@@ -1,0 +1,1 @@
+/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/share/gennodejs/ros/lwr_controllers/msg/MultiPriorityTask.js

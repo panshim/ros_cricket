@@ -1,0 +1,8 @@
+prefix=/home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg
+
+Name: kuka_interface_pkg
+Description: Description of kuka_interface_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg/lib 
+Requires: 

@@ -1,0 +1,12 @@
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/./local_setup.zsh
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/./cmake.lock
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/./setup.bash
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/./local_setup.sh
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/./local_setup.bash
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/./_setup_util.py
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/./setup.zsh
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/./setup.sh
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/./env.sh
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
