@@ -1,4 +1,4 @@
-Project Name: Baseball
+Project Name: Robot Cricket
 
 Team Members' Name: Jiawen Hu, Kejia Ren, Qihao Liu, Shimin Pan
 
