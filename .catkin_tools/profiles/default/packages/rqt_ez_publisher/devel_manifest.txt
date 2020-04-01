@@ -1,4 +1,4 @@
-rqt_ez_publisher-kinetic-devel
+debug_tool/rqt_ez_publisher
 /home/shimin/ROS_Prgm_Prj/devel/.private/rqt_ez_publisher/cmake.lock /home/shimin/ROS_Prgm_Prj/devel/./cmake.lock
 /home/shimin/ROS_Prgm_Prj/devel/.private/rqt_ez_publisher/lib/python2.7/dist-packages/rqt_ez_publisher/__init__.py /home/shimin/ROS_Prgm_Prj/devel/lib/python2.7/dist-packages/rqt_ez_publisher/__init__.py
 /home/shimin/ROS_Prgm_Prj/devel/.private/rqt_ez_publisher/lib/pkgconfig/rqt_ez_publisher.pc /home/shimin/ROS_Prgm_Prj/devel/lib/pkgconfig/rqt_ez_publisher.pc

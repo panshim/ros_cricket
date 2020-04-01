@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/lwr_hw
@@ -58,17 +58,17 @@ include CMakeFiles/friremote.dir/progress.make
 include CMakeFiles/friremote.dir/flags.make
 
 CMakeFiles/friremote.dir/src/fri/friremote.cpp.o: CMakeFiles/friremote.dir/flags.make
-CMakeFiles/friremote.dir/src/fri/friremote.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friremote.cpp
+CMakeFiles/friremote.dir/src/fri/friremote.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friremote.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/friremote.dir/src/fri/friremote.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/friremote.dir/src/fri/friremote.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friremote.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/friremote.dir/src/fri/friremote.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friremote.cpp
 
 CMakeFiles/friremote.dir/src/fri/friremote.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/friremote.dir/src/fri/friremote.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friremote.cpp > CMakeFiles/friremote.dir/src/fri/friremote.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friremote.cpp > CMakeFiles/friremote.dir/src/fri/friremote.cpp.i
 
 CMakeFiles/friremote.dir/src/fri/friremote.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/friremote.dir/src/fri/friremote.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friremote.cpp -o CMakeFiles/friremote.dir/src/fri/friremote.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friremote.cpp -o CMakeFiles/friremote.dir/src/fri/friremote.cpp.s
 
 CMakeFiles/friremote.dir/src/fri/friremote.cpp.o.requires:
 
@@ -82,17 +82,17 @@ CMakeFiles/friremote.dir/src/fri/friremote.cpp.o.provides.build: CMakeFiles/frir
 
 
 CMakeFiles/friremote.dir/src/fri/friudp.cpp.o: CMakeFiles/friremote.dir/flags.make
-CMakeFiles/friremote.dir/src/fri/friudp.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friudp.cpp
+CMakeFiles/friremote.dir/src/fri/friudp.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friudp.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/friremote.dir/src/fri/friudp.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/friremote.dir/src/fri/friudp.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friudp.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/friremote.dir/src/fri/friudp.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friudp.cpp
 
 CMakeFiles/friremote.dir/src/fri/friudp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/friremote.dir/src/fri/friudp.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friudp.cpp > CMakeFiles/friremote.dir/src/fri/friudp.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friudp.cpp > CMakeFiles/friremote.dir/src/fri/friudp.cpp.i
 
 CMakeFiles/friremote.dir/src/fri/friudp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/friremote.dir/src/fri/friudp.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friudp.cpp -o CMakeFiles/friremote.dir/src/fri/friudp.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friudp.cpp -o CMakeFiles/friremote.dir/src/fri/friudp.cpp.s
 
 CMakeFiles/friremote.dir/src/fri/friudp.cpp.o.requires:
 
@@ -135,6 +135,6 @@ CMakeFiles/friremote.dir/clean:
 .PHONY : CMakeFiles/friremote.dir/clean
 
 CMakeFiles/friremote.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/friremote.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/friremote.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/friremote.dir/depend
 

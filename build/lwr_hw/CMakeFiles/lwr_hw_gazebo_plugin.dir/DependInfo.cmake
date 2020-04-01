@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw_gazebo_plugin.cpp" "/home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o"
+  "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw_gazebo_plugin.cpp" "/home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include"
+  "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/opt/ros/kinetic/share/orocos_kdl/../../include"

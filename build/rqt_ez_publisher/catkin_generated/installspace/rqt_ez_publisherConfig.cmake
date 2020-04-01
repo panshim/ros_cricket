@@ -67,7 +67,7 @@ set(rqt_ez_publisher_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(rqt_ez_publisher_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/rqt_ez_publisher-kinetic-devel)
+  set(rqt_ez_publisher_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/debug_tool/rqt_ez_publisher)
   set(rqt_ez_publisher_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/rqt_ez_publisher)
   set(rqt_ez_publisher_INSTALL_PREFIX "")
   set(rqt_ez_publisher_PREFIX ${rqt_ez_publisher_DEVEL_PREFIX})
@@ -131,7 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/shimin/ROS_Prgm_Prj/install/lib;/home/shimin/ROS_Prgm_Prj/devel/lib;/home/shimin/en530_707_catkin_ws/devel/lib;/home/shimin/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/shimin/ROS_Prgm_Prj/install/lib;/home/shimin/ROS_Prgm_Prj/devel/lib;/home/shimin/en530_707_catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

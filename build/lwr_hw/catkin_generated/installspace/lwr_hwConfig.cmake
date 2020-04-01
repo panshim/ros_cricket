@@ -67,7 +67,7 @@ set(lwr_hw_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(lwr_hw_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw)
+  set(lwr_hw_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw)
   set(lwr_hw_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw)
   set(lwr_hw_INSTALL_PREFIX "")
   set(lwr_hw_PREFIX ${lwr_hw_DEVEL_PREFIX})
@@ -131,7 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/shimin/ROS_Prgm_Prj/install/lib;/home/shimin/ROS_Prgm_Prj/devel/lib;/home/shimin/en530_707_catkin_ws/devel/lib;/home/shimin/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/shimin/ROS_Prgm_Prj/install/lib;/home/shimin/ROS_Prgm_Prj/devel/lib;/home/shimin/en530_707_catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

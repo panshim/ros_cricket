@@ -1,0 +1,19 @@
+[31m[1mCMake Error[0m at /usr/share/cmake-3.5/Modules/FindBoost.cmake:1677 (message):
+  Unable to find the requested Boost libraries.
+
+  Boost version: 1.58.0
+
+  Boost include path: /usr/include
+
+  Could not find the following Boost libraries:
+
+          boost_1.65
+
+  No Boost libraries were found.  You may need to set BOOST_LIBRARYDIR to the
+  directory containing Boost libraries or BOOST_ROOT to the location of
+  Boost.
+[36mCall Stack (most recent call first):[0m
+  CMakeLists.txt:19 (find_package)
+
+
+make: *** [cmake_check_build_system] Error 1

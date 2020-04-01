@@ -1,4 +1,4 @@
-# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg
+# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -135,7 +135,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kuka_interface_pkg" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kuka_interface_pkg" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

@@ -300,7 +300,7 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 lwr_description_BINARY_DIR:STATIC=/home/shimin/ROS_Prgm_Prj/build/lwr_description
 
 //Value Computed by CMake
-lwr_description_SOURCE_DIR:STATIC=/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description
+lwr_description_SOURCE_DIR:STATIC=/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description
 
 
 ########################
@@ -384,7 +384,7 @@ CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
 CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

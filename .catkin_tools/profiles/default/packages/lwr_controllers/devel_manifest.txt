@@ -1,4 +1,4 @@
-kuka-lwr-master/lwr_controllers
+kuka-lwr/lwr_controllers
 /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/cmake.lock /home/shimin/ROS_Prgm_Prj/devel/./cmake.lock
 /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/lib/liblwr_controllers.so /home/shimin/ROS_Prgm_Prj/devel/lib/liblwr_controllers.so
 /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/lib/python2.7/dist-packages/lwr_controllers/__init__.py /home/shimin/ROS_Prgm_Prj/devel/lib/python2.7/dist-packages/lwr_controllers/__init__.py

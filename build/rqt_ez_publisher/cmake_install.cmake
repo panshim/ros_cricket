@@ -1,4 +1,4 @@
-# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/rqt_ez_publisher-kinetic-devel
+# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/debug_tool/rqt_ez_publisher
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -139,15 +139,15 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rqt_ez_publisher" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/rqt_ez_publisher-kinetic-devel/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rqt_ez_publisher" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/debug_tool/rqt_ez_publisher/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rqt_ez_publisher" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/rqt_ez_publisher-kinetic-devel/plugin.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rqt_ez_publisher" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/debug_tool/rqt_ez_publisher/plugin.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rqt_ez_publisher" TYPE PROGRAM FILES "/home/shimin/ROS_Prgm_Prj/src/rqt_ez_publisher-kinetic-devel/scripts/rqt_ez_publisher")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rqt_ez_publisher" TYPE PROGRAM FILES "/home/shimin/ROS_Prgm_Prj/src/debug_tool/rqt_ez_publisher/scripts/rqt_ez_publisher")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

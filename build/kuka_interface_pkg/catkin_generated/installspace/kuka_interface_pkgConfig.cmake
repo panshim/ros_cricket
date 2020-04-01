@@ -67,7 +67,7 @@ set(kuka_interface_pkg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(kuka_interface_pkg_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg)
+  set(kuka_interface_pkg_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg)
   set(kuka_interface_pkg_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg)
   set(kuka_interface_pkg_INSTALL_PREFIX "")
   set(kuka_interface_pkg_PREFIX ${kuka_interface_pkg_DEVEL_PREFIX})
@@ -131,7 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/shimin/ROS_Prgm_Prj/install/lib;/home/shimin/ROS_Prgm_Prj/devel/lib;/home/shimin/en530_707_catkin_ws/devel/lib;/home/shimin/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/shimin/ROS_Prgm_Prj/install/lib;/home/shimin/ROS_Prgm_Prj/devel/lib;/home/shimin/en530_707_catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

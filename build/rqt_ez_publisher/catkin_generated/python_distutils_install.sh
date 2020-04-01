@@ -14,7 +14,7 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/shimin/ROS_Prgm_Prj/src/rqt_ez_publisher-kinetic-devel"
+echo_and_run cd "/home/shimin/ROS_Prgm_Prj/src/debug_tool/rqt_ez_publisher"
 
 # ensure that Python install destination exists
 echo_and_run mkdir -p "$DESTDIR/home/shimin/ROS_Prgm_Prj/install/lib/python2.7/dist-packages"
@@ -26,7 +26,7 @@ echo_and_run /usr/bin/env \
     PYTHONPATH="/home/shimin/ROS_Prgm_Prj/install/lib/python2.7/dist-packages:/home/shimin/ROS_Prgm_Prj/build/rqt_ez_publisher/lib/python2.7/dist-packages:$PYTHONPATH" \
     CATKIN_BINARY_DIR="/home/shimin/ROS_Prgm_Prj/build/rqt_ez_publisher" \
     "/usr/bin/python" \
-    "/home/shimin/ROS_Prgm_Prj/src/rqt_ez_publisher-kinetic-devel/setup.py" \
+    "/home/shimin/ROS_Prgm_Prj/src/debug_tool/rqt_ez_publisher/setup.py" \
     build --build-base "/home/shimin/ROS_Prgm_Prj/build/rqt_ez_publisher" \
     install \
     $DESTDIR_ARG \

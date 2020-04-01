@@ -1,4 +1,4 @@
-# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers
+# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -125,17 +125,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_controllers/msg" TYPE FILE FILES
-    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/msg/PoseRPY.msg"
-    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/msg/RPY.msg"
-    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/msg/MultiPriorityTask.msg"
-    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/msg/ArmState.msg"
-    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/msg/CartesianImpedancePoint.msg"
-    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/msg/Stiffness.msg"
+    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/msg/PoseRPY.msg"
+    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/msg/RPY.msg"
+    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/msg/MultiPriorityTask.msg"
+    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/msg/ArmState.msg"
+    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/msg/CartesianImpedancePoint.msg"
+    "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/msg/Stiffness.msg"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_controllers/srv" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/srv/SetCartesianImpedanceCommand.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_controllers/srv" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/srv/SetCartesianImpedanceCommand.srv")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -182,11 +182,11 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_controllers" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_controllers" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/lwr_controllers" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/lwr_controllers" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -210,7 +210,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_controllers" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/lwr_controllers_plugins.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_controllers" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/lwr_controllers_plugins.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

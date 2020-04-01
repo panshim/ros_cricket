@@ -1,4 +1,4 @@
-# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw
+# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -135,7 +135,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_hw" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_hw" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -215,11 +215,11 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_hw/launch" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_hw/launch" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/launch/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/lwr_hw" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/cartesian_hardware_interface/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/lwr_hw" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/cartesian_hardware_interface/")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

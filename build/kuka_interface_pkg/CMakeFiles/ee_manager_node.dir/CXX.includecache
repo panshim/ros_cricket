@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/include/kuka_interface_pkg/commands.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/include/kuka_interface_pkg/commands.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/include/kuka_interface_pkg/ee_manager.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/include/kuka_interface_pkg/ee_manager.h
 ros/ros.h
 -
 math.h
@@ -18,27 +18,27 @@ std_msgs/Float64.h
 string
 -
 kuka_interface_pkg/qbmove_communications.h
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/include/kuka_interface_pkg/kuka_interface_pkg/qbmove_communications.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/include/kuka_interface_pkg/kuka_interface_pkg/qbmove_communications.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/include/kuka_interface_pkg/qbmove_communications.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/include/kuka_interface_pkg/qbmove_communications.h
 windows.h
 -
 termios.h
 -
 commands.h
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/include/kuka_interface_pkg/commands.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/include/kuka_interface_pkg/commands.h
 stdint.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/ee_manager.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/ee_manager.cpp
 kuka_interface_pkg/ee_manager.h
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/kuka_interface_pkg/ee_manager.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/kuka_interface_pkg/ee_manager.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/ee_manager_node.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/ee_manager_node.cpp
 kuka_interface_pkg/ee_manager.h
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/kuka_interface_pkg/ee_manager.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/kuka_interface_pkg/ee_manager.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/qbmove_communications.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/qbmove_communications.cpp
 stdio.h
 -
 string.h
@@ -78,9 +78,9 @@ IOKit/serial/ioss.h
 IOKit/IOBSD.h
 -
 kuka_interface_pkg/qbmove_communications.h
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/kuka_interface_pkg/qbmove_communications.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/kuka_interface_pkg/qbmove_communications.h
 kuka_interface_pkg/commands.h
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/kuka_interface_pkg/commands.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/kuka_interface_pkg/commands.h
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h

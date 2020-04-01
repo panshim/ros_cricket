@@ -1,0 +1,1 @@
+/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager/lib/pkgconfig/rqt_controller_manager.pc

@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg
@@ -58,17 +58,17 @@ include CMakeFiles/single_lwr_homing.dir/progress.make
 include CMakeFiles/single_lwr_homing.dir/flags.make
 
 CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.o: CMakeFiles/single_lwr_homing.dir/flags.make
-CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/single_lwr_homing.cpp
+CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/single_lwr_homing.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/single_lwr_homing.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/single_lwr_homing.cpp
 
 CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/single_lwr_homing.cpp > CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/single_lwr_homing.cpp > CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.i
 
 CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/single_lwr_homing.cpp -o CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/single_lwr_homing.cpp -o CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.s
 
 CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.o.requires:
 
@@ -127,6 +127,6 @@ CMakeFiles/single_lwr_homing.dir/clean:
 .PHONY : CMakeFiles/single_lwr_homing.dir/clean
 
 CMakeFiles/single_lwr_homing.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/single_lwr_homing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/single_lwr_homing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/single_lwr_homing.dir/depend
 

@@ -1,0 +1,4 @@
+<launch>
+    <node name="cricket_lwr_node" pkg="cricket_lwr_interface" type="cricket_lwr_node" output="screen"/>
+
+</launch>

@@ -1,4 +1,4 @@
-kuka-lwr-master/lwr_hw
+kuka-lwr/lwr_hw
 /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/cmake.lock /home/shimin/ROS_Prgm_Prj/devel/./cmake.lock
 /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/libfril.so /home/shimin/ROS_Prgm_Prj/devel/lib/libfril.so
 /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/libfril.so.1.2 /home/shimin/ROS_Prgm_Prj/devel/lib/libfril.so.1.2

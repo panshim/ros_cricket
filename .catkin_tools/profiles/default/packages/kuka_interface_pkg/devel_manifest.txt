@@ -1,4 +1,4 @@
-kuka_interface-master/kuka_interface_pkg
+kuka_interface/kuka_interface_pkg
 /home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg/cmake.lock /home/shimin/ROS_Prgm_Prj/devel/./cmake.lock
 /home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg/lib/kuka_interface_pkg/single_lwr_manager_node /home/shimin/ROS_Prgm_Prj/devel/lib/kuka_interface_pkg/single_lwr_manager_node
 /home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg/lib/kuka_interface_pkg/homing /home/shimin/ROS_Prgm_Prj/devel/lib/kuka_interface_pkg/homing

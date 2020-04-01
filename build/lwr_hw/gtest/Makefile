@@ -48,7 +48,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/lwr_hw

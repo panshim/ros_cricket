@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/lwr_description
@@ -135,6 +135,6 @@ gtest/CMakeFiles/gmock.dir/clean:
 .PHONY : gtest/CMakeFiles/gmock.dir/clean
 
 gtest/CMakeFiles/gmock.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/lwr_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description /usr/src/gmock /home/shimin/ROS_Prgm_Prj/build/lwr_description /home/shimin/ROS_Prgm_Prj/build/lwr_description/gtest /home/shimin/ROS_Prgm_Prj/build/lwr_description/gtest/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/lwr_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description /usr/src/gmock /home/shimin/ROS_Prgm_Prj/build/lwr_description /home/shimin/ROS_Prgm_Prj/build/lwr_description/gtest /home/shimin/ROS_Prgm_Prj/build/lwr_description/gtest/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gtest/CMakeFiles/gmock.dir/depend
 

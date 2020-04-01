@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/cartesian_hardware_interface/cartesian_command_interface.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/cartesian_hardware_interface/cartesian_command_interface.h
 cassert
 -
 string
@@ -18,7 +18,7 @@ cartesian_hardware_interface/cartesian_state_interface.h
 hardware_interface/joint_command_interface.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/cartesian_hardware_interface/cartesian_state_interface.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/cartesian_hardware_interface/cartesian_state_interface.h
 hardware_interface/internal/hardware_resource_manager.h
 -
 cassert
@@ -26,7 +26,7 @@ cassert
 string
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/lwr_hw/lwr_hw.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/lwr_hw/lwr_hw.h
 boost/scoped_ptr.hpp
 -
 std_msgs/Duration.h
@@ -62,7 +62,7 @@ kdl/chaindynparam.hpp
 kdl_parser/kdl_parser.hpp
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/lwr_hw/lwr_hw_gazebo.hpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/lwr_hw/lwr_hw_gazebo.hpp
 angles/angles.h
 -
 gazebo/common/common.hh
@@ -72,9 +72,9 @@ gazebo/physics/physics.hh
 gazebo/gazebo.hh
 -
 lwr_hw/lwr_hw.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/lwr_hw/lwr_hw/lwr_hw.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/lwr_hw/lwr_hw/lwr_hw.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw_gazebo_plugin.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw_gazebo_plugin.cpp
 boost/bind.hpp
 -
 boost/shared_ptr.hpp
@@ -92,7 +92,7 @@ gazebo/physics/physics.hh
 gazebo/common/common.hh
 -
 lwr_hw/lwr_hw_gazebo.hpp
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw/lwr_hw_gazebo.hpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw/lwr_hw_gazebo.hpp
 
 /opt/ros/kinetic/include/angles/angles.h
 algorithm

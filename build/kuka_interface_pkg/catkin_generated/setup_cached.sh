@@ -10,4 +10,4 @@
 export CMAKE_PREFIX_PATH="/home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg:$CMAKE_PREFIX_PATH"
 export PWD="/home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg:$ROS_PACKAGE_PATH"

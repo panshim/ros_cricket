@@ -303,7 +303,7 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 kuka_interface_pkg_BINARY_DIR:STATIC=/home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg
 
 //Value Computed by CMake
-kuka_interface_pkg_SOURCE_DIR:STATIC=/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg
+kuka_interface_pkg_SOURCE_DIR:STATIC=/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/kinetic/lib/libxmlrpcpp.so
@@ -420,7 +420,7 @@ CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
 CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

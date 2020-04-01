@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_robot
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/single_lwr_example/single_lwr_robot
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/single_lwr_robot
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/single_lwr_robot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_robot /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_robot /home/shimin/ROS_Prgm_Prj/build/single_lwr_robot /home/shimin/ROS_Prgm_Prj/build/single_lwr_robot /home/shimin/ROS_Prgm_Prj/build/single_lwr_robot/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/single_lwr_robot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/single_lwr_example/single_lwr_robot /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/single_lwr_example/single_lwr_robot /home/shimin/ROS_Prgm_Prj/build/single_lwr_robot /home/shimin/ROS_Prgm_Prj/build/single_lwr_robot /home/shimin/ROS_Prgm_Prj/build/single_lwr_robot/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

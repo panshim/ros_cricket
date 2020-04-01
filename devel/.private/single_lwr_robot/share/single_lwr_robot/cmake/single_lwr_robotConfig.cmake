@@ -67,7 +67,7 @@ set(single_lwr_robot_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(single_lwr_robot_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_robot)
+  set(single_lwr_robot_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/single_lwr_example/single_lwr_robot)
   set(single_lwr_robot_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_robot)
   set(single_lwr_robot_INSTALL_PREFIX "")
   set(single_lwr_robot_PREFIX ${single_lwr_robot_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'single_lwr_robot' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'single_lwr_robot' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_robot/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'single_lwr_robot' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/single_lwr_example/single_lwr_robot/${idir}'.  ${_report}")
     endif()
     _list_append_unique(single_lwr_robot_INCLUDE_DIRS ${include})
   endforeach()
@@ -131,7 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_robot/lib;/home/shimin/ROS_Prgm_Prj/devel/lib;/home/shimin/en530_707_catkin_ws/devel/lib;/home/shimin/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_robot/lib;/home/shimin/ROS_Prgm_Prj/devel/lib;/home/shimin/en530_707_catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

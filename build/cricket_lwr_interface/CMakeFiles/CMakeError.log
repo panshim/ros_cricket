@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/shimin/ROS_Prgm_Prj/build/cricket_lwr_interface/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e6236/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e6236.dir/build.make CMakeFiles/cmTC_e6236.dir/build
+make[1]: Entering directory '/home/shimin/ROS_Prgm_Prj/build/cricket_lwr_interface/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6236.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_e6236.dir/CheckSymbolExists.c.o   -c /home/shimin/ROS_Prgm_Prj/build/cricket_lwr_interface/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e6236
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6236.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e6236.dir/CheckSymbolExists.c.o  -o cmTC_e6236 -rdynamic 
+CMakeFiles/cmTC_e6236.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e6236.dir/build.make:97: recipe for target 'cmTC_e6236' failed
+make[1]: *** [cmTC_e6236] Error 1
+make[1]: Leaving directory '/home/shimin/ROS_Prgm_Prj/build/cricket_lwr_interface/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e6236/fast' failed
+make: *** [cmTC_e6236/fast] Error 2
+
+File /home/shimin/ROS_Prgm_Prj/build/cricket_lwr_interface/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/shimin/ROS_Prgm_Prj/build/cricket_lwr_interface/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2f0bd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2f0bd.dir/build.make CMakeFiles/cmTC_2f0bd.dir/build
+make[1]: Entering directory '/home/shimin/ROS_Prgm_Prj/build/cricket_lwr_interface/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2f0bd.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2f0bd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2f0bd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f0bd.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2f0bd.dir/CheckFunctionExists.c.o  -o cmTC_2f0bd -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2f0bd.dir/build.make:97: recipe for target 'cmTC_2f0bd' failed
+make[1]: *** [cmTC_2f0bd] Error 1
+make[1]: Leaving directory '/home/shimin/ROS_Prgm_Prj/build/cricket_lwr_interface/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2f0bd/fast' failed
+make: *** [cmTC_2f0bd/fast] Error 2
+
+

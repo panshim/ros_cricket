@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg
@@ -58,17 +58,17 @@ include CMakeFiles/arms_manager_node.dir/progress.make
 include CMakeFiles/arms_manager_node.dir/flags.make
 
 CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.o: CMakeFiles/arms_manager_node.dir/flags.make
-CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/arms_manager_node.cpp
+CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/arms_manager_node.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/arms_manager_node.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/arms_manager_node.cpp
 
 CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/arms_manager_node.cpp > CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/arms_manager_node.cpp > CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.i
 
 CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/arms_manager_node.cpp -o CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/arms_manager_node.cpp -o CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.s
 
 CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.o.requires:
 
@@ -82,17 +82,17 @@ CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.o.provides.build: CMa
 
 
 CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.o: CMakeFiles/arms_manager_node.dir/flags.make
-CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/arms_manager.cpp
+CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/arms_manager.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/arms_manager.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/arms_manager.cpp
 
 CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/arms_manager.cpp > CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/arms_manager.cpp > CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.i
 
 CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/arms_manager.cpp -o CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/arms_manager.cpp -o CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.s
 
 CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.o.requires:
 
@@ -154,6 +154,6 @@ CMakeFiles/arms_manager_node.dir/clean:
 .PHONY : CMakeFiles/arms_manager_node.dir/clean
 
 CMakeFiles/arms_manager_node.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/arms_manager_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/arms_manager_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/arms_manager_node.dir/depend
 

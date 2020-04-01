@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/lwr_controllers
@@ -58,17 +58,17 @@ include CMakeFiles/lwr_controllers.dir/progress.make
 include CMakeFiles/lwr_controllers.dir/flags.make
 
 CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/joint_impedance_controller.cpp
+CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/joint_impedance_controller.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/joint_impedance_controller.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/joint_impedance_controller.cpp
 
 CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/joint_impedance_controller.cpp > CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/joint_impedance_controller.cpp > CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/joint_impedance_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/joint_impedance_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o.requires:
 
@@ -82,17 +82,17 @@ CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o.provides.bui
 
 
 CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/inverse_dynamics_controller.cpp
+CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/inverse_dynamics_controller.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/inverse_dynamics_controller.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/inverse_dynamics_controller.cpp
 
 CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/inverse_dynamics_controller.cpp > CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/inverse_dynamics_controller.cpp > CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/inverse_dynamics_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/inverse_dynamics_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.o.requires:
 
@@ -106,17 +106,17 @@ CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.o.provides.bu
 
 
 CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/computed_torque_controller.cpp
+CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/computed_torque_controller.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/computed_torque_controller.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/computed_torque_controller.cpp
 
 CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/computed_torque_controller.cpp > CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/computed_torque_controller.cpp > CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/computed_torque_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/computed_torque_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.o.requires:
 
@@ -130,17 +130,17 @@ CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.o.provides.bui
 
 
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_kinematics.cpp
+CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_kinematics.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_kinematics.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_kinematics.cpp
 
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_kinematics.cpp > CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_kinematics.cpp > CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_kinematics.cpp -o CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_kinematics.cpp -o CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o.requires:
 
@@ -154,17 +154,17 @@ CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o.provides.bu
 
 
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp
+CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp
 
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp > CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp > CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp -o CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp -o CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o.requires:
 
@@ -178,17 +178,17 @@ CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o.
 
 
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp
+CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp
 
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp > CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp > CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp -o CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp -o CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o.requires:
 
@@ -202,17 +202,17 @@ CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o.pr
 
 
 CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp
+CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp
 
 CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp > CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp > CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp -o CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp -o CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o.requires:
 
@@ -226,17 +226,17 @@ CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o.provide
 
 
 CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/backstepping_controller.cpp
+CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/backstepping_controller.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/backstepping_controller.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/backstepping_controller.cpp
 
 CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/backstepping_controller.cpp > CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/backstepping_controller.cpp > CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/backstepping_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/backstepping_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o.requires:
 
@@ -250,17 +250,17 @@ CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o.provides.build:
 
 
 CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller.cpp
+CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller.cpp
 
 CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller.cpp > CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller.cpp > CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.o.requires:
 
@@ -274,17 +274,17 @@ CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.o.provide
 
 
 CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp
+CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp
 
 CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp > CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp > CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp -o CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp -o CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.o.requires:
 
@@ -298,17 +298,17 @@ CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cp
 
 
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp
+CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp
 
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp > CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp > CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp -o CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp -o CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o.requires:
 
@@ -322,17 +322,17 @@ CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o.provides.b
 
 
 CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/gravity_compensation.cpp
+CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/gravity_compensation.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/gravity_compensation.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/gravity_compensation.cpp
 
 CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/gravity_compensation.cpp > CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/gravity_compensation.cpp > CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/gravity_compensation.cpp -o CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/gravity_compensation.cpp -o CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.o.requires:
 
@@ -346,17 +346,17 @@ CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.o.provides.build: CM
 
 
 CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/arm_state_controller.cpp
+CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/arm_state_controller.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/arm_state_controller.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/arm_state_controller.cpp
 
 CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/arm_state_controller.cpp > CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/arm_state_controller.cpp > CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/arm_state_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/arm_state_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o.requires:
 
@@ -370,17 +370,17 @@ CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o.provides.build: CM
 
 
 CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/cartesian_impedance_controller.cpp
+CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/cartesian_impedance_controller.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/cartesian_impedance_controller.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/cartesian_impedance_controller.cpp
 
 CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/cartesian_impedance_controller.cpp > CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/cartesian_impedance_controller.cpp > CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/cartesian_impedance_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/cartesian_impedance_controller.cpp -o CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o.requires:
 
@@ -394,17 +394,17 @@ CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o.provides
 
 
 CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o: CMakeFiles/lwr_controllers.dir/flags.make
-CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/KinematicChainControllerBase.cpp
+CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/KinematicChainControllerBase.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/KinematicChainControllerBase.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/KinematicChainControllerBase.cpp
 
 CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/KinematicChainControllerBase.cpp > CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/KinematicChainControllerBase.cpp > CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.i
 
 CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/KinematicChainControllerBase.cpp -o CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/KinematicChainControllerBase.cpp -o CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.s
 
 CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o.requires:
 
@@ -541,6 +541,6 @@ CMakeFiles/lwr_controllers.dir/clean:
 .PHONY : CMakeFiles/lwr_controllers.dir/clean
 
 CMakeFiles/lwr_controllers.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/lwr_controllers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers /home/shimin/ROS_Prgm_Prj/build/lwr_controllers /home/shimin/ROS_Prgm_Prj/build/lwr_controllers /home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles/lwr_controllers.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/lwr_controllers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers /home/shimin/ROS_Prgm_Prj/build/lwr_controllers /home/shimin/ROS_Prgm_Prj/build/lwr_controllers /home/shimin/ROS_Prgm_Prj/build/lwr_controllers/CMakeFiles/lwr_controllers.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lwr_controllers.dir/depend
 

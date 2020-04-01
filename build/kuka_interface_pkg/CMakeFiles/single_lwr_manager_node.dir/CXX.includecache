@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/include/kuka_interface_pkg/single_lwr_manager.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/include/kuka_interface_pkg/single_lwr_manager.h
 ros/ros.h
 -
 std_msgs/Float64MultiArray.h
@@ -16,13 +16,13 @@ trajectory_msgs/JointTrajectory.h
 geometry_msgs/Pose.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/single_lwr_manager.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/single_lwr_manager.cpp
 kuka_interface_pkg/single_lwr_manager.h
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/kuka_interface_pkg/single_lwr_manager.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/kuka_interface_pkg/single_lwr_manager.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/single_lwr_manager_node.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/single_lwr_manager_node.cpp
 kuka_interface_pkg/single_lwr_manager.h
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/kuka_interface_pkg/single_lwr_manager.h
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/kuka_interface_pkg/single_lwr_manager.h
 
 /opt/ros/kinetic/include/geometry_msgs/Point.h
 string

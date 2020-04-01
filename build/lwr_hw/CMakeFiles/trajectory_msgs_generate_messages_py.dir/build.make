@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/lwr_hw
@@ -67,6 +67,6 @@ CMakeFiles/trajectory_msgs_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_py.dir/clean
 
 CMakeFiles/trajectory_msgs_generate_messages_py.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/trajectory_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/trajectory_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_py.dir/depend
 

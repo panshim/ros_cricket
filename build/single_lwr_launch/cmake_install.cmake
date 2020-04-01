@@ -1,4 +1,4 @@
-# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_launch
+# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/single_lwr_example/single_lwr_launch
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -135,7 +135,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/single_lwr_launch" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_launch/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/single_lwr_launch" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/single_lwr_example/single_lwr_launch/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

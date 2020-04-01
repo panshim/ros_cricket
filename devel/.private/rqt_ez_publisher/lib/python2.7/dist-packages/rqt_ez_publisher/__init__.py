@@ -7,7 +7,7 @@ from sys import path as sys_path
 
 from pkgutil import extend_path
 
-__extended_path = "/home/shimin/ROS_Prgm_Prj/src/rqt_ez_publisher-kinetic-devel/src".split(";")
+__extended_path = "/home/shimin/ROS_Prgm_Prj/src/debug_tool/rqt_ez_publisher/src".split(";")
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

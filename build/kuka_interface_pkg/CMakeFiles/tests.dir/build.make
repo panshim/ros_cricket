@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description
+# Install script for directory: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -135,15 +135,15 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_description" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_description" TYPE FILE FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_description/meshes" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description/meshes/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_description/meshes" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description/meshes/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_description/model" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description/model/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lwr_description/model" TYPE DIRECTORY FILES "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description/model/")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

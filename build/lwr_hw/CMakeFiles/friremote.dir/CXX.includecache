@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/fri/friComm.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/fri/friComm.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/fri/friremote.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/fri/friremote.h
 fri/friudp.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/fri/fri/friudp.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/fri/fri/friudp.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/fri/friudp.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/fri/friudp.h
 stdio.h
 -
 stdlib.h
@@ -36,31 +36,31 @@ sys/time.h
 time.h
 -
 fri/friComm.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/fri/fri/friComm.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/fri/fri/friComm.h
 iostream
 -
 sockLib.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friremote.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friremote.cpp
 fri/friremote.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/fri/friremote.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/fri/friremote.h
 iostream
 -
 stdlib.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friudp.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friudp.cpp
 fri/friudp.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/fri/friudp.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/fri/friudp.h
 winsock2.h
 -
 vxworks.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/vxworks.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/vxworks.h
 bpfDrv.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/bpfDrv.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/bpfDrv.h
 ioLib.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/ioLib.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/ioLib.h
 logLib.h
 -
 sys/ioctl.h
@@ -76,5 +76,5 @@ wrn/coreip/netinet/udp.h
 iostream
 -
 friremote.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friremote.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/fri/friremote.h
 

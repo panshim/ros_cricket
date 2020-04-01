@@ -1,4 +1,4 @@
-kuka-lwr-master/single_lwr_example/single_lwr_moveit
+kuka-lwr/single_lwr_example/single_lwr_moveit
 /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_moveit/cmake.lock /home/shimin/ROS_Prgm_Prj/devel/./cmake.lock
 /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_moveit/lib/pkgconfig/single_lwr_moveit.pc /home/shimin/ROS_Prgm_Prj/devel/lib/pkgconfig/single_lwr_moveit.pc
 /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_moveit/share/single_lwr_moveit/cmake/single_lwr_moveitConfig.cmake /home/shimin/ROS_Prgm_Prj/devel/share/single_lwr_moveit/cmake/single_lwr_moveitConfig.cmake

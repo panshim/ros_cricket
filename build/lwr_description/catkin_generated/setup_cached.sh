@@ -10,4 +10,4 @@
 export CMAKE_PREFIX_PATH="/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_description:$CMAKE_PREFIX_PATH"
 export PWD="/home/shimin/ROS_Prgm_Prj/build/lwr_description"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_description/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description:$ROS_PACKAGE_PATH"

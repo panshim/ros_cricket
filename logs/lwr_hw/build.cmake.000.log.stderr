@@ -1,4 +1,4 @@
-[33m[1mCMake Warning[0m at /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/CMakeLists.txt:85 (message):
+[33m[1mCMake Warning[0m at /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/CMakeLists.txt:85 (message):
   ATTENTION: This project supports the fork of the Standford library found in
   https://github.com/iocroblab/fril, and install the libraries in your catkin
   workspace, not in the system

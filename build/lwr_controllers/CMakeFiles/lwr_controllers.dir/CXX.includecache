@@ -164,7 +164,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 control_msgs/JointControllerState.h
 -
 urdf/model.h
@@ -198,15 +198,15 @@ kdl_parser/kdl_parser.hpp
 vector
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 KinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 control_toolbox/pid.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/arm_state_controller.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/arm_state_controller.h
 KinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 lwr_controllers/ArmState.h
 -
 std_msgs/Float32.h
@@ -218,9 +218,9 @@ realtime_tools/realtime_publisher.h
 boost/scoped_ptr.hpp
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/backstepping_controller.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/backstepping_controller.h
 PIDKinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 lwr_controllers/MultiPriorityTask.h
 -
 std_msgs/Float64MultiArray.h
@@ -236,7 +236,7 @@ boost/thread/condition.hpp
 sstream
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/cartesian_impedance_controller.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/cartesian_impedance_controller.h
 geometry_msgs/WrenchStamped.h
 -
 geometry_msgs/PoseStamped.h
@@ -256,21 +256,21 @@ kdl_conversions/kdl_msg.h
 boost/scoped_ptr.hpp
 -
 lwr_controllers/KinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/lwr_controllers/KinematicChainControllerBase.h
 lwr_controllers/SetCartesianImpedanceCommand.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/lwr_controllers/SetCartesianImpedanceCommand.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/lwr_controllers/SetCartesianImpedanceCommand.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/computed_torque_controller.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/computed_torque_controller.h
 KinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 std_msgs/Float64MultiArray.h
 -
 boost/scoped_ptr.hpp
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/dynamic_sliding_mode_controller.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/dynamic_sliding_mode_controller.h
 KinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 visualization_msgs/Marker.h
 -
 std_msgs/Float64MultiArray.h
@@ -278,9 +278,9 @@ std_msgs/Float64MultiArray.h
 boost/scoped_ptr.hpp
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/dynamic_sliding_mode_controller_task_space.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/dynamic_sliding_mode_controller_task_space.h
 PIDKinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 visualization_msgs/Marker.h
 -
 std_msgs/Float64MultiArray.h
@@ -288,17 +288,17 @@ std_msgs/Float64MultiArray.h
 boost/scoped_ptr.hpp
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/gravity_compensation.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/gravity_compensation.h
 KinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 std_msgs/Bool.h
 -
 std_msgs/Float32.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/inverse_dynamics_controller.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/inverse_dynamics_controller.h
 KinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 geometry_msgs/WrenchStamped.h
 -
 kdl/chainidsolver_recursive_newton_euler.hpp
@@ -308,9 +308,9 @@ boost/thread/condition.hpp
 boost/scoped_ptr.hpp
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/joint_impedance_controller.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/joint_impedance_controller.h
 KinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 visualization_msgs/Marker.h
 -
 std_msgs/Float64MultiArray.h
@@ -318,9 +318,9 @@ std_msgs/Float64MultiArray.h
 boost/scoped_ptr.hpp
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/minimum_effort_inverse_dynamics.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/minimum_effort_inverse_dynamics.h
 PIDKinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 lwr_controllers/MultiPriorityTask.h
 -
 std_msgs/Float64MultiArray.h
@@ -340,9 +340,9 @@ boost/thread/condition.hpp
 vector
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/multi_task_priority_inverse_dynamics.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/multi_task_priority_inverse_dynamics.h
 PIDKinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 lwr_controllers/MultiPriorityTask.h
 -
 std_msgs/Float64MultiArray.h
@@ -354,9 +354,9 @@ boost/scoped_ptr.hpp
 sstream
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/multi_task_priority_inverse_kinematics.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/multi_task_priority_inverse_kinematics.h
 PIDKinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 lwr_controllers/MultiPriorityTask.h
 -
 std_msgs/Float64MultiArray.h
@@ -368,9 +368,9 @@ boost/scoped_ptr.hpp
 sstream
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/one_task_inverse_dynamics_jl.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/one_task_inverse_dynamics_jl.h
 PIDKinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 lwr_controllers/MultiPriorityTask.h
 -
 lwr_controllers/PoseRPY.h
@@ -386,11 +386,11 @@ boost/thread/condition.hpp
 sstream
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/one_task_inverse_kinematics.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/one_task_inverse_kinematics.h
 KinematicChainControllerBase.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 lwr_controllers/PoseRPY.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/lwr_controllers/lwr_controllers/PoseRPY.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/lwr_controllers/PoseRPY.h
 visualization_msgs/Marker.h
 -
 geometry_msgs/PoseStamped.h
@@ -408,7 +408,7 @@ boost/thread/condition.hpp
 sstream
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/utils/pseudo_inversion.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/utils/pseudo_inversion.h
 Eigen/Core
 -
 Eigen/LU
@@ -416,17 +416,17 @@ Eigen/LU
 Eigen/SVD
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/utils/skew_symmetric.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/utils/skew_symmetric.h
 kdl/kdl.hpp
 -
 Eigen/Core
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/KinematicChainControllerBase.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/KinematicChainControllerBase.cpp
 lwr_controllers/KinematicChainControllerBase.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/arm_state_controller.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/arm_state_controller.cpp
 pluginlib/class_list_macros.h
 -
 math.h
@@ -440,7 +440,7 @@ utils/pseudo_inversion.h
 control_toolbox/filters.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/backstepping_controller.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/backstepping_controller.cpp
 pluginlib/class_list_macros.h
 -
 kdl_parser/kdl_parser.hpp
@@ -454,7 +454,7 @@ utils/pseudo_inversion.h
 lwr_controllers/backstepping_controller.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/cartesian_impedance_controller.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/cartesian_impedance_controller.cpp
 math.h
 -
 pluginlib/class_list_macros.h
@@ -464,9 +464,9 @@ kdl_conversions/kdl_msg.h
 tf_conversions/tf_kdl.h
 -
 lwr_controllers/cartesian_impedance_controller.h
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/lwr_controllers/cartesian_impedance_controller.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/lwr_controllers/cartesian_impedance_controller.h
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/computed_torque_controller.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/computed_torque_controller.cpp
 pluginlib/class_list_macros.h
 -
 kdl_parser/kdl_parser.hpp
@@ -476,7 +476,7 @@ math.h
 lwr_controllers/computed_torque_controller.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller.cpp
 lwr_controllers/dynamic_sliding_mode_controller.h
 -
 pluginlib/class_list_macros.h
@@ -490,7 +490,7 @@ Eigen/LU
 utils/pseudo_inversion.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/dynamic_sliding_mode_controller_task_space.cpp
 lwr_controllers/dynamic_sliding_mode_controller_task_space.h
 -
 utils/pseudo_inversion.h
@@ -506,7 +506,7 @@ Eigen/LU
 math.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/gravity_compensation.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/gravity_compensation.cpp
 pluginlib/class_list_macros.h
 -
 math.h
@@ -514,7 +514,7 @@ math.h
 lwr_controllers/gravity_compensation.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/inverse_dynamics_controller.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/inverse_dynamics_controller.cpp
 lwr_controllers/inverse_dynamics_controller.h
 -
 pluginlib/class_list_macros.h
@@ -528,7 +528,7 @@ kdl_parser/kdl_parser.hpp
 Eigen/Dense
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/joint_impedance_controller.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/joint_impedance_controller.cpp
 angles/angles.h
 -
 pluginlib/class_list_macros.h
@@ -546,7 +546,7 @@ urdf/model.h
 lwr_controllers/joint_impedance_controller.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/minimum_effort_inverse_dynamics.cpp
 lwr_controllers/minimum_effort_inverse_dynamics.h
 -
 utils/pseudo_inversion.h
@@ -560,7 +560,7 @@ Eigen/LU
 math.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_dynamics.cpp
 pluginlib/class_list_macros.h
 -
 kdl_parser/kdl_parser.hpp
@@ -576,7 +576,7 @@ utils/skew_symmetric.h
 lwr_controllers/multi_task_priority_inverse_dynamics.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/multi_task_priority_inverse_kinematics.cpp
 pluginlib/class_list_macros.h
 -
 kdl_parser/kdl_parser.hpp
@@ -592,7 +592,7 @@ utils/skew_symmetric.h
 lwr_controllers/multi_task_priority_inverse_kinematics.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_dynamics_jl.cpp
 lwr_controllers/one_task_inverse_dynamics_jl.h
 -
 utils/pseudo_inversion.h
@@ -608,7 +608,7 @@ Eigen/LU
 math.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/src/one_task_inverse_kinematics.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/one_task_inverse_kinematics.cpp
 lwr_controllers/one_task_inverse_kinematics.h
 -
 utils/pseudo_inversion.h
@@ -624,7 +624,7 @@ Eigen/LU
 math.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/cartesian_hardware_interface/cartesian_command_interface.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/cartesian_hardware_interface/cartesian_command_interface.h
 cassert
 -
 string
@@ -636,7 +636,7 @@ cartesian_hardware_interface/cartesian_state_interface.h
 hardware_interface/joint_command_interface.h
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/cartesian_hardware_interface/cartesian_state_interface.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/cartesian_hardware_interface/cartesian_state_interface.h
 hardware_interface/internal/hardware_resource_manager.h
 -
 cassert
@@ -644,7 +644,7 @@ cassert
 string
 -
 
-/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/lwr_hw/lwr_hw.h
+/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/lwr_hw/lwr_hw.h
 boost/scoped_ptr.hpp
 -
 std_msgs/Duration.h

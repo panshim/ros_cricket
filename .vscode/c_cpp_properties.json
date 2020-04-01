@@ -34,7 +34,9 @@
                 "/home/shimin/catkin_ws/src/ur_modern_driver/include/**",
                 "/home/shimin/catkin_ws/src/usb_cam/include/**",
                 "/usr/include/**",
-                "${workspaceFolder}/src/kuka_interface-master/kuka_interface_pkg/include"
+                "${workspaceFolder}/src/kuka_interface-master/kuka_interface_pkg/include",
+                "${workspaceFolder}/src/cricket_lwr_interface/include",
+                "${workspaceFolder}/src/kuka-lwr/lwr_controllers/include"
             ],
             "name": "ROS",
             "compilerPath": "/usr/bin/gcc"

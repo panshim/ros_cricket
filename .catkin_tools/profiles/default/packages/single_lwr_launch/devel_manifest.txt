@@ -1,4 +1,4 @@
-kuka-lwr-master/single_lwr_example/single_lwr_launch
+kuka-lwr/single_lwr_example/single_lwr_launch
 /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_launch/cmake.lock /home/shimin/ROS_Prgm_Prj/devel/./cmake.lock
 /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_launch/lib/pkgconfig/single_lwr_launch.pc /home/shimin/ROS_Prgm_Prj/devel/lib/pkgconfig/single_lwr_launch.pc
 /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_launch/share/single_lwr_launch/cmake/single_lwr_launchConfig-version.cmake /home/shimin/ROS_Prgm_Prj/devel/share/single_lwr_launch/cmake/single_lwr_launchConfig-version.cmake

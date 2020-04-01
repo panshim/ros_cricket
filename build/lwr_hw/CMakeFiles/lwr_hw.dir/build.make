@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/lwr_hw
@@ -58,17 +58,17 @@ include CMakeFiles/lwr_hw.dir/progress.make
 include CMakeFiles/lwr_hw.dir/flags.make
 
 CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.o: CMakeFiles/lwr_hw.dir/flags.make
-CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw.cpp
+CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw.cpp
 
 CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw.cpp > CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw.cpp > CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.i
 
 CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw.cpp -o CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw.cpp -o CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.s
 
 CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.o.requires:
 
@@ -158,6 +158,6 @@ CMakeFiles/lwr_hw.dir/clean:
 .PHONY : CMakeFiles/lwr_hw.dir/clean
 
 CMakeFiles/lwr_hw.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/lwr_hw.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/lwr_hw.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lwr_hw.dir/depend
 

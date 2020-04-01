@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/lwr_hw
@@ -58,17 +58,17 @@ include CMakeFiles/lwr_hw_gazebo_plugin.dir/progress.make
 include CMakeFiles/lwr_hw_gazebo_plugin.dir/flags.make
 
 CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o: CMakeFiles/lwr_hw_gazebo_plugin.dir/flags.make
-CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw_gazebo_plugin.cpp
+CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw_gazebo_plugin.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw_gazebo_plugin.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o -c /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw_gazebo_plugin.cpp
 
 CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw_gazebo_plugin.cpp > CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw_gazebo_plugin.cpp > CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.i
 
 CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/lwr_hw_gazebo_plugin.cpp -o CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/src/lwr_hw_gazebo_plugin.cpp -o CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.s
 
 CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o.requires:
 
@@ -228,6 +228,6 @@ CMakeFiles/lwr_hw_gazebo_plugin.dir/clean:
 .PHONY : CMakeFiles/lwr_hw_gazebo_plugin.dir/clean
 
 CMakeFiles/lwr_hw_gazebo_plugin.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/lwr_hw_gazebo_plugin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw /home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles/lwr_hw_gazebo_plugin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lwr_hw_gazebo_plugin.dir/depend
 

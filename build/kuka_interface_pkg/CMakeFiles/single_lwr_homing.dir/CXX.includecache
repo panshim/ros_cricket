@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg/src/single_lwr_homing.cpp
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/src/single_lwr_homing.cpp
 ros/ros.h
 -
 ros/rate.h

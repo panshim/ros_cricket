@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/lwr_controllers
@@ -108,6 +108,6 @@ gtest/gtest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/gtest/CMakeFiles/gtest.dir/clean
 
 gtest/gtest/CMakeFiles/gtest.dir/depend:
-	cd /home/shimin/ROS_Prgm_Prj/build/lwr_controllers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers /usr/src/gtest /home/shimin/ROS_Prgm_Prj/build/lwr_controllers /home/shimin/ROS_Prgm_Prj/build/lwr_controllers/gtest/gtest /home/shimin/ROS_Prgm_Prj/build/lwr_controllers/gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shimin/ROS_Prgm_Prj/build/lwr_controllers && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers /usr/src/gtest /home/shimin/ROS_Prgm_Prj/build/lwr_controllers /home/shimin/ROS_Prgm_Prj/build/lwr_controllers/gtest/gtest /home/shimin/ROS_Prgm_Prj/build/lwr_controllers/gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gtest/gtest/CMakeFiles/gtest.dir/depend
 

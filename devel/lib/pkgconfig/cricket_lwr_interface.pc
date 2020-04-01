@@ -1,0 +1,1 @@
+/home/shimin/ROS_Prgm_Prj/devel/.private/cricket_lwr_interface/lib/pkgconfig/cricket_lwr_interface.pc
