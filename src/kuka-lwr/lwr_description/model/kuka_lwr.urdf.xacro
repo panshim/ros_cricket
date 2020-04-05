@@ -3,8 +3,7 @@
 
 	<!-- utils /-->
 	<xacro:include filename="$(find lwr_description)/model/utils.xacro"/>
-	<xacro:include filename="$(find lwr_description)/model/kuka_materials.xacro"
-	/>
+	<xacro:include filename="$(find lwr_description)/model/kuka_materials.xacro"/>
 
 	<!-- gazebo and transmission models /-->
 	<xacro:include filename="$(find lwr_description)/model/kuka_lwr.gazebo.xacro"/>

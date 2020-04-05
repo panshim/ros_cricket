@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   trajectory_msgs
   actionlib
   kdl_parser
+  tf
 )
 find_package(orocos_kdl REQUIRED)
 find_package(Boost REQUIRED)

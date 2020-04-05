@@ -8,9 +8,11 @@
 #include <boost/shared_ptr.hpp>
 // KDL
 #include <kdl_parser/kdl_parser.hpp>
+#include <kdl/chainiksolvervel_pinv.hpp>
+#include <kdl/chainfksolverpos_recursive.hpp>
+#include <kdl/chainiksolverpos_lma.hpp>
 #include <kdl/chainiksolverpos_nr.hpp>
-// #include <kdl/chainfksolverpos_recursive.hpp>
-// #include <kdl/chainiksolvervel_pinv.hpp>
+
 typedef actionlib::SimpleActionClient<control_msgs::FollowJointTrajectoryAction> lwr_action_client;
 typedef boost::shared_ptr<lwr_action_client>  lwr_action_client_Ptr;
 
@@ -21,10 +23,18 @@ class LwrCartesianCommand
         /* Subscriber & Publisher & Actionlib Client*/
         ros::Subscriber subCartCmd;
         ros::Publisher pubJntCmd;
+        trajectory_msgs::JointTrajectory contrCmd;
         lwr_action_client_Ptr jntClientPtr;
         /* KDL Inverse Kinematics */
-        KDL::ChainIkSolverPos* solvIk;
+        KDL::ChainFkSolverPos* solvFk;
         KDL::ChainIkSolverVel* solvIkVel;
+        KDL::ChainIkSolverPos* solvIk;
+        KDL::ChainIkSolverPos* solvIk2;
+        KDL::Tree tree;
+        KDL::Chain chain;
+        std::string robot_description_string;
+        KDL::JntArray jointArrNrOut;
+        KDL::JntArray jointArrInit;
         /* Cartesian & JointSpace Command */
         geometry_msgs::Pose poseCmd;
         control_msgs::FollowJointTrajectoryGoal goalCmd;
@@ -32,7 +42,7 @@ class LwrCartesianCommand
     public:
         LwrCartesianCommand(ros::NodeHandle& nh);
         ~LwrCartesianCommand();
-        void callback_cartesian(const geometry_msgs::Pose poseCmd);
+        void callback_cartesian(geometry_msgs::Pose poseCmd);
         void publish_jointspace(const trajectory_msgs::JointTrajectory jntCmd);
         void action_joint_request();
 

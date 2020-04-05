@@ -36,7 +36,8 @@
                 "/usr/include/**",
                 "${workspaceFolder}/src/kuka_interface-master/kuka_interface_pkg/include",
                 "${workspaceFolder}/src/cricket_lwr_interface/include",
-                "${workspaceFolder}/src/kuka-lwr/lwr_controllers/include"
+                "${workspaceFolder}/src/kuka-lwr/lwr_controllers/include",
+                "${workspaceFolder}/src/kuka-lwr/lwr_hw/include"
             ],
             "name": "ROS",
             "compilerPath": "/usr/bin/gcc"

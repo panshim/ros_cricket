@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/shimin/ROS_Prgm_Prj/devel/include/**",
+                "/home/shimin/en530_707_catkin_ws/devel/include/**",
+                "/opt/ros/kinetic/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment1/assignment1_msgs/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment1/assignment1_srvcli/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment1/assignment1_subpub/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment2/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment3/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment7/include/**",
+                "/home/shimin/ROS_Prgm_Prj/src/cricket_lwr_interface/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment5/edumip_balance_ros_gazebo_plugin/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment5/edumip_description/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment5/edumip_gazebo/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment5/edumip_utdoa_plugin/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment4/gripper_description/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment8/iiwa_stack/iiwa_hw/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment8/iiwa_stack/iiwa_ros/include/**",
+                "/home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg/include/**",
+                "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/**",
+                "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment4/robot_description/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment4/robot_gripper/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "compilerPath": "/usr/bin/gcc"
+        }
+    ],
+    "version": 4
+}
