@@ -1,0 +1,1 @@
+/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_ez_publisher/lib/pkgconfig/rqt_ez_publisher.pc

@@ -1,0 +1,8 @@
+prefix=/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_ez_publisher
+
+Name: rqt_ez_publisher
+Description: Description of rqt_ez_publisher
+Version: 0.5.0
+Cflags: 
+Libs: -L/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_ez_publisher/lib 
+Requires: 

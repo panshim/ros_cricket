@@ -1,0 +1,16 @@
+Could not create symlink `/home/liu/RSP-Proj/devel/./local_setup.zsh` referencing `/home/liu/RSP-Proj/devel/.private/catkin_tools_prebuild/local_setup.zsh`
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/catkin_tools/execution/stages.py", line 174, in function_proxy
+    return function(logger, event_queue, *args, **kwargs)
+  File "/usr/lib/python2.7/dist-packages/catkin_tools/jobs/catkin.py", line 308, in link_devel_products
+    os.symlink(source_file, dest_file)
+OSError: [Errno 17] File exists
+
+Stage `symlink` failed with arguments:
+  package: {'buildtool_export_depends': [], 'test_depends': [], 'exec_depends': [], 'build_depends': [], 'licenses': ['BSD'], 'group_depends': [], 'doc_depends': [], 'filename': '/home/liu/RSP-Proj/build/catkin_tools_prebuild/package.xml', 'version': '0.0.0', 'package_format': 1, 'exports': [], 'description': u'This package is used to generate catkin setup files.', 'build_export_depends': [], 'maintainers': [<catkin_pkg.package.Person object at 0x7f7db35909d0>], 'member_of_groups': [], 'authors': [], 'conflicts': [], 'buildtool_depends': [Dependency(name='catkin')], 'version_compatibility': None, 'replaces': [], 'name': 'catkin_tools_prebuild', 'urls': []}
+  metadata_path: /home/liu/RSP-Proj/.catkin_tools/profiles/default
+  devel_manifest_path: /home/liu/RSP-Proj/.catkin_tools/profiles/default/packages/catkin_tools_prebuild
+  prebuild: True
+  package_path: /home/liu/RSP-Proj/build/catkin_tools_prebuild
+  dest_devel_path: /home/liu/RSP-Proj/devel
+  source_devel_path: /home/liu/RSP-Proj/devel/.private/catkin_tools_prebuild

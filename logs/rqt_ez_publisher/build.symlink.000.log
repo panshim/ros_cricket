@@ -1,0 +1,4 @@
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/lib/python2.7/dist-packages/rqt_ez_publisher/__init__.py
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/lib/pkgconfig/rqt_ez_publisher.pc
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/share/rqt_ez_publisher/cmake/rqt_ez_publisherConfig-version.cmake
+Symlinking /home/shimin/ROS_Prgm_Prj/devel/share/rqt_ez_publisher/cmake/rqt_ez_publisherConfig.cmake

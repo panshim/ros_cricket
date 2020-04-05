@@ -1,0 +1,6 @@
+devel_space: /home/liu/RSP-Proj/devel
+install: false
+install_space: /home/liu/RSP-Proj/install
+profile: default
+source_space: /home/liu/RSP-Proj/src
+workspace: /home/liu/RSP-Proj
