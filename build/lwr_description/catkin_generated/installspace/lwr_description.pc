@@ -1,8 +1,0 @@
-prefix=/home/shimin/ROS_Prgm_Prj/install
-
-Name: lwr_description
-Description: Description of lwr_description
-Version: 1.0.0
-Cflags: 
-Libs: -L/home/shimin/ROS_Prgm_Prj/install/lib 
-Requires: 

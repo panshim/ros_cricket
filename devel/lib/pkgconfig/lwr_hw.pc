@@ -1,1 +1,0 @@
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/pkgconfig/lwr_hw.pc

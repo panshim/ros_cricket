@@ -1,6 +1,0 @@
-devel_space: /home/shimin/ROS_Prgm_Prj/devel
-install: false
-install_space: /home/shimin/ROS_Prgm_Prj/install
-profile: default
-source_space: /home/shimin/ROS_Prgm_Prj/src
-workspace: /home/shimin/ROS_Prgm_Prj

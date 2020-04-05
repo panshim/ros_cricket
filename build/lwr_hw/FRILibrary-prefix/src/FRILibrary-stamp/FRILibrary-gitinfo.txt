@@ -1,3 +1,0 @@
-repository='https://github.com/iocroblab/fril.git'
-module=''
-tag=''

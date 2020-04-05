@@ -1,8 +1,0 @@
-prefix=/home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_launch
-
-Name: single_lwr_launch
-Description: Description of single_lwr_launch
-Version: 0.1.0
-Cflags: 
-Libs: -L/home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_launch/lib 
-Requires: 

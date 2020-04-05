@@ -1,8 +1,0 @@
-prefix=/home/shimin/ROS_Prgm_Prj/install
-
-Name: single_lwr_robot
-Description: Description of single_lwr_robot
-Version: 0.1.0
-Cflags: 
-Libs: -L/home/shimin/ROS_Prgm_Prj/install/lib 
-Requires: 
