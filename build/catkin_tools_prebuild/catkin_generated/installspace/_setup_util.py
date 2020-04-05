@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/python2
+=======
+#!/usr/bin/python
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 # -*- coding: utf-8 -*-
 
 # Software License Agreement (BSD License)
@@ -270,7 +274,11 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
+<<<<<<< HEAD
             CMAKE_PREFIX_PATH = '/opt/ros/kinetic'.split(';')
+=======
+            CMAKE_PREFIX_PATH = '/home/shimin/en530_707_catkin_ws/devel;/home/shimin/catkin_ws/devel;/opt/ros/kinetic'.split(';')
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

@@ -1,0 +1,13 @@
+<launch>
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find ball_throwing)/world/ball.world"/>
+	</include>
+
+	<node pkg="ball_throwing"
+		  	  type="ball_node"
+		  	  name="throw_the_ball">
+	</node>
+
+</launch>
+

@@ -208,8 +208,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "catkin_generated/stamps/catkin_tools_prebuild/package.xml.stamp"
   "catkin_generated/pkg.develspace.context.pc.py"
   "catkin_generated/stamps/catkin_tools_prebuild/pkg.pc.em.stamp"
+<<<<<<< HEAD
   "/home/liu/RSP-Proj/devel/.private/catkin_tools_prebuild/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake"
   "/home/liu/RSP-Proj/devel/.private/catkin_tools_prebuild/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake"
+=======
+  "/home/shimin/ROS_Prgm_Prj/devel/.private/catkin_tools_prebuild/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake"
+  "/home/shimin/ROS_Prgm_Prj/devel/.private/catkin_tools_prebuild/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake"
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
   "catkin_generated/pkg.installspace.context.pc.py"
   "catkin_generated/stamps/catkin_tools_prebuild/pkg.pc.em.stamp"
   "catkin_generated/installspace/catkin_tools_prebuildConfig.cmake"

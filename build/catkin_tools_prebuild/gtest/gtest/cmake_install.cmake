@@ -2,7 +2,11 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+<<<<<<< HEAD
   set(CMAKE_INSTALL_PREFIX "/home/liu/RSP-Proj/install")
+=======
+  set(CMAKE_INSTALL_PREFIX "/home/shimin/ROS_Prgm_Prj/install")
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -1,0 +1,8 @@
+prefix=/home/shimin/ROS_Prgm_Prj/install
+
+Name: lwr_controllers
+Description: Description of lwr_controllers
+Version: 0.1.0
+Cflags: -I/home/shimin/ROS_Prgm_Prj/install/include
+Libs: -L/home/shimin/ROS_Prgm_Prj/install/lib -llwr_controllers
+Requires: controller_interface control_msgs geometry_msgs control_toolbox realtime_tools urdf forward_command_controller kdl_parser message_runtime lwr_hw

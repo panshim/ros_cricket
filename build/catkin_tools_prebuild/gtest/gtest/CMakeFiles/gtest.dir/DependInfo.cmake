@@ -4,7 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+<<<<<<< HEAD
   "/usr/src/gtest/src/gtest-all.cc" "/home/liu/RSP-Proj/build/catkin_tools_prebuild/gtest/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+=======
+  "/usr/src/gtest/src/gtest-all.cc" "/home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

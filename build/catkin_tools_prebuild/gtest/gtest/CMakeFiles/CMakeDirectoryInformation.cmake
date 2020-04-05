@@ -3,7 +3,11 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/usr/src/gtest")
+<<<<<<< HEAD
 set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/liu/RSP-Proj/build/catkin_tools_prebuild")
+=======
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild")
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

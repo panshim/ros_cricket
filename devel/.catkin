@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /home/liu/RSP-Proj/src/ball_throwing;/home/liu/RSP-Proj/src/kuka_interface-master/kuka_interface_pkg;/home/liu/RSP-Proj/src/kuka-lwr-master/lwr_description;/home/liu/RSP-Proj/src/kuka-lwr-master/lwr_hw;/home/liu/RSP-Proj/src/kuka-lwr-master/lwr_controllers;/home/liu/RSP-Proj/src/rqt_ez_publisher-kinetic-devel;/home/liu/RSP-Proj/src/kuka-lwr-master/single_lwr_example/single_lwr_launch;/home/liu/RSP-Proj/src/kuka-lwr-master/single_lwr_example/single_lwr_robot;/home/liu/RSP-Proj/src/kuka-lwr-master/single_lwr_example/single_lwr_moveit
+=======
+/home/shimin/ROS_Prgm_Prj/src/kuka_interface-master/kuka_interface_pkg;/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_description;/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw;/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers;/home/shimin/ROS_Prgm_Prj/src/rqt_ez_publisher-kinetic-devel;/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_launch;/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_robot;/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/single_lwr_example/single_lwr_moveit
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d

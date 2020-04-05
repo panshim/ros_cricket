@@ -4,5 +4,9 @@ Name: @(CATKIN_PACKAGE_PREFIX + PROJECT_NAME)
 Description: Description of @PROJECT_NAME
 Version: @PROJECT_VERSION
 Cflags: @(' '.join(['-I%s' % include for include in PROJECT_PKG_CONFIG_INCLUDE_DIRS]))
+<<<<<<< HEAD
 Libs: -L${prefix}/lib @(' '.join(PKG_CONFIG_LIBRARIES_WITH_PREFIX))
+=======
+Libs: -L@PROJECT_SPACE_DIR/lib @(' '.join(PKG_CONFIG_LIBRARIES_WITH_PREFIX))
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 Requires: @(PROJECT_CATKIN_DEPENDS)

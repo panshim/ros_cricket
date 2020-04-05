@@ -1,0 +1,1 @@
+cmd='cmake;-DCMAKE_INSTALL_PREFIX=/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw'

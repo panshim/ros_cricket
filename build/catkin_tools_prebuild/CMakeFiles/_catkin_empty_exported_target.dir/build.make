@@ -43,10 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/liu/RSP-Proj/build/catkin_tools_prebuild
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/liu/RSP-Proj/build/catkin_tools_prebuild
+=======
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -67,6 +74,10 @@ CMakeFiles/_catkin_empty_exported_target.dir/clean:
 .PHONY : CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 CMakeFiles/_catkin_empty_exported_target.dir/depend:
+<<<<<<< HEAD
 	cd /home/liu/RSP-Proj/build/catkin_tools_prebuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/liu/RSP-Proj/build/catkin_tools_prebuild /home/liu/RSP-Proj/build/catkin_tools_prebuild /home/liu/RSP-Proj/build/catkin_tools_prebuild /home/liu/RSP-Proj/build/catkin_tools_prebuild /home/liu/RSP-Proj/build/catkin_tools_prebuild/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 .PHONY : CMakeFiles/_catkin_empty_exported_target.dir/depend
 

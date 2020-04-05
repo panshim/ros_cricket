@@ -67,14 +67,23 @@ set(catkin_tools_prebuild_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
+<<<<<<< HEAD
   set(catkin_tools_prebuild_SOURCE_PREFIX /home/liu/RSP-Proj/build/catkin_tools_prebuild)
   set(catkin_tools_prebuild_DEVEL_PREFIX /home/liu/RSP-Proj/devel/.private/catkin_tools_prebuild)
+=======
+  set(catkin_tools_prebuild_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild)
+  set(catkin_tools_prebuild_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/catkin_tools_prebuild)
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
   set(catkin_tools_prebuild_INSTALL_PREFIX "")
   set(catkin_tools_prebuild_PREFIX ${catkin_tools_prebuild_DEVEL_PREFIX})
 else()
   set(catkin_tools_prebuild_SOURCE_PREFIX "")
   set(catkin_tools_prebuild_DEVEL_PREFIX "")
+<<<<<<< HEAD
   set(catkin_tools_prebuild_INSTALL_PREFIX /home/liu/RSP-Proj/install)
+=======
+  set(catkin_tools_prebuild_INSTALL_PREFIX /home/shimin/ROS_Prgm_Prj/install)
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
   set(catkin_tools_prebuild_PREFIX ${catkin_tools_prebuild_INSTALL_PREFIX})
 endif()
 
@@ -110,7 +119,11 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'catkin_tools_prebuild' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
+<<<<<<< HEAD
       message(FATAL_ERROR "Project 'catkin_tools_prebuild' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '\${prefix}/${idir}'.  ${_report}")
+=======
+      message(FATAL_ERROR "Project 'catkin_tools_prebuild' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/shimin/ROS_Prgm_Prj/install/${idir}'.  ${_report}")
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
     endif()
     _list_append_unique(catkin_tools_prebuild_INCLUDE_DIRS ${include})
   endforeach()
@@ -123,6 +136,7 @@ foreach(library ${libraries})
     list(APPEND catkin_tools_prebuild_LIBRARIES ${library})
   elseif(${library} MATCHES "^-l")
     list(APPEND catkin_tools_prebuild_LIBRARIES ${library})
+<<<<<<< HEAD
   elseif(${library} MATCHES "^-")
     # This is a linker flag/option (like -pthread)
     # There's no standard variable for these, so create an interface library to hold it
@@ -146,6 +160,8 @@ foreach(library ${libraries})
       target_link_options("${interface_target_name}" INTERFACE "${library}")
     endif()
     list(APPEND catkin_tools_prebuild_LIBRARIES "${interface_target_name}")
+=======
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
   elseif(TARGET ${library})
     list(APPEND catkin_tools_prebuild_LIBRARIES ${library})
   elseif(IS_ABSOLUTE ${library})
@@ -154,7 +170,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
     foreach(path /home/liu/RSP-Proj/install/lib;/opt/ros/kinetic/lib)
+=======
+    foreach(path /home/shimin/ROS_Prgm_Prj/install/lib;/home/shimin/en530_707_catkin_ws/devel/lib;/home/shimin/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

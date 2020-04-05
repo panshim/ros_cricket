@@ -43,10 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/liu/RSP-Proj/build/catkin_tools_prebuild
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/liu/RSP-Proj/build/catkin_tools_prebuild
+=======
+CMAKE_SOURCE_DIR = /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 
 # Include any dependencies generated for this target.
 include gtest/CMakeFiles/gmock.dir/depend.make
@@ -59,6 +66,7 @@ include gtest/CMakeFiles/gmock.dir/flags.make
 
 gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o: gtest/CMakeFiles/gmock.dir/flags.make
 gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o: /usr/src/gtest/src/gtest-all.cc
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liu/RSP-Proj/build/catkin_tools_prebuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o"
 	cd /home/liu/RSP-Proj/build/catkin_tools_prebuild/gtest && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o -c /usr/src/gtest/src/gtest-all.cc
 
@@ -69,6 +77,18 @@ gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.i: cmake_force
 gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.s"
 	cd /home/liu/RSP-Proj/build/catkin_tools_prebuild/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/gtest/src/gtest-all.cc -o CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o"
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o -c /usr/src/gtest/src/gtest-all.cc
+
+gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.i"
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/src/gtest/src/gtest-all.cc > CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.i
+
+gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.s"
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/gtest/src/gtest-all.cc -o CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.s
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 
 gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o.requires:
 
@@ -83,6 +103,7 @@ gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o.provides.build: gtes
 
 gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.o: gtest/CMakeFiles/gmock.dir/flags.make
 gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.o: /usr/src/gmock/src/gmock-all.cc
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liu/RSP-Proj/build/catkin_tools_prebuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
 	cd /home/liu/RSP-Proj/build/catkin_tools_prebuild/gtest && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /usr/src/gmock/src/gmock-all.cc
 
@@ -93,6 +114,18 @@ gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.i: cmake_force
 gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/src/gmock-all.cc.s"
 	cd /home/liu/RSP-Proj/build/catkin_tools_prebuild/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/gmock/src/gmock-all.cc -o CMakeFiles/gmock.dir/src/gmock-all.cc.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /usr/src/gmock/src/gmock-all.cc
+
+gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock.dir/src/gmock-all.cc.i"
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/src/gmock/src/gmock-all.cc > CMakeFiles/gmock.dir/src/gmock-all.cc.i
+
+gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/src/gmock-all.cc.s"
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/gmock/src/gmock-all.cc -o CMakeFiles/gmock.dir/src/gmock-all.cc.s
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 
 gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.o.requires:
 
@@ -117,8 +150,13 @@ gtest/libgmock.so: gtest/CMakeFiles/gmock.dir/usr/src/gtest/src/gtest-all.cc.o
 gtest/libgmock.so: gtest/CMakeFiles/gmock.dir/src/gmock-all.cc.o
 gtest/libgmock.so: gtest/CMakeFiles/gmock.dir/build.make
 gtest/libgmock.so: gtest/CMakeFiles/gmock.dir/link.txt
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liu/RSP-Proj/build/catkin_tools_prebuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libgmock.so"
 	cd /home/liu/RSP-Proj/build/catkin_tools_prebuild/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=$(VERBOSE)
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libgmock.so"
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=$(VERBOSE)
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 
 # Rule to build all files generated by this target.
 gtest/CMakeFiles/gmock.dir/build: gtest/libgmock.so
@@ -131,10 +169,18 @@ gtest/CMakeFiles/gmock.dir/requires: gtest/CMakeFiles/gmock.dir/src/gmock-all.cc
 .PHONY : gtest/CMakeFiles/gmock.dir/requires
 
 gtest/CMakeFiles/gmock.dir/clean:
+<<<<<<< HEAD
 	cd /home/liu/RSP-Proj/build/catkin_tools_prebuild/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean.cmake
 .PHONY : gtest/CMakeFiles/gmock.dir/clean
 
 gtest/CMakeFiles/gmock.dir/depend:
 	cd /home/liu/RSP-Proj/build/catkin_tools_prebuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/liu/RSP-Proj/build/catkin_tools_prebuild /usr/src/gmock /home/liu/RSP-Proj/build/catkin_tools_prebuild /home/liu/RSP-Proj/build/catkin_tools_prebuild/gtest /home/liu/RSP-Proj/build/catkin_tools_prebuild/gtest/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean.cmake
+.PHONY : gtest/CMakeFiles/gmock.dir/clean
+
+gtest/CMakeFiles/gmock.dir/depend:
+	cd /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild /usr/src/gmock /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/gtest/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 .PHONY : gtest/CMakeFiles/gmock.dir/depend
 
