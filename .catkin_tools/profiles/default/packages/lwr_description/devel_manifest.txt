@@ -1,5 +1,0 @@
-kuka-lwr-master/lwr_description
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_description/cmake.lock /home/shimin/ROS_Prgm_Prj/devel/./cmake.lock
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_description/lib/pkgconfig/lwr_description.pc /home/shimin/ROS_Prgm_Prj/devel/lib/pkgconfig/lwr_description.pc
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_description/share/lwr_description/cmake/lwr_descriptionConfig.cmake /home/shimin/ROS_Prgm_Prj/devel/share/lwr_description/cmake/lwr_descriptionConfig.cmake
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_description/share/lwr_description/cmake/lwr_descriptionConfig-version.cmake /home/shimin/ROS_Prgm_Prj/devel/share/lwr_description/cmake/lwr_descriptionConfig-version.cmake
