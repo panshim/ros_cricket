@@ -1,6 +1,0 @@
-[33m[1mCMake Warning[0m at /home/charlierkj/530_707_independent_project/src/kuka-lwr-master/lwr_hw/CMakeLists.txt:85 (message):
-  ATTENTION: This project supports the fork of the Standford library found in
-  https://github.com/iocroblab/fril, and install the libraries in your catkin
-  workspace, not in the system
-
-
