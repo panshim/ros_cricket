@@ -1,1 +1,0 @@
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/share/roseus/ros/lwr_controllers/msg/PoseRPY.l

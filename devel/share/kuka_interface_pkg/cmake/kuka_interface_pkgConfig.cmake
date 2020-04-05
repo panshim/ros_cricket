@@ -1,1 +1,0 @@
-/home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg/share/kuka_interface_pkg/cmake/kuka_interface_pkgConfig.cmake

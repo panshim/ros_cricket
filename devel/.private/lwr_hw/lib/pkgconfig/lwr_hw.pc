@@ -1,8 +1,0 @@
-prefix=/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw
-
-Name: lwr_hw
-Description: Description of lwr_hw
-Version: 1.0.0
-Cflags: -I/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include
-Libs: -L/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib -llwr_hw -llwr_hw_gazebo_plugin -lfriremote
-Requires: control_toolbox controller_interface controller_manager hardware_interface realtime_tools joint_limits_interface roscpp tf urdf cmake_modules pluginlib kdl_parser transmission_interface gazebo_ros std_msgs

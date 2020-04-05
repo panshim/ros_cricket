@@ -1,1 +1,0 @@
-/home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_robot/lib/pkgconfig/single_lwr_robot.pc
