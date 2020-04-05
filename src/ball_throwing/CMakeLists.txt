@@ -9,8 +9,9 @@ project(ball_throwing)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  std_msgs
+  roslib
   gazebo_msgs
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -105,7 +106,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ball_throwing
-#  CATKIN_DEPENDS roscpp std_msgs
+   CATKIN_DEPENDS roscpp roslib gazebo_msgs geometry_msgs
 #  DEPENDS system_lib
 )
 

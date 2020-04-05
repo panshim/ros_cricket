@@ -1,18 +1,18 @@
-[35m[1mScanning dependencies of target FRILibrary[0m
 [35m[1mScanning dependencies of target friremote[0m
-[35m[1mScanning dependencies of target lwr_hw[0m
-[  5%] [34m[1mCreating directories for 'FRILibrary'[0m
+[  5%] [32mBuilding CXX object CMakeFiles/friremote.dir/src/fri/friremote.cpp.o[0m
 [ 10%] [32mBuilding CXX object CMakeFiles/friremote.dir/src/fri/friudp.cpp.o[0m
-[ 15%] [32mBuilding CXX object CMakeFiles/friremote.dir/src/fri/friremote.cpp.o[0m
-[ 21%] [32mBuilding CXX object CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.o[0m
-[ 26%] [34m[1mPerforming download step (git clone) for 'FRILibrary'[0m
-正克隆到 'FRILibrary'...
-[01m[K/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friudp.cpp:[m[K In member function ‘[01m[Kint friUdp::Recv(tFriMsrData*)[m[K’:
-[01m[K/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/src/fri/friudp.cpp:185:108:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Klong unsigned int[m[K’ [-Wformat=]
+[35m[1mScanning dependencies of target lwr_hw[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/lwr_hw.dir/src/lwr_hw.cpp.o[0m
+[01m[K/home/charlierkj/530_707_independent_project/src/kuka-lwr-master/lwr_hw/src/fri/friudp.cpp:[m[K In member function ‘[01m[Kint friUdp::Recv(tFriMsrData*)[m[K’:
+[01m[K/home/charlierkj/530_707_independent_project/src/kuka-lwr-master/lwr_hw/src/fri/friudp.cpp:185:108:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 3 has type ‘[01m[Klong unsigned int[m[K’ [-Wformat=]
              printf("received something, but wrong size %d (expected %d)...\n",received, sizeof(tFriMsrData));
 [01;32m[K                                                                                                            ^[m[K
-[ 31%] [32m[1mLinking CXX shared library /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/libfriremote.so[0m
-[ 31%] Built target friremote
+[ 21%] [32m[1mLinking CXX shared library /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/lib/libfriremote.so[0m
+[ 21%] Built target friremote
+[35m[1mScanning dependencies of target FRILibrary[0m
+[ 26%] [34m[1mCreating directories for 'FRILibrary'[0m
+[ 31%] [34m[1mPerforming download step (git clone) for 'FRILibrary'[0m
+Cloning into 'FRILibrary'...
 Note: checking out 'a10695fad32ba8315817c42020e2dbc66f4505dd'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
@@ -24,7 +24,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 
   git checkout -b <new-branch-name>
 
-HEAD 目前位于 a10695f... Imported version 1.2, December 2014
+HEAD is now at a10695f... Imported version 1.2, December 2014
 [ 36%] [34m[1mNo patch step for 'FRILibrary'[0m
 [ 42%] [34m[1mPerforming update step for 'FRILibrary'[0m
 [ 47%] [34m[1mPerforming configure step for 'FRILibrary'[0m
@@ -54,7 +54,7 @@ HEAD 目前位于 a10695f... Imported version 1.2, December 2014
 -- Detected a Linux Platform
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary
+-- Build files have been written to: /home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary
 [ 52%] [34m[1mPerforming build step for 'FRILibrary'[0m
 make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 [35m[1mScanning dependencies of target fril_irml_dynamic[0m
@@ -69,11 +69,11 @@ make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule
 [ 11%] [32mBuilding CXX object CMakeFiles/fril_dynamic.dir/src/FastResearchInterfaceLibrary/Console.cpp.o[0m
 [ 12%] [32mBuilding CXX object CMakeFiles/fril_dynamic.dir/src/FastResearchInterfaceLibrary/DataLogging.cpp.o[0m
 [ 14%] [32mBuilding CXX object CMakeFiles/fril_dynamic.dir/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp.o[0m
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:[m[K In constructor ‘[01m[KFastResearchInterface::FastResearchInterface(const char*)[m[K’:
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:243:58:[m[K [01;35m[Kwarning: [m[Kembedded ‘[01m[K\0[m[K’ in format [-Wformat-contains-nul]
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:[m[K In constructor ‘[01m[KFastResearchInterface::FastResearchInterface(const char*)[m[K’:
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:243:58:[m[K [01;35m[Kwarning: [m[Kembedded ‘[01m[K\0[m[K’ in format [-Wformat-contains-nul]
    sprintf(this->LoggingPath, ".%s\0", OS_FOLDER_SEPARATOR);
 [01;32m[K                                                          ^[m[K
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:248:45:[m[K [01;35m[Kwarning: [m[Kembedded ‘[01m[K\0[m[K’ in format [-Wformat-contains-nul]
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:248:45:[m[K [01;35m[Kwarning: [m[Kembedded ‘[01m[K\0[m[K’ in format [-Wformat-contains-nul]
    sprintf(this->LoggingFileName, "FRI.dat\0");
 [01;32m[K                                             ^[m[K
 [ 16%] [32mBuilding CXX object CMakeFiles/fril_dynamic.dir/src/FastResearchInterfaceLibrary/GetCompleteRobotStateAndInformation.cpp.o[0m
@@ -91,8 +91,8 @@ make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule
 [ 35%] [32mBuilding CXX object CMakeFiles/fril_dynamic.dir/src/FastResearchInterfaceLibrary/StopRobot.cpp.o[0m
 [ 37%] [32mBuilding CXX object CMakeFiles/fril_dynamic.dir/src/FastResearchInterfaceLibrary/TimerThreadMain.cpp.o[0m
 [ 38%] [32mBuilding CXX object CMakeFiles/fril_dynamic.dir/src/FastResearchInterfaceLibrary/UDPSocket.cpp.o[0m
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/UDPSocket.cpp:[m[K In member function ‘[01m[Kint UDPSocket::ReceiveFRIDataFromKRC(FRIDataReceivedFromKRC*) const[m[K’:
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/UDPSocket.cpp:160:124:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 4 has type ‘[01m[Klong unsigned int[m[K’ [-Wformat=]
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/UDPSocket.cpp:[m[K In member function ‘[01m[Kint UDPSocket::ReceiveFRIDataFromKRC(FRIDataReceivedFromKRC*) const[m[K’:
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/UDPSocket.cpp:160:124:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 4 has type ‘[01m[Klong unsigned int[m[K’ [-Wformat=]
     fprintf(stderr, "ERROR: Data size incorrect (received: %d, expected %d)\n", DataReceived, sizeof(FRIDataReceivedFromKRC));
 [01;32m[K                                                                                                                            ^[m[K
 [ 40%] [32mBuilding CXX object CMakeFiles/fril_dynamic.dir/src/FastResearchInterfaceLibrary/WaitForTicks.cpp.o[0m
@@ -104,20 +104,22 @@ make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule
 [ 46%] [32mBuilding CXX object CMakeFiles/fril_test_dynamic.dir/src/FastResearchInterfaceTest/MoveToCandle.cpp.o[0m
 [ 48%] [32mBuilding CXX object CMakeFiles/fril_test_dynamic.dir/src/FastResearchInterfaceTest/RunTrajectorySimple.cpp.o[0m
 [ 50%] [32m[1mLinking CXX static library libfril_test_dynamic.a[0m
+[ 57%] [32m[1mLinking CXX shared library /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/lib/liblwr_hw.so[0m
 [ 50%] Built target fril_test_dynamic
 [35m[1mScanning dependencies of target LWRCartImpedanceControlExample[0m
 [ 51%] [32mBuilding CXX object CMakeFiles/LWRCartImpedanceControlExample.dir/src/LWRGettingStartedExamples/LWRCartImpedanceControlExample.cpp.o[0m
 [ 53%] [32m[1mLinking CXX executable LWRCartImpedanceControlExample[0m
+[ 57%] Built target lwr_hw
 [ 53%] Built target LWRCartImpedanceControlExample
 [35m[1mScanning dependencies of target fril_static[0m
 [ 54%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/Console.cpp.o[0m
 [ 56%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/DataLogging.cpp.o[0m
 [ 58%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp.o[0m
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:[m[K In constructor ‘[01m[KFastResearchInterface::FastResearchInterface(const char*)[m[K’:
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:243:58:[m[K [01;35m[Kwarning: [m[Kembedded ‘[01m[K\0[m[K’ in format [-Wformat-contains-nul]
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:[m[K In constructor ‘[01m[KFastResearchInterface::FastResearchInterface(const char*)[m[K’:
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:243:58:[m[K [01;35m[Kwarning: [m[Kembedded ‘[01m[K\0[m[K’ in format [-Wformat-contains-nul]
    sprintf(this->LoggingPath, ".%s\0", OS_FOLDER_SEPARATOR);
 [01;32m[K                                                          ^[m[K
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:248:45:[m[K [01;35m[Kwarning: [m[Kembedded ‘[01m[K\0[m[K’ in format [-Wformat-contains-nul]
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/FastResearchInterface.cpp:248:45:[m[K [01;35m[Kwarning: [m[Kembedded ‘[01m[K\0[m[K’ in format [-Wformat-contains-nul]
    sprintf(this->LoggingFileName, "FRI.dat\0");
 [01;32m[K                                             ^[m[K
 [ 59%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/GetCompleteRobotStateAndInformation.cpp.o[0m
@@ -126,23 +128,19 @@ make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule
 [ 64%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/GetUDPCommunicationData.cpp.o[0m
 [ 66%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/InitializationFileEntry.cpp.o[0m
 [ 67%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/KRCCommunicationThreadMain.cpp.o[0m
-[ 57%] [32m[1mLinking CXX shared library /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/liblwr_hw.so[0m
 [ 69%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/LoggingMethods.cpp.o[0m
 [ 70%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/ReadInitFile.cpp.o[0m
 [ 72%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/SetControlScheme.cpp.o[0m
 [ 74%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/SetRobotControlData.cpp.o[0m
-[ 57%] Built target lwr_hw
-[35m[1mScanning dependencies of target lwr_hw_gazebo_plugin[0m
-[35m[1mScanning dependencies of target lwr_hw_fri_node[0m
 [ 75%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/SetRobotStatusData.cpp.o[0m
-[ 63%] [32mBuilding CXX object CMakeFiles/lwr_hw_fri_node.dir/src/lwr_hw_fri_node.cpp.o[0m
 [ 77%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/StartRobot.cpp.o[0m
-[ 68%] [32mBuilding CXX object CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o[0m
 [ 79%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/StopRobot.cpp.o[0m
 [ 80%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/TimerThreadMain.cpp.o[0m
+[35m[1mScanning dependencies of target lwr_hw_fri_node[0m
 [ 82%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/UDPSocket.cpp.o[0m
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/UDPSocket.cpp:[m[K In member function ‘[01m[Kint UDPSocket::ReceiveFRIDataFromKRC(FRIDataReceivedFromKRC*) const[m[K’:
-[01m[K/home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/UDPSocket.cpp:160:124:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 4 has type ‘[01m[Klong unsigned int[m[K’ [-Wformat=]
+[ 63%] [32mBuilding CXX object CMakeFiles/lwr_hw_fri_node.dir/src/lwr_hw_fri_node.cpp.o[0m
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/UDPSocket.cpp:[m[K In member function ‘[01m[Kint UDPSocket::ReceiveFRIDataFromKRC(FRIDataReceivedFromKRC*) const[m[K’:
+[01m[K/home/charlierkj/530_707_independent_project/build/lwr_hw/FRILibrary-prefix/src/FRILibrary/src/FastResearchInterfaceLibrary/UDPSocket.cpp:160:124:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 4 has type ‘[01m[Klong unsigned int[m[K’ [-Wformat=]
     fprintf(stderr, "ERROR: Data size incorrect (received: %d, expected %d)\n", DataReceived, sizeof(FRIDataReceivedFromKRC));
 [01;32m[K                                                                                                                            ^[m[K
 [ 83%] [32mBuilding CXX object CMakeFiles/fril_static.dir/src/FastResearchInterfaceLibrary/WaitForTicks.cpp.o[0m
@@ -165,10 +163,12 @@ make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule
 [ 98%] [32mBuilding CXX object CMakeFiles/LWRLoggingExample.dir/src/LWRGettingStartedExamples/LWRLoggingExample.cpp.o[0m
 [100%] [32m[1mLinking CXX executable LWRLoggingExample[0m
 [100%] Built target LWRLoggingExample
-[ 73%] [34m[1mPerforming install step for 'FRILibrary'[0m
+[35m[1mScanning dependencies of target lwr_hw_gazebo_plugin[0m
+[ 68%] [34m[1mPerforming install step for 'FRILibrary'[0m
 make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 [  9%] Built target fril_irml_dynamic
 [ 43%] Built target fril_dynamic
+[ 73%] [32mBuilding CXX object CMakeFiles/lwr_hw_gazebo_plugin.dir/src/lwr_hw_gazebo_plugin.cpp.o[0m
 [ 50%] Built target fril_test_dynamic
 [ 53%] Built target LWRCartImpedanceControlExample
 [ 87%] Built target fril_static
@@ -178,41 +178,41 @@ make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule
 [100%] Built target LWRLoggingExample
 [36mInstall the project...[0m
 -- Install configuration: ""
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/libfril.a
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/libfril.so.1.2
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/libfril.so
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/Console.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/DataLogging.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/Doxygen.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/FastResearchInterface.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/FastResearchInterfaceTest.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/FRICommunication.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/InitializationFileEntry.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/LinuxAbstraction.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/LWRBaseControllerInterface.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/LWRCartImpedanceController.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/LWRJointImpedanceController.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/LWRJointPositionController.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/MACOSAbstraction.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/OSAbstraction.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/QNXAbstraction.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/TypeIRMLDecision.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/TypeIRML.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/TypeIRMLInputParameters.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/TypeIRMLMath.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/TypeIRMLOutputParameters.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/TypeIRMLPolynomial.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/TypeIRMLProfiles.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/TypeIRMLVector.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/UDPSocket.h
--- Installing: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/WindowsAbstraction.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/lib/libfril.a
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/lib/libfril.so.1.2
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/lib/libfril.so
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/Console.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/DataLogging.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/Doxygen.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/FastResearchInterface.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/FastResearchInterfaceTest.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/FRICommunication.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/InitializationFileEntry.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/LinuxAbstraction.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/LWRBaseControllerInterface.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/LWRCartImpedanceController.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/LWRJointImpedanceController.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/LWRJointPositionController.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/MACOSAbstraction.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/OSAbstraction.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/QNXAbstraction.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/TypeIRMLDecision.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/TypeIRML.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/TypeIRMLInputParameters.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/TypeIRMLMath.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/TypeIRMLOutputParameters.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/TypeIRMLPolynomial.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/TypeIRMLProfiles.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/TypeIRMLVector.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/UDPSocket.h
+-- Installing: /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/include/fril/WindowsAbstraction.h
 [ 78%] [34m[1mCompleted 'FRILibrary'[0m
 [ 78%] Built target FRILibrary
 [35m[1mScanning dependencies of target lwr_hw_fril_node[0m
 [ 84%] [32mBuilding CXX object CMakeFiles/lwr_hw_fril_node.dir/src/lwr_hw_fril_node.cpp.o[0m
-[ 89%] [32m[1mLinking CXX executable /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/lwr_hw/lwr_hw_fri_node[0m
+[ 89%] [32m[1mLinking CXX executable /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/lib/lwr_hw/lwr_hw_fri_node[0m
 [ 89%] Built target lwr_hw_fri_node
-[ 94%] [32m[1mLinking CXX executable /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/lwr_hw/lwr_hw_fril_node[0m
+[ 94%] [32m[1mLinking CXX executable /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/lib/lwr_hw/lwr_hw_fril_node[0m
 [ 94%] Built target lwr_hw_fril_node
-[100%] [32m[1mLinking CXX shared library /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/lib/liblwr_hw_gazebo_plugin.so[0m
+[100%] [32m[1mLinking CXX shared library /home/charlierkj/530_707_independent_project/devel/.private/lwr_hw/lib/liblwr_hw_gazebo_plugin.so[0m
 [100%] Built target lwr_hw_gazebo_plugin

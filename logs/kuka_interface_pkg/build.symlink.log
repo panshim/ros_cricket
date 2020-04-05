@@ -1,8 +1,8 @@
-Symlinking /home/jiawen/530_707_independent_project/devel/share/kuka_interface_pkg/cmake/kuka_interface_pkgConfig-version.cmake
-Symlinking /home/jiawen/530_707_independent_project/devel/share/kuka_interface_pkg/cmake/kuka_interface_pkgConfig.cmake
-Symlinking /home/jiawen/530_707_independent_project/devel/lib/kuka_interface_pkg/arms_manager_node
-Symlinking /home/jiawen/530_707_independent_project/devel/lib/kuka_interface_pkg/homing
-Symlinking /home/jiawen/530_707_independent_project/devel/lib/kuka_interface_pkg/single_lwr_homing
-Symlinking /home/jiawen/530_707_independent_project/devel/lib/kuka_interface_pkg/ee_manager_node
-Symlinking /home/jiawen/530_707_independent_project/devel/lib/kuka_interface_pkg/single_lwr_manager_node
-Symlinking /home/jiawen/530_707_independent_project/devel/lib/pkgconfig/kuka_interface_pkg.pc
+Symlinking /home/charlierkj/530_707_independent_project/devel/share/kuka_interface_pkg/cmake/kuka_interface_pkgConfig-version.cmake
+Symlinking /home/charlierkj/530_707_independent_project/devel/share/kuka_interface_pkg/cmake/kuka_interface_pkgConfig.cmake
+Symlinking /home/charlierkj/530_707_independent_project/devel/lib/pkgconfig/kuka_interface_pkg.pc
+Symlinking /home/charlierkj/530_707_independent_project/devel/lib/kuka_interface_pkg/ee_manager_node
+Symlinking /home/charlierkj/530_707_independent_project/devel/lib/kuka_interface_pkg/homing
+Symlinking /home/charlierkj/530_707_independent_project/devel/lib/kuka_interface_pkg/single_lwr_homing
+Symlinking /home/charlierkj/530_707_independent_project/devel/lib/kuka_interface_pkg/single_lwr_manager_node
+Symlinking /home/charlierkj/530_707_independent_project/devel/lib/kuka_interface_pkg/arms_manager_node
