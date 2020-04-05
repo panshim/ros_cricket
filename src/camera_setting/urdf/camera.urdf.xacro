@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="firefighter">
+
+<xacro:arg name="parent" default="world"/>
+
+<xacro:include filename="$(find camera_setting)/urdf/camera.xacro"/>
+
+<xacro:camera name="A" parent="$(arg parent)">
+	<origin xyz="10.0 10.0 10.0" rpy="0.0 0.0 0.0"/>
+</xacro:camera>
+
+<xacro:camera name="B" parent="$(arg parent)">
+	<origin xyz="-10.0 10.0 10.0" rpy="0.0 0.0 0.0"/>
+</xacro:camera>
+
+<xacro:camera name="C" parent="$(arg parent)">
+	<origin xyz="10.0 -10.0 10.0" rpy="0 0 0"/>
+</xacro:camera>
+
+<xacro:camera name="D" parent="$(arg parent)">
+	<origin xyz="-10.0 -10.0 10.0" rpy="0 0 0"/>
+</xacro:camera>
+
+</robot>

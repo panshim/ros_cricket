@@ -1,30 +1,114 @@
-[  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target _lwr_controllers_generate_messages_check_deps_ArmState
-[  0%] Built target _lwr_controllers_generate_messages_check_deps_Stiffness
-[  0%] Built target _lwr_controllers_generate_messages_check_deps_CartesianImpedancePoint
+[35m[1mScanning dependencies of target _lwr_controllers_generate_messages_check_deps_RPY[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target _lwr_controllers_generate_messages_check_deps_PoseRPY[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target _lwr_controllers_generate_messages_check_deps_Stiffness[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target _lwr_controllers_generate_messages_check_deps_CartesianImpedancePoint[0m
+[35m[1mScanning dependencies of target _lwr_controllers_generate_messages_check_deps_ArmState[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target _lwr_controllers_generate_messages_check_deps_MultiPriorityTask[0m
+[35m[1mScanning dependencies of target _lwr_controllers_generate_messages_check_deps_SetCartesianImpedanceCommand[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
 [  0%] Built target sensor_msgs_generate_messages_cpp
-[  0%] Built target _lwr_controllers_generate_messages_check_deps_PoseRPY
-[  0%] Built target std_msgs_generate_messages_cpp
 [  0%] Built target geometry_msgs_generate_messages_py
-[  0%] Built target _lwr_controllers_generate_messages_check_deps_SetCartesianImpedanceCommand
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_cpp
 [  0%] Built target std_msgs_generate_messages_py
-[  0%] Built target _lwr_controllers_generate_messages_check_deps_RPY
-[  0%] Built target _lwr_controllers_generate_messages_check_deps_MultiPriorityTask
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[  0%] Built target std_msgs_generate_messages_nodejs
 [  0%] Built target sensor_msgs_generate_messages_py
 [  0%] Built target geometry_msgs_generate_messages_nodejs
-[  0%] Built target std_msgs_generate_messages_nodejs
-[  0%] Built target sensor_msgs_generate_messages_nodejs
 [  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target _lwr_controllers_generate_messages_check_deps_CartesianImpedancePoint
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[  0%] Built target _lwr_controllers_generate_messages_check_deps_RPY
+[  0%] Built target _lwr_controllers_generate_messages_check_deps_PoseRPY
+[  0%] Built target _lwr_controllers_generate_messages_check_deps_Stiffness
+[  0%] Built target _lwr_controllers_generate_messages_check_deps_MultiPriorityTask
+[  0%] Built target _lwr_controllers_generate_messages_check_deps_SetCartesianImpedanceCommand
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[  0%] Built target _lwr_controllers_generate_messages_check_deps_ArmState
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
 [  0%] Built target std_msgs_generate_messages_lisp
-[  0%] Built target geometry_msgs_generate_messages_lisp
 [  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_lisp
 [  0%] Built target geometry_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target lwr_controllers_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target lwr_controllers_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target lwr_controllers_generate_messages_lisp[0m
 [  0%] Built target std_msgs_generate_messages_eus
-[ 12%] Built target lwr_controllers_generate_messages_cpp
-[ 29%] Built target lwr_controllers_generate_messages_py
-[ 42%] Built target lwr_controllers_generate_messages_nodejs
-[ 55%] Built target lwr_controllers_generate_messages_lisp
-[ 55%] Built target lwr_controllers_gencpp
-[ 70%] Built target lwr_controllers_generate_messages_eus
-[ 70%] Built target lwr_controllers_generate_messages
+[35m[1mScanning dependencies of target lwr_controllers_generate_messages_py[0m
+[  1%] [34m[1mGenerating Javascript code from lwr_controllers/Stiffness.msg[0m
+[  3%] [34m[1mGenerating C++ code from lwr_controllers/Stiffness.msg[0m
+[  5%] [34m[1mGenerating C++ code from lwr_controllers/CartesianImpedancePoint.msg[0m
+[ 11%] [34m[1mGenerating C++ code from lwr_controllers/RPY.msg[0m
+[ 11%] [34m[1mGenerating C++ code from lwr_controllers/ArmState.msg[0m
+[ 12%] [34m[1mGenerating C++ code from lwr_controllers/MultiPriorityTask.msg[0m
+[ 12%] [34m[1mGenerating Javascript code from lwr_controllers/CartesianImpedancePoint.msg[0m
+[ 14%] [34m[1mGenerating Javascript code from lwr_controllers/ArmState.msg[0m
+[ 16%] [34m[1mGenerating Javascript code from lwr_controllers/MultiPriorityTask.msg[0m
+[ 18%] [34m[1mGenerating Javascript code from lwr_controllers/RPY.msg[0m
+[ 20%] [34m[1mGenerating Lisp code from lwr_controllers/Stiffness.msg[0m
+[ 22%] [34m[1mGenerating Python from MSG lwr_controllers/Stiffness[0m
+[ 24%] [34m[1mGenerating Lisp code from lwr_controllers/CartesianImpedancePoint.msg[0m
+[ 25%] [34m[1mGenerating Lisp code from lwr_controllers/ArmState.msg[0m
+[ 27%] [34m[1mGenerating Lisp code from lwr_controllers/MultiPriorityTask.msg[0m
+[ 29%] [34m[1mGenerating C++ code from lwr_controllers/SetCartesianImpedanceCommand.srv[0m
+[ 33%] [34m[1mGenerating C++ code from lwr_controllers/PoseRPY.msg[0m
+[ 33%] [34m[1mGenerating Javascript code from lwr_controllers/PoseRPY.msg[0m
+[ 35%] [34m[1mGenerating Python from MSG lwr_controllers/CartesianImpedancePoint[0m
+[ 37%] [34m[1mGenerating Lisp code from lwr_controllers/RPY.msg[0m
+[ 38%] [34m[1mGenerating Javascript code from lwr_controllers/SetCartesianImpedanceCommand.srv[0m
+[ 40%] [34m[1mGenerating Python from MSG lwr_controllers/MultiPriorityTask[0m
+[ 42%] [34m[1mGenerating Lisp code from lwr_controllers/PoseRPY.msg[0m
+[ 44%] [34m[1mGenerating Lisp code from lwr_controllers/SetCartesianImpedanceCommand.srv[0m
+[ 44%] Built target lwr_controllers_generate_messages_nodejs
+[ 46%] [34m[1mGenerating Python from MSG lwr_controllers/ArmState[0m
+[35m[1mScanning dependencies of target lwr_controllers_generate_messages_eus[0m
+[ 48%] [34m[1mGenerating Python from MSG lwr_controllers/RPY[0m
+[ 50%] [34m[1mGenerating Python code from SRV lwr_controllers/SetCartesianImpedanceCommand[0m
+[ 51%] [34m[1mGenerating Python from MSG lwr_controllers/PoseRPY[0m
+[ 53%] [34m[1mGenerating EusLisp code from lwr_controllers/CartesianImpedancePoint.msg[0m
+[ 55%] [34m[1mGenerating EusLisp code from lwr_controllers/Stiffness.msg[0m
+[ 57%] [34m[1mGenerating EusLisp code from lwr_controllers/MultiPriorityTask.msg[0m
+[ 57%] Built target lwr_controllers_generate_messages_lisp
+[ 59%] [34m[1mGenerating EusLisp code from lwr_controllers/RPY.msg[0m
+[ 61%] [34m[1mGenerating EusLisp code from lwr_controllers/ArmState.msg[0m
+[ 62%] [34m[1mGenerating EusLisp code from lwr_controllers/PoseRPY.msg[0m
+[ 64%] [34m[1mGenerating EusLisp code from lwr_controllers/SetCartesianImpedanceCommand.srv[0m
+[ 66%] [34m[1mGenerating EusLisp manifest code for lwr_controllers[0m
+[ 70%] [34m[1mGenerating Python msg __init__.py for lwr_controllers[0m
+[ 70%] [34m[1mGenerating Python srv __init__.py for lwr_controllers[0m
+[ 70%] Built target lwr_controllers_generate_messages_cpp
+[35m[1mScanning dependencies of target lwr_controllers_gencpp[0m
+[ 70%] Built target lwr_controllers_gencpp
+[35m[1mScanning dependencies of target lwr_controllers[0m
+[ 70%] Built target lwr_controllers_generate_messages_py
+[ 72%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/inverse_dynamics_controller.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/computed_torque_controller.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller.cpp.o[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/dynamic_sliding_mode_controller_task_space.cpp.o[0m
+[ 90%] Built target lwr_controllers_generate_messages_eus
+[35m[1mScanning dependencies of target lwr_controllers_generate_messages[0m
+[ 90%] Built target lwr_controllers_generate_messages
+[ 92%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/gravity_compensation.cpp.o[0m
+[ 94%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o[0m
+[ 96%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o[0m
+[ 98%] [32mBuilding CXX object CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/jiawen/530_707_independent_project/devel/.private/lwr_controllers/lib/liblwr_controllers.so[0m
 [100%] Built target lwr_controllers

@@ -13,32 +13,17 @@ Not searching for unused variables given on the command line.
 [36m--[0m Detecting CXX compiler ABI info - done
 [36m--[0m Detecting CXX compile features
 [36m--[0m Detecting CXX compile features - done
-<<<<<<< HEAD
-[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/liu/RSP-Proj/devel/.private/catkin_tools_prebuild
-[36m--[0m Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
-[36m--[0m This workspace overlays: /opt/ros/kinetic
-[36m--[0m Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.12", minimum required is "2")
-[36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python2
-=======
-[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/shimin/ROS_Prgm_Prj/devel/.private/catkin_tools_prebuild
-[36m--[0m Using CMAKE_PREFIX_PATH: /home/shimin/en530_707_catkin_ws/devel;/home/shimin/catkin_ws/devel;/opt/ros/kinetic
-[36m--[0m This workspace overlays: /home/shimin/en530_707_catkin_ws/devel;/home/shimin/catkin_ws/devel;/opt/ros/kinetic
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/jiawen/530_707_independent_project/devel/.private/catkin_tools_prebuild
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/jiawen/catkin_ws/devel;/opt/ros/kinetic
+[36m--[0m This workspace overlays: /home/jiawen/catkin_ws/devel;/opt/ros/kinetic
 [36m--[0m Found PythonInterp: /usr/bin/python (found version "2.7.12")
 [36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python
->>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 [36m--[0m Using Debian Python package layout
 [36m--[0m Using empy: /usr/bin/empy
 [36m--[0m Using CATKIN_ENABLE_TESTING: ON
 [36m--[0m Call enable_testing()
-<<<<<<< HEAD
-[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/liu/RSP-Proj/build/catkin_tools_prebuild/test_results
-[36m--[0m Found gtest sources under '/usr/src/gmock': gtests will be built
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/jiawen/530_707_independent_project/build/catkin_tools_prebuild/test_results
 [36m--[0m Found gmock sources under '/usr/src/gmock': gmock will be built
-[36m--[0m Found PythonInterp: /usr/bin/python2 (found version "2.7.12")
-=======
-[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild/test_results
-[36m--[0m Found gmock sources under '/usr/src/gmock': gmock will be built
->>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
 [36m--[0m Looking for pthread.h
 [36m--[0m Looking for pthread.h - found
 [36m--[0m Looking for pthread_create
@@ -48,19 +33,10 @@ Not searching for unused variables given on the command line.
 [36m--[0m Looking for pthread_create in pthread
 [36m--[0m Looking for pthread_create in pthread - found
 [36m--[0m Found Threads: TRUE
-<<<<<<< HEAD
-[36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
-[36m--[0m catkin 0.7.20
-[36m--[0m BUILD_SHARED_LIBS is on
-[36m--[0m Configuring done
-[36m--[0m Generating done
-[36m--[0m Build files have been written to: /home/liu/RSP-Proj/build/catkin_tools_prebuild
-=======
 [36m--[0m Found gtest sources under '/usr/src/gmock': gtests will be built
 [36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
 [36m--[0m catkin 0.7.18
 [36m--[0m BUILD_SHARED_LIBS is on
 [36m--[0m Configuring done
 [36m--[0m Generating done
-[36m--[0m Build files have been written to: /home/shimin/ROS_Prgm_Prj/build/catkin_tools_prebuild
->>>>>>> 24e8b89151bb1281ae4a6c477ecf802df642162d
+[36m--[0m Build files have been written to: /home/jiawen/530_707_independent_project/build/catkin_tools_prebuild

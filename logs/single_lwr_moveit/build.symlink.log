@@ -1,3 +1,3 @@
-Linked: (/home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_moveit/lib/pkgconfig/single_lwr_moveit.pc, /home/shimin/ROS_Prgm_Prj/devel/lib/pkgconfig/single_lwr_moveit.pc)
-Linked: (/home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_moveit/share/single_lwr_moveit/cmake/single_lwr_moveitConfig.cmake, /home/shimin/ROS_Prgm_Prj/devel/share/single_lwr_moveit/cmake/single_lwr_moveitConfig.cmake)
-Linked: (/home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_moveit/share/single_lwr_moveit/cmake/single_lwr_moveitConfig-version.cmake, /home/shimin/ROS_Prgm_Prj/devel/share/single_lwr_moveit/cmake/single_lwr_moveitConfig-version.cmake)
+Symlinking /home/jiawen/530_707_independent_project/devel/share/single_lwr_moveit/cmake/single_lwr_moveitConfig-version.cmake
+Symlinking /home/jiawen/530_707_independent_project/devel/share/single_lwr_moveit/cmake/single_lwr_moveitConfig.cmake
+Symlinking /home/jiawen/530_707_independent_project/devel/lib/pkgconfig/single_lwr_moveit.pc
