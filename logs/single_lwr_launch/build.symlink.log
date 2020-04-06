@@ -1,3 +1,3 @@
-Symlinking /home/jiawen/530_707_independent_project/devel/share/single_lwr_launch/cmake/single_lwr_launchConfig.cmake
-Symlinking /home/jiawen/530_707_independent_project/devel/share/single_lwr_launch/cmake/single_lwr_launchConfig-version.cmake
-Symlinking /home/jiawen/530_707_independent_project/devel/lib/pkgconfig/single_lwr_launch.pc
+Linked: (/home/jiawen/530_707_independent_project/devel/.private/single_lwr_launch/share/single_lwr_launch/cmake/single_lwr_launchConfig.cmake, /home/jiawen/530_707_independent_project/devel/share/single_lwr_launch/cmake/single_lwr_launchConfig.cmake)
+Linked: (/home/jiawen/530_707_independent_project/devel/.private/single_lwr_launch/share/single_lwr_launch/cmake/single_lwr_launchConfig-version.cmake, /home/jiawen/530_707_independent_project/devel/share/single_lwr_launch/cmake/single_lwr_launchConfig-version.cmake)
+Linked: (/home/jiawen/530_707_independent_project/devel/.private/single_lwr_launch/lib/pkgconfig/single_lwr_launch.pc, /home/jiawen/530_707_independent_project/devel/lib/pkgconfig/single_lwr_launch.pc)

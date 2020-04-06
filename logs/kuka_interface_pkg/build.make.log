@@ -1,54 +1,20 @@
-[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
-[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
-[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
-[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
-[35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
-[  0%] Built target std_msgs_generate_messages_eus
-[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_lisp
 [  0%] Built target roscpp_generate_messages_py
 [  0%] Built target roscpp_generate_messages_eus
-[  0%] Built target std_msgs_generate_messages_nodejs
-[  0%] Built target roscpp_generate_messages_cpp
-[  0%] Built target std_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
-[35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
-[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
-[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
-[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
-[  0%] Built target rosgraph_msgs_generate_messages_cpp
-[  0%] Built target rosgraph_msgs_generate_messages_nodejs
-[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target rosgraph_msgs_generate_messages_eus
 [  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target roscpp_generate_messages_lisp
 [  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_nodejs
 [  0%] Built target rosgraph_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_py
-[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
-[  0%] Built target roscpp_generate_messages_lisp
-[35m[1mScanning dependencies of target single_lwr_homing[0m
-[35m[1mScanning dependencies of target homing[0m
-[35m[1mScanning dependencies of target arms_manager_node[0m
-[35m[1mScanning dependencies of target single_lwr_manager_node[0m
-[35m[1mScanning dependencies of target ee_manager_node[0m
-[  7%] [32mBuilding CXX object CMakeFiles/homing.dir/src/homing.cpp.o[0m
-[ 14%] [32mBuilding CXX object CMakeFiles/single_lwr_homing.dir/src/single_lwr_homing.cpp.o[0m
-[ 21%] [32mBuilding CXX object CMakeFiles/single_lwr_manager_node.dir/src/single_lwr_manager_node.cpp.o[0m
-[ 28%] [32mBuilding CXX object CMakeFiles/ee_manager_node.dir/src/ee_manager_node.cpp.o[0m
-[ 35%] [32mBuilding CXX object CMakeFiles/single_lwr_manager_node.dir/src/single_lwr_manager.cpp.o[0m
-[ 42%] [32mBuilding CXX object CMakeFiles/arms_manager_node.dir/src/arms_manager_node.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/ee_manager_node.dir/src/ee_manager.cpp.o[0m
-[ 57%] [32mBuilding CXX object CMakeFiles/arms_manager_node.dir/src/arms_manager.cpp.o[0m
-[ 64%] [32mBuilding CXX object CMakeFiles/ee_manager_node.dir/src/qbmove_communications.cpp.o[0m
-[ 71%] [32m[1mLinking CXX executable /home/jiawen/530_707_independent_project/devel/.private/kuka_interface_pkg/lib/kuka_interface_pkg/single_lwr_manager_node[0m
-[ 78%] [32m[1mLinking CXX executable /home/jiawen/530_707_independent_project/devel/.private/kuka_interface_pkg/lib/kuka_interface_pkg/ee_manager_node[0m
-[ 78%] Built target single_lwr_manager_node
-[ 85%] [32m[1mLinking CXX executable /home/jiawen/530_707_independent_project/devel/.private/kuka_interface_pkg/lib/kuka_interface_pkg/single_lwr_homing[0m
-[ 85%] Built target ee_manager_node
-[ 92%] [32m[1mLinking CXX executable /home/jiawen/530_707_independent_project/devel/.private/kuka_interface_pkg/lib/kuka_interface_pkg/homing[0m
-[ 92%] Built target single_lwr_homing
-[ 92%] Built target homing
-[100%] [32m[1mLinking CXX executable /home/jiawen/530_707_independent_project/devel/.private/kuka_interface_pkg/lib/kuka_interface_pkg/arms_manager_node[0m
+[ 35%] Built target single_lwr_manager_node
+[ 35%] Built target single_lwr_homing
+[ 50%] Built target homing
+[ 78%] Built target ee_manager_node
 [100%] Built target arms_manager_node

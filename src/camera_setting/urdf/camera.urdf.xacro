@@ -1,24 +1,30 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="firefighter">
 
-<xacro:arg name="parent" default="world"/>
+<xacro:property name="camera_roll" value="0.0" />
+<xacro:property name="camera_pitch" value="0.7853" />
+<xacro:property name="camera_yaw" value="0.7853" />
+
+<xacro:arg name="parent" default="base_link"/>
 
 <xacro:include filename="$(find camera_setting)/urdf/camera.xacro"/>
 
-<xacro:camera name="A" parent="$(arg parent)">
-	<origin xyz="10.0 10.0 10.0" rpy="0.0 0.0 0.0"/>
-</xacro:camera>
+<xacro:base/>
 
-<xacro:camera name="B" parent="$(arg parent)">
-	<origin xyz="-10.0 10.0 10.0" rpy="0.0 0.0 0.0"/>
-</xacro:camera>
+<xacro:camera_link name="A" parent="$(arg parent)">
+	<origin xyz="2.5 2.5 2.5" rpy="${camera_roll} ${camera_pitch} ${3.1416 + camera_yaw}"/>
+</xacro:camera_link>
 
-<xacro:camera name="C" parent="$(arg parent)">
-	<origin xyz="10.0 -10.0 10.0" rpy="0 0 0"/>
-</xacro:camera>
+<xacro:camera_link name="B" parent="$(arg parent)">
+	<origin xyz="-2.5 2.5 2.5" rpy="${camera_roll} ${camera_pitch} ${4.712 + camera_yaw}"/>
+</xacro:camera_link>
 
-<xacro:camera name="D" parent="$(arg parent)">
-	<origin xyz="-10.0 -10.0 10.0" rpy="0 0 0"/>
-</xacro:camera>
+<xacro:camera_link name="C" parent="$(arg parent)">
+	<origin xyz="2.5 -2.5 2.5" rpy="${camera_roll} ${camera_pitch} ${1.508 + camera_yaw}"/>
+</xacro:camera_link>
+
+<xacro:camera_link name="D" parent="$(arg parent)">
+	<origin xyz="-2.5 -2.5 2.5" rpy="${camera_roll} ${camera_pitch} ${camera_yaw}"/>
+</xacro:camera_link>
 
 </robot>
