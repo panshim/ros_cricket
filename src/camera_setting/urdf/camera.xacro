@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="firefighter">
 
+<!--
 <xacro:macro name="base">
 
 	<link name="base_link">
@@ -27,11 +28,13 @@
 	</link>
 
 </xacro:macro>
+-->
 
+<xacro:arg name="camera_name" default="A"/>
 
-<xacro:macro name="camera_link" params="name parent *origin">
+<xacro:macro name="camera_model" params="name">
 
-	<link name="camera_${name}_link">
+	<link name="camera_link">
 		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0" />
 			<geometry>
@@ -48,20 +51,32 @@
 			</geometry>
 		</collision>
 		<inertial>
-			<mass value="0.001" />
+			<mass value="0.1" />
 			<origin xyz="0 0 0" rpy="0 0 0" />
-			<inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
+			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
 		</inertial>
 	</link>
 
+        <!-- set the model to be static -->
+        <gazebo>
+        	<static>true</static>
+	</gazebo>
+
+        <!-- set gravity of camera to zero -->
+        <!--gazebo reference="camera_link">
+        	<gravity>0 0 0</gravity>
+	</gazebo-->
+        
+        <!--
 	<joint name="camera_${name}_joint" type="fixed">
 		<xacro:insert_block name="origin" />
 		<axis xyz="0 1 0"/>
 		<parent link="${parent}"/>
 		<child link="camera_${name}_link"/>
 	</joint>
+        -->
 
-  	<gazebo reference="camera_${name}_link">
+  	<gazebo reference="camera_link">
 		<sensor type="camera" name="camera_${name}">
 			<update_rate>30.0</update_rate>
 			<visualize>1</visualize>
@@ -87,10 +102,10 @@
 			</camera>
 			<plugin name="camera_controller" filename="libgazebo_ros_camera.so">
 				<alwaysOn>true</alwaysOn>
-				<updateRate>0.0</updateRate>
-				<cameraName>rrbot/camera_${name}</cameraName>
-				<imageTopicName>image_raw</imageTopicName>
-				<cameraInfoTopicName>camera_info</cameraInfoTopicName>
+				<updateRate>30.0</updateRate>
+				<cameraName>camera_${name}/name</cameraName>
+				<imageTopicName>/camera_${name}/image_raw</imageTopicName>
+				<cameraInfoTopicName>/camera_${name}/camera_info</cameraInfoTopicName>
 				<frameName>camera_${name}_link</frameName>
 				<hackBaseline>0.07</hackBaseline>
 				<distortionK1>0.0</distortionK1>
@@ -102,5 +117,7 @@
 		</sensor>
 	</gazebo>
 </xacro:macro>
+
+<xacro:camera_model name="$(arg camera_name)"/>
 
 </robot>

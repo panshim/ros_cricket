@@ -1,15 +1,16 @@
 <launch>
 
-	<arg name="parent" default="base_link"/>
+	<arg name="camera_name"/>
 
-	<include file="$(find gazebo_ros)/launch/empty_world.launch">
-		<arg name="world_name" value="$(find camera_setting)/worlds/test.world"/>
-	</include>
+        <arg name="x"/>
+        <arg name="y"/>
+        <arg name="z"/>
+        <arg name="roll"/>
+        <arg name="pitch"/>
+        <arg name="yaw"/>        
 
-	<param name="robot_description" 
-		command="xacro --inorder '$(find camera_setting)/urdf/camera.urdf.xacro' 
-				parent:=$(arg parent)"/>
+        <param name="/camera_$(arg camera_name)/robot_description" command="xacro --inorder $(find camera_setting)/urdf/camera.xacro camera_name:=$(arg camera_name)"/>
 
-	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model cameras" />
+	<node name="spawn_$(arg camera_name)" pkg="gazebo_ros" type="spawn_model" args="-param /camera_$(arg camera_name)/robot_description -urdf -model camera_$(arg camera_name) -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
 </launch>
