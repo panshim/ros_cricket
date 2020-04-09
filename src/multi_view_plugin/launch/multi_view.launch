@@ -6,10 +6,10 @@
         <arg name="camera_D_name" default="D"/>
 
         <include file="$(find gazebo_ros)/launch/empty_world.launch">
-		<arg name="world_name" value="$(find camera_setting)/worlds/multi_view.world"/>
+		<arg name="world_name" value="$(find multi_view_plugin)/worlds/multi_view.world"/>
 	</include>
 
-	<include file="$(find camera_setting)/launch/camera_setting.launch">
+	<include file="$(find multi_view_plugin)/launch/camera_setting.launch">
         	<arg name="camera_name" value="$(arg camera_A_name)"/>
 		<arg name="x" value="2.5"/>
      		<arg name="y" value="2.5"/>
@@ -21,7 +21,7 @@
 	
 
 	
-	<include file="$(find camera_setting)/launch/camera_setting.launch">
+	<include file="$(find multi_view_plugin)/launch/camera_setting.launch">
         	<arg name="camera_name" value="$(arg camera_B_name)"/>
 		<arg name="x" value="-2.5"/>
      		<arg name="y" value="2.5"/>
@@ -32,7 +32,7 @@
 	</include>
 	
 	
-	<include file="$(find camera_setting)/launch/camera_setting.launch">
+	<include file="$(find multi_view_plugin)/launch/camera_setting.launch">
         	<arg name="camera_name" value="$(arg camera_C_name)"/>
 		<arg name="x" value="2.5"/>
      		<arg name="y" value="-2.5"/>
@@ -44,7 +44,7 @@
 	
 	
 	
-	<include file="$(find camera_setting)/launch/camera_setting.launch">
+	<include file="$(find multi_view_plugin)/launch/camera_setting.launch">
         	<arg name="camera_name" value="$(arg camera_D_name)"/>
 		<arg name="x" value="-2.5"/>
      		<arg name="y" value="-2.5"/>

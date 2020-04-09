@@ -9,7 +9,7 @@
         <arg name="pitch"/>
         <arg name="yaw"/>        
 
-        <param name="/camera_$(arg camera_name)/robot_description" command="xacro --inorder $(find camera_setting)/urdf/camera.xacro camera_name:=$(arg camera_name)"/>
+        <param name="/camera_$(arg camera_name)/robot_description" command="xacro --inorder $(find multi_view_plugin)/urdf/camera.xacro camera_name:=$(arg camera_name)"/>
 
 	<node name="spawn_$(arg camera_name)" pkg="gazebo_ros" type="spawn_model" args="-param /camera_$(arg camera_name)/robot_description -urdf -model camera_$(arg camera_name) -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
