@@ -8,9 +8,14 @@ project(multi_view_plugin)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  cv_bridge
   gazebo_dev
+  gazebo_plugins
   roscpp
+  sensor_msgs
 )
+
+find_package(gazebo REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -102,9 +107,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES multi_view_plugin
-#  CATKIN_DEPENDS gazebo_dev roscpp
+   INCLUDE_DIRS include
+   LIBRARIES ball_tracker
+   CATKIN_DEPENDS cv_bridge gazebo_dev gazebo_plugins roscpp sensor_msgs
 #  DEPENDS system_lib
 )
 
@@ -115,7 +120,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -123,6 +128,7 @@ include_directories(
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/multi_view_plugin.cpp
 # )
+add_library(ball_tracker src/ball_tracker.cpp)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -148,6 +154,7 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
+target_link_libraries(ball_tracker ${catkin_LIBRARIES})
 
 #############
 ## Install ##
