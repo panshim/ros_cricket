@@ -68,7 +68,7 @@ set(cricket_lwr_interface_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(cricket_lwr_interface_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/cricket_lwr_interface)
-  set(cricket_lwr_interface_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/cricket_lwr_interface)
+  set(cricket_lwr_interface_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel)
   set(cricket_lwr_interface_INSTALL_PREFIX "")
   set(cricket_lwr_interface_PREFIX ${cricket_lwr_interface_DEVEL_PREFIX})
 else()

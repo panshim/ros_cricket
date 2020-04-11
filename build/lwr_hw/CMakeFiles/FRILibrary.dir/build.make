@@ -103,7 +103,7 @@ FRILibrary-prefix/src/FRILibrary-stamp/FRILibrary-configure: FRILibrary-prefix/t
 FRILibrary-prefix/src/FRILibrary-stamp/FRILibrary-configure: FRILibrary-prefix/src/FRILibrary-stamp/FRILibrary-update
 FRILibrary-prefix/src/FRILibrary-stamp/FRILibrary-configure: FRILibrary-prefix/src/FRILibrary-stamp/FRILibrary-patch
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/shimin/ROS_Prgm_Prj/build/lwr_hw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Performing configure step for 'FRILibrary'"
-	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary && cmake -DCMAKE_INSTALL_PREFIX=/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw
+	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary && cmake -DCMAKE_INSTALL_PREFIX=/home/shimin/ROS_Prgm_Prj/devel
 	cd /home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary && /usr/bin/cmake -E touch /home/shimin/ROS_Prgm_Prj/build/lwr_hw/FRILibrary-prefix/src/FRILibrary-stamp/FRILibrary-configure
 
 FRILibrary-prefix/src/FRILibrary-stamp/FRILibrary-build: FRILibrary-prefix/src/FRILibrary-stamp/FRILibrary-configure

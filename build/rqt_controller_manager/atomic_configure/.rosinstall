@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager/setup.sh
+    local-name: /home/shimin/ROS_Prgm_Prj/devel/setup.sh

@@ -31,7 +31,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include"
+  "/home/shimin/ROS_Prgm_Prj/devel/include"
   "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include"
   "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw/include"
   "/opt/ros/kinetic/include"

@@ -1,1 +1,8 @@
-/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager/lib/pkgconfig/rqt_controller_manager.pc
+prefix=/home/shimin/ROS_Prgm_Prj/devel
+
+Name: rqt_controller_manager
+Description: Description of rqt_controller_manager
+Version: 0.13.5
+Cflags: 
+Libs: -L/home/shimin/ROS_Prgm_Prj/devel/lib 
+Requires: 

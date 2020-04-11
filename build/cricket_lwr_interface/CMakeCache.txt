@@ -17,12 +17,6 @@
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
-//Boost 1.65 library (debug)
-Boost_1.65_LIBRARY_DEBUG:FILEPATH=Boost_1.65_LIBRARY_DEBUG-NOTFOUND
-
-//Boost 1.65 library (release)
-Boost_1.65_LIBRARY_RELEASE:FILEPATH=Boost_1.65_LIBRARY_RELEASE-NOTFOUND
-
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=Boost_DIR-NOTFOUND
 
@@ -30,7 +24,7 @@ Boost_DIR:PATH=Boost_DIR-NOTFOUND
 Boost_INCLUDE_DIR:PATH=/usr/include
 
 //catkin devel space
-CATKIN_DEVEL_PREFIX:PATH=/home/shimin/ROS_Prgm_Prj/devel/.private/cricket_lwr_interface
+CATKIN_DEVEL_PREFIX:PATH=/home/shimin/ROS_Prgm_Prj/devel
 
 //Catkin enable testing
 CATKIN_ENABLE_TESTING:BOOL=ON
@@ -427,10 +421,6 @@ xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: Boost_1.65_LIBRARY_DEBUG
-Boost_1.65_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_1.65_LIBRARY_RELEASE
-Boost_1.65_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_DIR
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_INCLUDE_DIR
@@ -602,7 +592,7 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=1.65
+_Boost_COMPONENTS_SEARCHED:INTERNAL=
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
 //Last used Boost_NAMESPACE value.

@@ -68,7 +68,7 @@ set(lwr_description_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(lwr_description_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_description)
-  set(lwr_description_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_description)
+  set(lwr_description_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel)
   set(lwr_description_INSTALL_PREFIX "")
   set(lwr_description_PREFIX ${lwr_description_DEVEL_PREFIX})
 else()

@@ -19,7 +19,7 @@ except ImportError:
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager/env.sh')
+code = generate_environment_script('/home/shimin/ROS_Prgm_Prj/devel/env.sh')
 
 output_filename = '/home/shimin/ROS_Prgm_Prj/build/rqt_controller_manager/catkin_generated/setup_cached.sh'
 with open(output_filename, 'w') as f:

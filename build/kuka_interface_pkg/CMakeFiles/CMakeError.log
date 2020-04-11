@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_27654/fast"
-/usr/bin/make -f CMakeFiles/cmTC_27654.dir/build.make CMakeFiles/cmTC_27654.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_56e48/fast"
+/usr/bin/make -f CMakeFiles/cmTC_56e48.dir/build.make CMakeFiles/cmTC_56e48.dir/build
 make[1]: Entering directory '/home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_27654.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_27654.dir/CheckSymbolExists.c.o   -c /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_27654
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27654.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_27654.dir/CheckSymbolExists.c.o  -o cmTC_27654 -rdynamic 
-CMakeFiles/cmTC_27654.dir/CheckSymbolExists.c.o：在函数‘main’中：
+Building C object CMakeFiles/cmTC_56e48.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_56e48.dir/CheckSymbolExists.c.o   -c /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_56e48
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56e48.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_56e48.dir/CheckSymbolExists.c.o  -o cmTC_56e48 -rdynamic 
+CMakeFiles/cmTC_56e48.dir/CheckSymbolExists.c.o：在函数‘main’中：
 CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_27654.dir/build.make:97: recipe for target 'cmTC_27654' failed
-make[1]: *** [cmTC_27654] Error 1
+CMakeFiles/cmTC_56e48.dir/build.make:97: recipe for target 'cmTC_56e48' failed
+make[1]: *** [cmTC_56e48] Error 1
 make[1]: Leaving directory '/home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_27654/fast' failed
-make: *** [cmTC_27654/fast] Error 2
+Makefile:126: recipe for target 'cmTC_56e48/fast' failed
+make: *** [cmTC_56e48/fast] Error 2
 
 File /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b139d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b139d.dir/build.make CMakeFiles/cmTC_b139d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_52147/fast"
+/usr/bin/make -f CMakeFiles/cmTC_52147.dir/build.make CMakeFiles/cmTC_52147.dir/build
 make[1]: Entering directory '/home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b139d.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b139d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_b139d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b139d.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b139d.dir/CheckFunctionExists.c.o  -o cmTC_b139d -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_52147.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_52147.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_52147
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52147.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_52147.dir/CheckFunctionExists.c.o  -o cmTC_52147 -rdynamic -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b139d.dir/build.make:97: recipe for target 'cmTC_b139d' failed
-make[1]: *** [cmTC_b139d] Error 1
+CMakeFiles/cmTC_52147.dir/build.make:97: recipe for target 'cmTC_52147' failed
+make[1]: *** [cmTC_52147] Error 1
 make[1]: Leaving directory '/home/shimin/ROS_Prgm_Prj/build/kuka_interface_pkg/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_b139d/fast' failed
-make: *** [cmTC_b139d/fast] Error 2
+Makefile:126: recipe for target 'cmTC_52147/fast' failed
+make: *** [cmTC_52147/fast] Error 2
 
 

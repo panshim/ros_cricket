@@ -68,7 +68,7 @@ set(single_lwr_moveit_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(single_lwr_moveit_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/single_lwr_example/single_lwr_moveit)
-  set(single_lwr_moveit_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_moveit)
+  set(single_lwr_moveit_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel)
   set(single_lwr_moveit_INSTALL_PREFIX "")
   set(single_lwr_moveit_PREFIX ${single_lwr_moveit_DEVEL_PREFIX})
 else()

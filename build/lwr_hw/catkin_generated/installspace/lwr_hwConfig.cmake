@@ -68,7 +68,7 @@ set(lwr_hw_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(lwr_hw_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_hw)
-  set(lwr_hw_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw)
+  set(lwr_hw_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel)
   set(lwr_hw_INSTALL_PREFIX "")
   set(lwr_hw_PREFIX ${lwr_hw_DEVEL_PREFIX})
 else()

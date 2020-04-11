@@ -18,7 +18,7 @@
 BUILD_SHARED_LIBS:BOOL=ON
 
 //catkin devel space
-CATKIN_DEVEL_PREFIX:PATH=/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager
+CATKIN_DEVEL_PREFIX:PATH=/home/shimin/ROS_Prgm_Prj/devel
 
 //Catkin enable testing
 CATKIN_ENABLE_TESTING:BOOL=ON

@@ -20,6 +20,8 @@
 	<xacro:property name="max_stiffness" value="5000"/>
 	<xacro:property name="min_stiffness" value="0"/>
 	<xacro:property name="rate_stiffness" value="20000"/> <!-- reflex to stiffness -->
+	<xacro:property name="bat_handle_offset" value="0.015"/> <!-- reflex to stiffness -->
+	<xacro:property name="bat_mass_center" value="0.01"/> <!-- reflex to stiffness -->
 
 	<!-- URDF model /-->
 	<xacro:macro name="kuka_lwr" params="parent name *origin">
@@ -400,6 +402,32 @@
 			</collision>
 		</link>
 
+		<joint name="${name}_bat_joint" type="fixed">
+			<axis xyz="0 0 1"/>
+			<parent link="${name}_7_link"/>
+			<child link="${name}_bat_link"/>
+		</joint>
+
+		<!-- Cricket Bat's Joint and Link -->
+		<link name="${name}_bat_link">
+			<inertia>
+				<mass value="0.196"/>
+				<origin xyz="0 0 ${bat_mass_center}" rpy="0 0 0"/>
+				<inertia ixx="0.0013552" iyy="0.0014578" izz="0.0001245" ixy="0" iyz="0" ixz="0"/>
+			</inertia>
+			<visual>
+				<origin xyz="0 0 0" rpy="0 0 0"/>
+				<geometry>
+						<mesh filename="package://cricket_lwr_interface/meshes/cricket_bat.STL" scale="0.001 0.001 0.001"/>
+				</geometry>
+			</visual>
+			<collision>
+				<origin xyz="0 0 0" rpy="0 0 0"/>
+				<geometry>
+					<mesh filename="package://cricket_lwr_interface/meshes/cricket_bat.STL" scale="0.001 0.001 0.001"/>
+				</geometry>
+			</collision>>
+		</link>
 		<xacro:kuka_lwr_gazebo name="${name}"/>
 		<xacro:kuka_lwr_transmission name="${name}"/>
 

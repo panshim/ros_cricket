@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target cricket_lwr_node[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/cricket_lwr_node.dir/src/cricket_lwr.cpp.o[0m
-[ 66%] [32m[1mLinking CXX executable /home/shimin/ROS_Prgm_Prj/devel/.private/cricket_lwr_interface/lib/cricket_lwr_interface/cricket_lwr_node[0m
-[100%] Built target cricket_lwr_node

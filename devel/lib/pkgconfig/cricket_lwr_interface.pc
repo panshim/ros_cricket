@@ -1,1 +1,8 @@
-/home/shimin/ROS_Prgm_Prj/devel/.private/cricket_lwr_interface/lib/pkgconfig/cricket_lwr_interface.pc
+prefix=/home/shimin/ROS_Prgm_Prj/devel
+
+Name: cricket_lwr_interface
+Description: Description of cricket_lwr_interface
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/shimin/ROS_Prgm_Prj/devel/lib 
+Requires: 

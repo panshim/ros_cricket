@@ -68,7 +68,7 @@ set(rqt_controller_manager_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(rqt_controller_manager_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/debug_tool/ros_control/rqt_controller_manager)
-  set(rqt_controller_manager_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager)
+  set(rqt_controller_manager_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel)
   set(rqt_controller_manager_INSTALL_PREFIX "")
   set(rqt_controller_manager_PREFIX ${rqt_controller_manager_DEVEL_PREFIX})
 else()

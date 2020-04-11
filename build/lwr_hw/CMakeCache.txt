@@ -93,7 +93,7 @@ Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
 Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
 
 //catkin devel space
-CATKIN_DEVEL_PREFIX:PATH=/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw
+CATKIN_DEVEL_PREFIX:PATH=/home/shimin/ROS_Prgm_Prj/devel
 
 //Catkin enable testing
 CATKIN_ENABLE_TESTING:BOOL=ON

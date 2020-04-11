@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/ArmState.h
+/home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/ArmState.h
 string
 -
 vector
@@ -28,7 +28,7 @@ geometry_msgs/Wrench.h
 geometry_msgs/Wrench.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/CartesianImpedancePoint.h
+/home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/CartesianImpedancePoint.h
 string
 -
 vector
@@ -54,7 +54,7 @@ lwr_controllers/Stiffness.h
 geometry_msgs/Wrench.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/MultiPriorityTask.h
+/home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/MultiPriorityTask.h
 string
 -
 vector
@@ -70,7 +70,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/PoseRPY.h
+/home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/PoseRPY.h
 string
 -
 vector
@@ -90,7 +90,7 @@ geometry_msgs/Vector3.h
 lwr_controllers/RPY.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/RPY.h
+/home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/RPY.h
 string
 -
 vector
@@ -106,7 +106,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/SetCartesianImpedanceCommand.h
+/home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/SetCartesianImpedanceCommand.h
 ros/service_traits.h
 -
 lwr_controllers/SetCartesianImpedanceCommandRequest.h
@@ -114,7 +114,7 @@ lwr_controllers/SetCartesianImpedanceCommandRequest.h
 lwr_controllers/SetCartesianImpedanceCommandResponse.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/SetCartesianImpedanceCommandRequest.h
+/home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/SetCartesianImpedanceCommandRequest.h
 string
 -
 vector
@@ -132,7 +132,7 @@ ros/message_operations.h
 lwr_controllers/CartesianImpedancePoint.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/SetCartesianImpedanceCommandResponse.h
+/home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/SetCartesianImpedanceCommandResponse.h
 string
 -
 vector
@@ -148,7 +148,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/Stiffness.h
+/home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/Stiffness.h
 string
 -
 vector

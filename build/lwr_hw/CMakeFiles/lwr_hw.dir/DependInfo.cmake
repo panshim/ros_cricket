@@ -22,7 +22,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/opt/ros/kinetic/share/orocos_kdl/../../include"
   "/usr/include/eigen3"
-  "/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril"
+  "/home/shimin/ROS_Prgm_Prj/devel/include/fril"
   "/usr/include/gazebo-7"
   "/usr/include/sdformat-4.0"
   "/usr/include/ignition/math2"

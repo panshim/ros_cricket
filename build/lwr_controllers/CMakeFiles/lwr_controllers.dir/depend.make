@@ -250,7 +250,7 @@ CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o: /usr/incl
 CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/lwr_controllers.dir/src/KinematicChainControllerBase.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/ArmState.h
+CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/ArmState.h
 CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/arm_state_controller.h
 CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/utils/pseudo_inversion.h
@@ -553,7 +553,7 @@ CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /usr/include/eige
 CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/lwr_controllers.dir/src/arm_state_controller.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/MultiPriorityTask.h
+CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/MultiPriorityTask.h
 CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/backstepping_controller.h
@@ -875,11 +875,11 @@ CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /usr/include/e
 CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/lwr_controllers.dir/src/backstepping_controller.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/CartesianImpedancePoint.h
-CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/SetCartesianImpedanceCommand.h
-CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/SetCartesianImpedanceCommandRequest.h
-CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/SetCartesianImpedanceCommandResponse.h
-CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/Stiffness.h
+CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/CartesianImpedancePoint.h
+CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/SetCartesianImpedanceCommand.h
+CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/SetCartesianImpedanceCommandRequest.h
+CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/SetCartesianImpedanceCommandResponse.h
+CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/Stiffness.h
 CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/cartesian_impedance_controller.h
 CMakeFiles/lwr_controllers.dir/src/cartesian_impedance_controller.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/src/cartesian_impedance_controller.cpp
@@ -2947,7 +2947,7 @@ CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o: /usr/includ
 CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/lwr_controllers.dir/src/joint_impedance_controller.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/MultiPriorityTask.h
+CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/MultiPriorityTask.h
 CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/minimum_effort_inverse_dynamics.h
@@ -3269,7 +3269,7 @@ CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /usr/i
 CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/lwr_controllers.dir/src/minimum_effort_inverse_dynamics.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/MultiPriorityTask.h
+CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/MultiPriorityTask.h
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/multi_task_priority_inverse_dynamics.h
@@ -3593,7 +3593,7 @@ CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_dynamics.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/MultiPriorityTask.h
+CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/MultiPriorityTask.h
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/multi_task_priority_inverse_kinematics.h
@@ -3917,9 +3917,9 @@ CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o:
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/lwr_controllers.dir/src/multi_task_priority_inverse_kinematics.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/MultiPriorityTask.h
-CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/PoseRPY.h
-CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/RPY.h
+CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/MultiPriorityTask.h
+CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/PoseRPY.h
+CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/RPY.h
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/PIDKinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/one_task_inverse_dynamics_jl.h
@@ -4242,8 +4242,8 @@ CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /usr/incl
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_dynamics_jl.cpp.o: /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/PoseRPY.h
-CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/.private/lwr_controllers/include/lwr_controllers/RPY.h
+CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/PoseRPY.h
+CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/devel/include/lwr_controllers/RPY.h
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/KinematicChainControllerBase.h
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/lwr_controllers/one_task_inverse_kinematics.h
 CMakeFiles/lwr_controllers.dir/src/one_task_inverse_kinematics.cpp.o: /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/lwr_controllers/include/utils/pseudo_inversion.h

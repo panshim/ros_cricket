@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/Console.h
+/home/shimin/ROS_Prgm_Prj/devel/include/fril/Console.h
 stdio.h
 -
 pthread.h
@@ -14,7 +14,7 @@ pthread.h
 sched.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/DataLogging.h
+/home/shimin/ROS_Prgm_Prj/devel/include/fril/DataLogging.h
 stdio.h
 -
 stdlib.h
@@ -22,11 +22,11 @@ stdlib.h
 FRICommunication.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/FRICommunication.h
+/home/shimin/ROS_Prgm_Prj/devel/include/fril/FRICommunication.h
 inttypes.h
 -
 
-/home/shimin/ROS_Prgm_Prj/devel/.private/lwr_hw/include/fril/FastResearchInterface.h
+/home/shimin/ROS_Prgm_Prj/devel/include/fril/FastResearchInterface.h
 Console.h
 -
 DataLogging.h

@@ -68,7 +68,7 @@ set(kuka_interface_pkg_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(kuka_interface_pkg_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka_interface/kuka_interface_pkg)
-  set(kuka_interface_pkg_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/kuka_interface_pkg)
+  set(kuka_interface_pkg_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel)
   set(kuka_interface_pkg_INSTALL_PREFIX "")
   set(kuka_interface_pkg_PREFIX ${kuka_interface_pkg_DEVEL_PREFIX})
 else()

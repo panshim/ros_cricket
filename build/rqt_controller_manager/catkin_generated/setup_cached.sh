@@ -7,9 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager/lib:$LD_LIBRARY_PATH"
 export PWD="/home/shimin/ROS_Prgm_Prj/build/rqt_controller_manager"
-export PYTHONPATH="/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager/lib/python2.7/dist-packages:$PYTHONPATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/shimin/ROS_Prgm_Prj/devel/.private/rqt_controller_manager/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/shimin/ROS_Prgm_Prj/src/debug_tool/ros_control/rqt_controller_manager:$ROS_PACKAGE_PATH"
+export PYTHONPATH="/home/shimin/ROS_Prgm_Prj/devel/lib/python2.7/dist-packages:$PYTHONPATH"

@@ -68,7 +68,7 @@ set(rqt_ez_publisher_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(rqt_ez_publisher_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/debug_tool/rqt_ez_publisher)
-  set(rqt_ez_publisher_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/rqt_ez_publisher)
+  set(rqt_ez_publisher_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel)
   set(rqt_ez_publisher_INSTALL_PREFIX "")
   set(rqt_ez_publisher_PREFIX ${rqt_ez_publisher_DEVEL_PREFIX})
 else()

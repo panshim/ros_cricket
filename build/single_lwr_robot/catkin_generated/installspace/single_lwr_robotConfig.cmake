@@ -68,7 +68,7 @@ set(single_lwr_robot_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(single_lwr_robot_SOURCE_PREFIX /home/shimin/ROS_Prgm_Prj/src/kuka-lwr/single_lwr_example/single_lwr_robot)
-  set(single_lwr_robot_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel/.private/single_lwr_robot)
+  set(single_lwr_robot_DEVEL_PREFIX /home/shimin/ROS_Prgm_Prj/devel)
   set(single_lwr_robot_INSTALL_PREFIX "")
   set(single_lwr_robot_PREFIX ${single_lwr_robot_DEVEL_PREFIX})
 else()
