@@ -1,0 +1,46 @@
+// Gazebo
+#include "gazebo/common/common.hh"
+#include "gazebo/physics/physics.hh"
+#include "gazebo/math/gzmath.hh"
+#include "gazebo_plugins/gazebo_ros_utils.h"
+
+// ROS
+#include <ros/ros.h>
+#include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/Image.h>
+
+// OpenCV
+#include <opencv2/opencv.hpp>
+
+
+namespace gazebo
+{
+  class BallTracker : public ModelPlugin
+  {
+  private:
+    GazeboRosPtr gazebo_ros_;
+    physics::ModelPtr model_;
+
+    std::string camera_name_;
+    std::string topic_raw_;
+    std::string topic_binary_;
+    std::string topic_cm_;
+
+    //cv::Mat K(3, 3, CV_64FC1); // intrinsic matrix
+    //cv::Mat R(3, 3, CV_64FC1); // rotation
+    //cv::Mat R(3, 1, CV_64FC1); // translation
+    //cv::Mat R(3, 4, CV_64FC1); // projection matrix
+
+    ros::Subscriber sub_raw;
+    ros::Publisher pub_binary;
+    ros::Publisher pub_cm; // 2D center of mass publisher
+
+  public:
+    BallTracker();
+    ~BallTracker();
+
+    void Load(physics::ModelPtr model, sdf::ElementPtr sdf);
+    void Track(const sensor_msgs::ImageConstPtr& raw);
+    void hsv_filter(const cv_bridge::CvImagePtr& img_ptr);
+  };
+}
