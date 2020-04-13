@@ -23,6 +23,7 @@ namespace gazebo
 
     sub_raw = gazebo_ros_->node()->subscribe(topic_raw_, 10, &BallTracker::Track, this);
     pub_binary = gazebo_ros_->node()->advertise<sensor_msgs::Image>(topic_binary_, 10);
+    pub_cm = gazebo_ros_->node()->advertise<geometry_msgs::Point>(topic_cm_, 10);
   }
 
   void BallTracker::Track(const sensor_msgs::ImageConstPtr& raw)
@@ -39,14 +40,15 @@ namespace gazebo
     }
 
     BallTracker::hsvFilter(img_ptr);
+    BallTracker::pubCenter(img_ptr);
 
+    cv::cvtColor(img_ptr->image, img_ptr->image, CV_GRAY2RGB);
     pub_binary.publish(img_ptr->toImageMsg());
-
-    //std_msgs::  cm;
-    //find_center(raw_ptr->image, cm);
-
-    //pub_cm.publish(cm);
   }
+
+  void BallTracker::setProjectionMatrix(){}
+
+  cv::Mat BallTracker::getProjectionMatrix() { return P; }
 
   void BallTracker::hsvFilter(const cv_bridge::CvImagePtr& img_ptr)
   {
@@ -54,7 +56,16 @@ namespace gazebo
     cv::Scalar hsv_lower(100, 80, 0);
     cv::Scalar hsv_upper(130, 255, 255);
     cv::inRange(img_ptr->image, hsv_lower, hsv_upper, img_ptr->image);
-    cv::cvtColor(img_ptr->image, img_ptr->image, CV_GRAY2RGB);
+  }
+
+  void BallTracker::pubCenter(const cv_bridge::CvImagePtr& img_ptr)
+  {
+    cv::Moments m = cv::moments(img_ptr->image, true);
+    geometry_msgs::Point cm;
+    cm.x = m.m10/m.m00;
+    cm.y = m.m01/m.m00;
+    cm.z = 0;
+    pub_cm.publish(cm);
   }
 
   GZ_REGISTER_MODEL_PLUGIN(BallTracker)

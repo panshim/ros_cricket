@@ -8,6 +8,7 @@
 #include <ros/ros.h>
 #include <cv_bridge/cv_bridge.h>
 #include <sensor_msgs/Image.h>
+#include <geometry_msgs/Point.h>
 
 // OpenCV
 #include <opencv2/opencv.hpp>
@@ -26,7 +27,7 @@ namespace gazebo
     std::string topic_binary_;
     std::string topic_cm_;
 
-    cv::Mat R(3, 4, CV_64FC1); // projection matrix
+    cv::Mat P = cv::Mat(3, 4, CV_64FC1); // projection matrix
 
     ros::Subscriber sub_raw;
     ros::Publisher pub_binary;
@@ -38,7 +39,9 @@ namespace gazebo
 
     void Load(physics::ModelPtr model, sdf::ElementPtr sdf);
     void Track(const sensor_msgs::ImageConstPtr& raw);
-    void setProjectionMatrix()
+    void setProjectionMatrix();
+    cv::Mat getProjectionMatrix();
     void hsvFilter(const cv_bridge::CvImagePtr& img_ptr);
+    void pubCenter(const cv_bridge::CvImagePtr& img_ptr);
   };
 }
