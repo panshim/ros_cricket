@@ -210,3 +210,6 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_executable(ball_node src/ball.cpp)
 target_link_libraries(ball_node ${catkin_LIBRARIES})
+
+add_executable(pub_real_pos_node src/pub_real_pos.cpp)
+target_link_libraries(pub_real_pos_node ${catkin_LIBRARIES})

@@ -50,7 +50,6 @@ int main(int argc, char **argv){
 
 	ros::Publisher twist_pub = nh.advertise<gazebo_msgs::ModelState>("gazebo/set_model_state",10);
 
-
         if (argc != 4)
         {
           ROS_INFO("usage: (rosrun) ball x[type:int] y[type:int] z[type:int]");

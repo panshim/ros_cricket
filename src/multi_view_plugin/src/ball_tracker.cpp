@@ -38,7 +38,7 @@ namespace gazebo
       return;
     }
 
-    BallTracker::hsv_filter(img_ptr);
+    BallTracker::hsvFilter(img_ptr);
 
     pub_binary.publish(img_ptr->toImageMsg());
 
@@ -48,7 +48,7 @@ namespace gazebo
     //pub_cm.publish(cm);
   }
 
-  void BallTracker::hsv_filter(const cv_bridge::CvImagePtr& img_ptr)
+  void BallTracker::hsvFilter(const cv_bridge::CvImagePtr& img_ptr)
   {
     cv::cvtColor(img_ptr->image, img_ptr->image, CV_RGB2HSV);
     cv::Scalar hsv_lower(100, 80, 0);
