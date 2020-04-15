@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   gazebo_dev
   gazebo_plugins
+  geometry_msgs
   roscpp
   sensor_msgs
 )
@@ -109,7 +110,7 @@ find_package(gazebo REQUIRED)
 catkin_package(
    INCLUDE_DIRS include
    LIBRARIES ball_tracker
-   CATKIN_DEPENDS cv_bridge gazebo_dev gazebo_plugins roscpp sensor_msgs
+   CATKIN_DEPENDS cv_bridge gazebo_dev gazebo_plugins geometry_msgs roscpp sensor_msgs
 #  DEPENDS system_lib
 )
 

@@ -9,5 +9,13 @@
                           output="screen">
 	</node>
 
+        <node pkg="ball_throwing"
+		  	  type="pub_real_pos_node"
+		  	  name="pub_ball_real_pos"
+                          output="screen">
+	</node>
+
+        <node pkg="rviz" type="rviz" name="rviz" args="-d $(find ball_throwing)/rviz/ball.rviz"/>
+
 </launch>
 
