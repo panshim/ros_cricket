@@ -1,1 +1,0 @@
-from ez_publisher_plugin import EzPublisherPlugin
