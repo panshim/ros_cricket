@@ -12,11 +12,16 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_dev
   gazebo_plugins
   geometry_msgs
+  kdl_parser
+  message_filters
   roscpp
   sensor_msgs
+  std_msgs
 )
 
 find_package(gazebo REQUIRED)
+
+find_package(OpenCV REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -109,8 +114,8 @@ find_package(gazebo REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
    INCLUDE_DIRS include
-   LIBRARIES ball_tracker
-   CATKIN_DEPENDS cv_bridge gazebo_dev gazebo_plugins geometry_msgs roscpp sensor_msgs
+   LIBRARIES ball_tracker multi_view_sys
+   CATKIN_DEPENDS cv_bridge gazebo_dev gazebo_plugins geometry_msgs kdl_parser message_filters roscpp sensor_msgs std_msgs
 #  DEPENDS system_lib
 )
 
@@ -123,6 +128,7 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -130,6 +136,7 @@ include_directories(
 #   src/${PROJECT_NAME}/multi_view_plugin.cpp
 # )
 add_library(ball_tracker src/ball_tracker.cpp)
+add_library(multi_view_sys src/multi_view_sys.cpp)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -140,6 +147,7 @@ add_library(ball_tracker src/ball_tracker.cpp)
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/multi_view_plugin_node.cpp)
+add_executable(tracking_node src/tracking_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -155,7 +163,9 @@ add_library(ball_tracker src/ball_tracker.cpp)
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-target_link_libraries(ball_tracker ${catkin_LIBRARIES})
+target_link_libraries(ball_tracker ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+target_link_libraries(multi_view_sys ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+target_link_libraries(tracking_node multi_view_sys ${catkin_LIBRARIES})
 
 #############
 ## Install ##

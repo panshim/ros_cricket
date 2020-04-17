@@ -111,9 +111,9 @@ int main(int argc, char **argv){
 
                         msg_qd.pose = init_pose;
 
-			msg_qd.twist.linear.x=double(rand())/double(RAND_MAX)*5;
-			msg_qd.twist.linear.y=double(rand())/double(RAND_MAX)*5;
-			msg_qd.twist.linear.z=8+double(rand())/double(RAND_MAX)*5;
+			msg_qd.twist.linear.x=double(rand())/double(RAND_MAX)*4.0-2.0;
+			msg_qd.twist.linear.y=double(rand())/double(RAND_MAX)*4.0-2.0;
+			msg_qd.twist.linear.z=5+double(rand())/double(RAND_MAX)*2.0;
 
 			twist_pub.publish( msg_qd );
 
