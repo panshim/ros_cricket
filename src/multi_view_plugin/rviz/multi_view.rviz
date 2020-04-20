@@ -56,7 +56,7 @@ Visualization Manager:
       Class: rviz/PointStamped
       Color: 204; 41; 204
       Enabled: true
-      History Length: 1
+      History Length: 10
       Name: PointStamped
       Radius: 0.0500000007
       Topic: /ball/real_pos
@@ -66,7 +66,7 @@ Visualization Manager:
       Class: rviz/PointStamped
       Color: 0; 255; 0
       Enabled: true
-      History Length: 1
+      History Length: 10
       Name: PointStamped
       Radius: 0.0500000007
       Topic: /ball/tracked_pos
