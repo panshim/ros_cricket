@@ -47,7 +47,7 @@ int main(int argc, char **argv)
   ros::NodeHandle nh;
 
   RealPosTransmitter rpt(nh);
-  ros::Timer timer = nh.createTimer(ros::Duration(0.1), &RealPosTransmitter::timerCallback, &rpt);
+  ros::Timer timer = nh.createTimer(ros::Duration(0.01), &RealPosTransmitter::timerCallback, &rpt);
 
   ros::spin();
 }
