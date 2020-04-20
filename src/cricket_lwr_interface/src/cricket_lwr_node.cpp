@@ -2,8 +2,8 @@
 
 int main(int argc, char **argv)
 {
-       /* To initialize a node called "test_kdl_node" */
-    ros::init(argc, argv, "test_kdl_node");
+       /* To initialize a node called "cricket_lwr_node" */
+    ros::init(argc, argv, "cricket_lwr_node");
 
     ros::NodeHandle nh;
     LwrCartesianCommand lwrCartCmd(nh); 

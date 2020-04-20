@@ -3,13 +3,14 @@
 
 #include <ros/ros.h>
 #include <tf/transform_listener.h>
+#include <tf/transform_datatypes.h>
 #include <string>
 class TFOperation
 {
     private:
         ros::NodeHandle nh;
-        tf::TransformListener listener;
     public:
+        tf::TransformListener listener;
         tf::StampedTransform listen_transform;
         TFOperation(ros::NodeHandle nh);
         ~TFOperation();

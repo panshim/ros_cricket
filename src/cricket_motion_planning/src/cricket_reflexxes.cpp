@@ -40,7 +40,11 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     // Note: For the very first motion after starting the controller, velocities & acceleration are commonly set to zero.
     tf_oper.TFListen("/lwr_base_link", "/lwr_7_link");
     double roll, pitch, yaw;
-    QuaternionToRPY<tf::Quaternion>(tf_oper.listen_transform.getRotation(), roll, pitch, yaw);
+    geometry_msgs::TransformStamped geo_ST;
+    transformStampedTFToMsg(tf_oper.listen_transform, geo_ST);
+    geometry_msgs::Quaternion Quat(geo_ST.transform.rotation);
+    CricketReflexxes::QuaternionToRPY<geometry_msgs::Quaternion>(Quat, roll, pitch, yaw);
+    // CricketReflexxes::QuaternionToRPY<tf::StampedTransform >(tf_oper.listen_transform, roll, pitch, yaw);
     IP->CurrentPositionVector->VecData      [0] = tf_oper.listen_transform.getOrigin().getX();
     IP->CurrentPositionVector->VecData      [1] = tf_oper.listen_transform.getOrigin().getY();
     IP->CurrentPositionVector->VecData      [2] = tf_oper.listen_transform.getOrigin().getZ();
@@ -78,7 +82,7 @@ void CricketReflexxes::SubMsgCallback(const geometry_msgs::Pose rcv_msg)
 
     /* Set-up TARGET of the input parameters */
     double roll, pitch, yaw;
-    QuaternionToRPY<geometry_msgs::Quaternion>(reflexxesTarget.orientation, roll, pitch, yaw);
+    CricketReflexxes::QuaternionToRPY<geometry_msgs::Quaternion>(reflexxesTarget.orientation, roll, pitch, yaw);
     IP->TargetPositionVector->VecData       [0] = reflexxesTarget.position.x;
     IP->TargetPositionVector->VecData       [1] = reflexxesTarget.position.y;
     IP->TargetPositionVector->VecData       [2] = reflexxesTarget.position.z;
@@ -126,7 +130,11 @@ void CricketReflexxes::TimerCallback(const ros::TimerEvent&)
     // step3: Update the Module's Input: IP
     tf_oper.TFListen("/lwr_base_link", "/lwr_7_link");
     double roll, pitch, yaw;
-    QuaternionToRPY<tf::Quaternion>(tf_oper.listen_transform.getRotation(), roll, pitch, yaw);
+    geometry_msgs::TransformStamped geo_ST;
+    transformStampedTFToMsg(tf_oper.listen_transform, geo_ST);
+    geometry_msgs::Quaternion Quat(geo_ST.transform.rotation);
+    CricketReflexxes::QuaternionToRPY<geometry_msgs::Quaternion>(Quat, roll, pitch, yaw);
+    // CricketReflexxes::QuaternionToRPY<tf::Quaternion>(tf_oper.listen_transform.getRotation(), roll, pitch, yaw);
     IP->CurrentPositionVector->VecData      [0] = tf_oper.listen_transform.getOrigin().getX();
     IP->CurrentPositionVector->VecData      [1] = tf_oper.listen_transform.getOrigin().getY();
     IP->CurrentPositionVector->VecData      [2] = tf_oper.listen_transform.getOrigin().getZ();
@@ -138,7 +146,7 @@ void CricketReflexxes::TimerCallback(const ros::TimerEvent&)
     *IP->CurrentAccelerationVector  =*OP->NewAccelerationVector;
 }
 
-template<class T> void CricketReflexxes::QuaternionToRPY(const T Quat, double &roll, double &pitch, double &yaw)
+template<class T> void CricketReflexxes::QuaternionToRPY(T Quat, double &roll, double &pitch, double &yaw)
 {
     // By default, in ROS, RPY rotation means ZYX (first Z axis, then Y axis, last X axis)
     tf::Quaternion q(Quat.x, Quat.y, Quat.z, Quat.w);

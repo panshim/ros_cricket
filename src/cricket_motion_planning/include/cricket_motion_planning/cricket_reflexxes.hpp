@@ -42,7 +42,7 @@ class CricketReflexxes
         ~CricketReflexxes();
         void TimerCallback(const ros::TimerEvent&);
         void SubMsgCallback(const geometry_msgs::Pose rcv_msg);
-        template<class T> void QuaternionToRPY(const T Quat, double &roll, double &pitch, double &yaw);
+        template<class T> static void QuaternionToRPY(const T Quat, double &roll, double &pitch, double &yaw);
         void RPYToQuaternion(tf::Quaternion &Quat, double roll, double pitch, double yaw);
 
 };

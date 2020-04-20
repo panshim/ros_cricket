@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv)
 {
-       /* To initialize a node called "test_kdl_node" */
+       /* To initialize a node called "cricket_motion_planning_node" */
     ros::init(argc, argv, "cricket_motion_planning_node");
 
     ros::NodeHandle nh;
