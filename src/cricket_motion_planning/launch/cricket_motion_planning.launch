@@ -1,6 +1,9 @@
 <launch>
-    <include file="$(find single_lwr_launch)/launch/single_lwr.launch"/>
     <include file="$(find cricket_lwr_interface)/launch/cricket_lwr.launch"/>
-
-    <!-- <node name="cricket_motion_planning_node" pkg="cricket_motion_planning" type="cricket_motion_planning_node" output="screen"/> -->
+    <include file="$(find single_lwr_launch)/launch/single_lwr.launch">
+        <arg name="use_rviz" value="false"/>
+    </include>
+    
+    <node name="cricket_motion_planning_node" pkg="cricket_motion_planning" type="cricket_motion_planning_node" output="screen"/>
+    
 </launch>

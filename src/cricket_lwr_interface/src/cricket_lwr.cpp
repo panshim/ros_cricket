@@ -26,9 +26,9 @@ LwrCartesianCommand::LwrCartesianCommand(ros::NodeHandle& nh): nh(nh)
     {
         if(tree.getChain("lwr_base_link", "lwr_7_link", chain))
         {
-            solvFk = new KDL::ChainFkSolverPos_recursive(chain);
-            solvIkVel = new KDL::ChainIkSolverVel_pinv(chain);
-            solvIk2 = new KDL::ChainIkSolverPos_NR(chain, *solvFk, *solvIkVel);
+            // solvFk = new KDL::ChainFkSolverPos_recursive(chain);
+            // solvIkVel = new KDL::ChainIkSolverVel_pinv(chain);
+            // solvIk2 = new KDL::ChainIkSolverPos_NR(chain, *solvFk, *solvIkVel);
             solvIk = new KDL::ChainIkSolverPos_LMA(chain);
         }
         else
@@ -59,7 +59,7 @@ LwrCartesianCommand::LwrCartesianCommand(ros::NodeHandle& nh): nh(nh)
     goalCmd.trajectory.joint_names[6] = "lwr_a6_joint";
     goalCmd.trajectory.points.resize(1);
 
-    // 4. Initialize Publisher
+    // 4. Initialize Publisher---Internal Inverse Kine. Controller
     // pubJntCmd = nh.advertise<trajectory_msgs::JointTrajectory>("lwr/joint_trajectory_controller/command", 100);
     // contrCmd.joint_names.resize(7);
     // contrCmd.points.resize(1);
@@ -96,8 +96,8 @@ void LwrCartesianCommand::callback_cartesian(geometry_msgs::Pose poseCmd)
     KDL::Frame fkTargetFrame(frameRot, frameVec);
     solvIk->CartToJnt(jointArrInit, fkTargetFrame, jointArrNrOut);
 
-    KDL::JntArray jointArrNrOut2;
-    solvIk2->CartToJnt(jointArrInit, fkTargetFrame,jointArrNrOut2);
+    // KDL::JntArray jointArrNrOut2;
+    // solvIk2->CartToJnt(jointArrInit, fkTargetFrame,jointArrNrOut2);
     /* END: Inverse Kinematics ChainIkSolverPos_NR */
 
     /* BEGIN: Publisher */
@@ -136,7 +136,7 @@ void LwrCartesianCommand::callback_cartesian(geometry_msgs::Pose poseCmd)
     LwrCartesianCommand::action_joint_request();
     while(!(jntClientPtr->getState().isDone()) && ros::ok())
     {
-        ros::Duration(0.1).sleep(); // sleep for four seconds
+        ros::Duration(0.2).sleep(); // sleep for four seconds
     }
     /* END: Request Action */
 }

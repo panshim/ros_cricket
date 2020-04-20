@@ -14,8 +14,7 @@ class TFOperation
         tf::StampedTransform listen_transform;
         TFOperation(ros::NodeHandle nh);
         ~TFOperation();
-        void TFListen(std::string base_frame, std::string target_frame);
+        void TFListen(std::string target_frame, std::string base_frame);
 };
-
 
 #endif

@@ -6,6 +6,7 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     //topic: [reflexxes_target_cart] --> {ReflexML} --> [cartesian_pos_cmd] --> {Inverse Postion Kine}.
     sub_reflex_target = nh.subscribe<geometry_msgs::Pose>("reflexxes_target_cart", 100, &CricketReflexxes::SubMsgCallback, this);
     pub_next_cart = nh.advertise<geometry_msgs::Pose>("cartesian_pos_cmd", 100);
+
     // Reflexxes Motion Lib Call
     IP=new RMLPositionInputParameters(NUMBER_OF_DOFS);
     OP=new RMLPositionOutputParameters(NUMBER_OF_DOFS);
@@ -15,39 +16,48 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     /* TF Operation class initialization in Initial List */
 
     /* set MAX ARGUMENTS for Reflexxes Call */
-    IP->MaxVelocityVector->VecData          [0] = 20.0;
-    IP->MaxVelocityVector->VecData          [1] = 20.0;
-    IP->MaxVelocityVector->VecData          [2] = 20.0;
-    IP->MaxVelocityVector->VecData          [3] = 10.0;
-    IP->MaxVelocityVector->VecData          [4] = 10.0;
-    IP->MaxVelocityVector->VecData          [5] = 10.0;
+    IP->MaxVelocityVector->VecData          [0] = 0.5;
+    IP->MaxVelocityVector->VecData          [1] = 0.5;
+    IP->MaxVelocityVector->VecData          [2] = 0.5;
+    IP->MaxVelocityVector->VecData          [3] = 0.5;
+    IP->MaxVelocityVector->VecData          [4] = 0.5;
+    IP->MaxVelocityVector->VecData          [5] = 0.5;
 
-    IP->MaxAccelerationVector->VecData      [0] = 20.0;
-    IP->MaxAccelerationVector->VecData      [1] = 20.0;
-    IP->MaxAccelerationVector->VecData      [2] = 20.0;
-    IP->MaxAccelerationVector->VecData      [3] = 10.0;
-    IP->MaxAccelerationVector->VecData      [4] = 10.0;
-    IP->MaxAccelerationVector->VecData      [5] = 10.0;
+    IP->MaxAccelerationVector->VecData      [0] = 2.0;
+    IP->MaxAccelerationVector->VecData      [1] = 2.0;
+    IP->MaxAccelerationVector->VecData      [2] = 2.0;
+    IP->MaxAccelerationVector->VecData      [3] = 2.0;
+    IP->MaxAccelerationVector->VecData      [4] = 2.0;
+    IP->MaxAccelerationVector->VecData      [5] = 2.0;
     
-    IP->MaxJerkVector->VecData              [0] = 400.0;
-    IP->MaxJerkVector->VecData              [1] = 300.0;
-    IP->MaxJerkVector->VecData              [2] = 200.0;
+    IP->MaxJerkVector->VecData              [0] = 20.0;
+    IP->MaxJerkVector->VecData              [1] = 20.0;
+    IP->MaxJerkVector->VecData              [2] = 20.0;
     IP->MaxJerkVector->VecData              [3] = 20.0;
     IP->MaxJerkVector->VecData              [4] = 20.0;
     IP->MaxJerkVector->VecData              [5] = 20.0;
 
+    IP->SelectionVector->VecData            [0] = true;
+    IP->SelectionVector->VecData            [1] = true;
+    IP->SelectionVector->VecData            [2] = true;
+    IP->SelectionVector->VecData            [3] = true;
+    IP->SelectionVector->VecData            [4] = true;
+    IP->SelectionVector->VecData            [5] = true;
+
     /* set Initial CURRENT POSITION for Reflexxes Call */
     // Note: For the very first motion after starting the controller, velocities & acceleration are commonly set to zero.
-    tf_oper.TFListen("/lwr_base_link", "/lwr_7_link");
+    tf_oper.TFListen("/lwr_7_link", "/lwr_base_link");
     double roll, pitch, yaw;
     geometry_msgs::TransformStamped geo_ST;
+    // from "tf::StampedTransform" to "geometry_msgs::TransformStamped"
     transformStampedTFToMsg(tf_oper.listen_transform, geo_ST);
+    //extract "geometry_msgs::Quaternion" from "geometry_msgs::TransformStamped"
     geometry_msgs::Quaternion Quat(geo_ST.transform.rotation);
     CricketReflexxes::QuaternionToRPY<geometry_msgs::Quaternion>(Quat, roll, pitch, yaw);
-    // CricketReflexxes::QuaternionToRPY<tf::StampedTransform >(tf_oper.listen_transform, roll, pitch, yaw);
-    IP->CurrentPositionVector->VecData      [0] = tf_oper.listen_transform.getOrigin().getX();
-    IP->CurrentPositionVector->VecData      [1] = tf_oper.listen_transform.getOrigin().getY();
-    IP->CurrentPositionVector->VecData      [2] = tf_oper.listen_transform.getOrigin().getZ();
+    
+    IP->CurrentPositionVector->VecData      [0] = geo_ST.transform.translation.x;
+    IP->CurrentPositionVector->VecData      [1] = geo_ST.transform.translation.y;
+    IP->CurrentPositionVector->VecData      [2] = geo_ST.transform.translation.z;
     IP->CurrentPositionVector->VecData      [3] = roll;
     IP->CurrentPositionVector->VecData      [4] = pitch;
     IP->CurrentPositionVector->VecData      [5] = yaw;
@@ -65,7 +75,6 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     IP->CurrentAccelerationVector->VecData  [3] = 0;
     IP->CurrentAccelerationVector->VecData  [4] = 0;
     IP->CurrentAccelerationVector->VecData  [5] = 0;
-
 }
 
 CricketReflexxes::~CricketReflexxes()
@@ -96,13 +105,6 @@ void CricketReflexxes::SubMsgCallback(const geometry_msgs::Pose rcv_msg)
     IP->TargetVelocityVector->VecData       [3] = 0;
     IP->TargetVelocityVector->VecData       [4] = 0;
     IP->TargetVelocityVector->VecData       [5] = 0;
-
-    IP->SelectionVector->VecData            [0] = true;
-    IP->SelectionVector->VecData            [1] = true;
-    IP->SelectionVector->VecData            [2] = true;
-    IP->SelectionVector->VecData            [3] = true;
-    IP->SelectionVector->VecData            [4] = true;
-    IP->SelectionVector->VecData            [5] = true;
 
 }
 
