@@ -38,7 +38,8 @@
                 "${workspaceFolder}/src/cricket_lwr_interface/include",
                 "${workspaceFolder}/src/kuka-lwr/lwr_controllers/include",
                 "${workspaceFolder}/src/kuka-lwr/lwr_hw/include",
-                "${workspaceFolder}/src/cricket_motion_planning/include"
+                "${workspaceFolder}/src/cricket_motion_planning/include",
+                "${workspaceFolder}/src/multi_view_plugin/include"
             ],
             "name": "ROS",
             "compilerPath": "/usr/bin/gcc"
