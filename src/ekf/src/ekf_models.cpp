@@ -19,11 +19,13 @@ State sys_evaluate_g( const State& state_in, double dt ){
 
   state_out.x[0] = state_in.x[0]+dt*state_in.x[3];
   state_out.x[1] = state_in.x[1]+dt*state_in.x[4];
-  state_out.x[2] = state_in.x[2]+dt*state_in.x[5]+0.5*state_in.x[6]*dt*dt;
+  state_out.x[2] = std::max(state_in.x[2]+dt*state_in.x[5]+0.5*state_in.x[6]*dt*dt,0.0);
   state_out.x[3] = state_in.x[3];
   state_out.x[4] = state_in.x[4];
   state_out.x[5] = state_in.x[5]+dt*state_in.x[6];
-  state_out.x[6] = state_in.x[6];
+  state_out.x[6] = state_out.x[6];
+
+  //std::cout<<state_in.x[6]<<std::endl;
 
   /*
   std::cout<<"----- g ------------------------------------------------------"<<std::endl;
@@ -113,22 +115,28 @@ void sys_evaluate_VMVt( double VMVt[7][7], const State& state, double dt ){
 }
 
 
-geometry_msgs::PointStamped meas_evaluate_gps( const State& state ){
+geometry_msgs::AccelStamped meas_evaluate_gps( const State& state ){
 
-  geometry_msgs::PointStamped obs;
+  geometry_msgs::AccelStamped obs;
 
   // TODO !! 这里是最需要改的地方，我现在还不知道仿真里的observation跟对应的state之间的关系。
-  obs.point.x = state.x[0];
-  obs.point.y = state.x[1];
-  obs.point.z = state.x[2];
+  //obs.point.x = state.x[0];
+  //obs.point.y = state.x[1];
+  //obs.point.z = state.x[2];
+  obs.accel.linear.x = state.x[0];
+  obs.accel.linear.y = state.x[1];
+  obs.accel.linear.z = state.x[2];
+  obs.accel.angular.x = state.x[3];
+  obs.accel.angular.y = state.x[4];
+  obs.accel.angular.z = state.x[5];
 
   return obs;
 }
 
 
-void meas_evaluate_Hgps( double Hgps[3][7], const State& state ){
+void meas_evaluate_Hgps( double Hgps[6][7], const State& state ){
 
-  for( int r=0; r<3; r++ )
+  for( int r=0; r<6; r++ )
     for( int c=0; c<7; c++ )
       Hgps[r][c] = 0.0;
 
@@ -136,6 +144,9 @@ void meas_evaluate_Hgps( double Hgps[3][7], const State& state ){
   Hgps[0][0] = 1.0;
   Hgps[1][1] = 1.0;
   Hgps[2][2] = 1.0;
+  Hgps[3][3] = 1.0;
+  Hgps[4][4] = 1.0;
+  Hgps[5][5] = 1.0;
 
   /*
   std::cout<<"-- Hgps ------------------------------------------------------"<<std::endl;
@@ -156,13 +167,13 @@ void meas_evaluate_R( double R[7][7], const State& state ){
     for( int c=0; c<7; c++ )
       R[r][c] = 0.0;
 
-  R[0][0] = 0.01;
-  R[1][1] = 0.01;
-  R[2][2] = 0.01;
-  R[3][3] = 0.01;
-  R[4][4] = 0.01;
-  R[5][5] = 0.01;
-  R[6][6] = 0.01;
+  R[0][0] = 0.001;
+  R[1][1] = 0.001;
+  R[2][2] = 0.001;
+  R[3][3] = 0.001;
+  R[4][4] = 0.001;
+  R[5][5] = 0.001;
+  R[6][6] = 0.001;
 
   /*
   R[0][0] = 1.251461376E-3;

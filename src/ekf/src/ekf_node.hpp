@@ -16,8 +16,8 @@ class EKFNode{
 private:
 
   BFL::ColumnVector z;
-  BFL::ColumnVector time;
 
+  ros::Time time;
   double rate;
   
   ros::NodeHandle nh;

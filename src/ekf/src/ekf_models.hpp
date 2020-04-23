@@ -6,6 +6,7 @@
 #include <iomanip>
 
 #include <geometry_msgs/PointStamped.h>
+#include <geometry_msgs/AccelStamped.h>
 
 struct State{
 
@@ -67,7 +68,7 @@ void sys_evaluate_G( double G[7][7], const State& state, double dt );
 
 void sys_evaluate_VMVt( double VMVt[7][7], const State& state, double dt );
 
-geometry_msgs::PointStamped meas_evaluate_gps( const State& state );
+geometry_msgs::AccelStamped meas_evaluate_gps( const State& state );
 
 void meas_evaluate_Hgps( double Hgps[3][7], const State& state );
 

@@ -25,13 +25,16 @@ namespace BFL
       { state_in.x[i-1] = state(i); }
 
     // Call the state prediction
-    geometry_msgs::PointStamped sen = meas_evaluate_gps( state_in ); //
+    geometry_msgs::AccelStamped sen = meas_evaluate_gps( state_in ); //
     
     // copy to the state
-    ColumnVector z(3);
-    z(1) = sen.point.x;
-    z(2) = sen.point.y;
-    z(3) = sen.point.z;
+    ColumnVector z(6);
+    z(1) = sen.accel.linear.x;
+    z(2) = sen.accel.linear.y;
+    z(3) = sen.accel.linear.z;
+    z(4) = sen.accel.angular.x;
+    z(5) = sen.accel.angular.y;
+    z(6) = sen.accel.angular.z;
     
     return z;
 
@@ -40,10 +43,10 @@ namespace BFL
   Matrix Measurement::dfGet(unsigned int i) const // compute jacobian
   {
 
-    Matrix df( 3, 7 );
+    Matrix df( 6, 7 );
 
     // initialize df matrix
-    for( int r=1; r<=3; r++)
+    for( int r=1; r<=6; r++)
     {
       for( int c=1; c<=7; c++)
       {
@@ -61,10 +64,10 @@ namespace BFL
       State s;
       for( size_t i=1; i<=7; i++ ) { s.x[i-1] = state(i); }
 
-      double Hgps[3][7];
+      double Hgps[6][7];
       meas_evaluate_Hgps( Hgps, s );
 
-      for( int r=1; r<=3; r++)
+      for( int r=1; r<=6; r++)
       {
         for( int c=1; c<=7; c++)
         {

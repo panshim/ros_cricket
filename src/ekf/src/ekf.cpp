@@ -62,16 +62,20 @@ void EKF::initialize()
 
   ColumnVector prior_Mu(7);
   prior_Mu = 0.0;
-  
-  // TODO!!! need to be filled with the start position of the ball
-  prior_Mu(6) = -9.8; // a_z
+  prior_Mu(1) = 1;
+  prior_Mu(2) = 1;
+  prior_Mu(3) = 0;
+  prior_Mu(4) = 0;
+  prior_Mu(5) = 0;
+  prior_Mu(6) = 0;
+  prior_Mu(7) = 0; // a_z
   // how to estimate the velocity of the ball??
 
   // TODO!!! set covariance
   SymmetricMatrix prior_Cov(7);
   for (unsigned int i=1; i<=7; i++){
     for (unsigned int j=1; j<=7; j++){
-      if (i==j) { prior_Cov(i,j) = pow( 1, 2 ); }
+      if (i==j) { prior_Cov(i,j) = 1; }
       else      { prior_Cov(i,j) = 0; }
     }
   }
@@ -94,26 +98,30 @@ geometry_msgs::AccelStamped EKF::get_posterior() const
 
   // prediction
   post_pose.header.stamp = ros::Time::now(); // TODO : how to match the time?
-  post_pose.accel.linear.x = state(0); // x position
-  post_pose.accel.linear.y = state(1); // y position
-  post_pose.accel.linear.z = state(2); // z position
-  post_pose.accel.angular.x = state(3); // x velocity
-  post_pose.accel.angular.y = state(4); // y velocity
-  post_pose.accel.angular.z = state(5); // z velocity
+  post_pose.header.frame_id = "world";
+  post_pose.accel.linear.x = state(1); // x position
+  post_pose.accel.linear.y = state(2); // y position
+  post_pose.accel.linear.z = state(3); // z position
+  post_pose.accel.angular.x = state(4); // x velocity
+  post_pose.accel.angular.y = state(5); // y velocity
+  post_pose.accel.angular.z = state(6); // z velocity
 
   // alternative method to make prediction
+
   /*
-  int dt = 100;
+  double i = 0.4;
+  //for(double i = 0.01; i<dt ; i=i+0.01){
+    post_pose.accel.linear.x = post_pose.accel.linear.x+i*post_pose.accel.angular.x; // x position
+    post_pose.accel.linear.y = post_pose.accel.linear.y+i*post_pose.accel.angular.y; // y position
+    post_pose.accel.linear.z = std::max(post_pose.accel.linear.z+i*post_pose.accel.angular.z,0.0);//-4.9*i*i,0.0); // z position
+    post_pose.accel.angular.x = post_pose.accel.angular.x; // x velocity
+    post_pose.accel.angular.y = post_pose.accel.angular.y; // y velocity
+    post_pose.accel.angular.z = post_pose.accel.angular.z;//-9.8*i; // z velocity
+  //}
 
-  post_pose.header.stamp = ros::Time::now()+ros::Duration(dt); // TODO : how to match the time?
-  post_pose.accel.linear.x = state(0)+dt*state(3); // x position
-  post_pose.accel.linear.y = state(1)+dt*state(4); // y position
-  post_pose.accel.linear.z = state(2)+dt*state(5)+0.5*dt*dt*state(6); // z position
-  post_pose.accel.angular.x = state(3); // x velocity
-  post_pose.accel.angular.y = state(4); // y velocity
-  post_pose.accel.angular.z = state(5)+dt*state(6); // z velocity
-
+  post_pose.header.stamp = ros::Time::now()+ros::Duration(i); // TODO : how to match the time?
   */
+
 
 
   return post_pose;

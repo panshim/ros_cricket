@@ -27,7 +27,7 @@ namespace BFL
       { state_in.x[i-1] = state(i); }
 
     // Call the state prediction
-    State state_out = sys_evaluate_g( state_in, 1); // TODO:!!! update time step == 1
+    State state_out = sys_evaluate_g( state_in, 0.05); // TODO:!!! update time step == 1
 
     // copy back to the state
     for( size_t i=1; i<=7; i++ )
@@ -62,7 +62,7 @@ namespace BFL
         { s.x[i-1] = state(i); }
 
       double G[7][7];
-      sys_evaluate_G( G, s, 100 );
+      sys_evaluate_G( G, s, 0.05);
 
       // initialize df matrix
       for( int r=1; r<=7; r++)
@@ -89,7 +89,7 @@ namespace BFL
       { s.x[i-1] = state(i); }
 
     double Q[7][7];
-    sys_evaluate_VMVt( Q, s, 1 );
+    sys_evaluate_VMVt( Q, s, 0.05);
     
     SymmetricMatrix sysQ( 7, 7 );
     for( int r=1; r<=6; r++)
