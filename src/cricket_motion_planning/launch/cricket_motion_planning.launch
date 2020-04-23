@@ -1,0 +1,11 @@
+<launch>
+    <include file="$(find cricket_lwr_interface)/launch/cricket_lwr.launch"/>
+    <include file="$(find single_lwr_launch)/launch/single_lwr.launch">
+        <arg name="controllers" value="one_task_inverse_kinematics"/> 
+	    <!-- default: joint_trajectory_controller  one_task_inverse_kinematics-->
+        <arg name="use_rviz" value="false"/>
+    </include>
+    
+    <node name="cricket_motion_planning_node" pkg="cricket_motion_planning" type="cricket_motion_planning_node" output="screen"/>
+    
+</launch>

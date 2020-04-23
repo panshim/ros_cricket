@@ -1,0 +1,49 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/shimin/ROS_Prgm_Prj/devel/include/**",
+                "/home/shimin/en530_707_catkin_ws/devel/include/**",
+                "/home/shimin/catkin_ws/devel/include/**",
+                "/opt/ros/kinetic/include/**",
+                "/home/shimin/catkin_ws/src/aruco_ros/aruco/include/**",
+                "/home/shimin/catkin_ws/src/aruco_ros/aruco_ros/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment1/assignment1_msgs/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment1/assignment1_srvcli/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment1/assignment1_subpub/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment2/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment3/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment5/edumip_balance_ros_gazebo_plugin/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment5/edumip_description/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment5/edumip_gazebo/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment5/edumip_utdoa_plugin/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment4/gripper_description/include/**",
+                "/home/shimin/catkin_ws/src/industrial_core/industrial_robot_client/include/**",
+                "/home/shimin/catkin_ws/src/industrial_core/industrial_trajectory_filters/include/**",
+                "/home/shimin/catkin_ws/src/industrial_core/industrial_utils/include/**",
+                "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_controllers/include/**",
+                "/home/shimin/ROS_Prgm_Prj/src/kuka-lwr-master/lwr_hw/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment4/robot_description/include/**",
+                "/home/shimin/en530_707_catkin_ws/src/sbr/assignment4/robot_gripper/include/**",
+                "/home/shimin/catkin_ws/src/industrial_core/simple_message/include/**",
+                "/home/shimin/catkin_ws/src/universal_robot/ur_kinematics/include/**",
+                "/home/shimin/catkin_ws/src/ur_modern_driver/include/**",
+                "/home/shimin/catkin_ws/src/usb_cam/include/**",
+                "/usr/include/**",
+                "${workspaceFolder}/src/kuka_interface-master/kuka_interface_pkg/include",
+                "${workspaceFolder}/src/cricket_lwr_interface/include",
+                "${workspaceFolder}/src/kuka-lwr/lwr_controllers/include",
+                "${workspaceFolder}/src/kuka-lwr/lwr_hw/include",
+                "${workspaceFolder}/src/cricket_motion_planning/include",
+                "${workspaceFolder}/src/multi_view_plugin/include"
+            ],
+            "name": "ROS",
+            "compilerPath": "/usr/bin/gcc"
+        }
+    ],
+    "version": 4
+}
