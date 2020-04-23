@@ -14,9 +14,10 @@
 #include <RMLPositionOutputParameters.h>
 
 #include "tf_operation.hpp"
+#include "lwr_controllers/PoseRPY.h"
 
 // defines
-#define CYCLE_TIME_IN_SECONDS   0.1 // 20Hz traj. command frequency
+#define CYCLE_TIME_IN_SECONDS   0.005 // 10Hz traj. command frequency
 #define NUMBER_OF_DOFS          6   // 6 DOF EndEffector
 
 class CricketReflexxes
@@ -27,8 +28,11 @@ class CricketReflexxes
         TFOperation tf_oper;
         geometry_msgs::Pose reflexxesTarget;
         geometry_msgs::Pose cartesian_pos_next_cmd;
+        lwr_controllers::PoseRPY inv_pos_next_cmd;
+        // Publisher & Subscriber
         ros::Subscriber sub_reflex_target;
         ros::Publisher pub_next_cart;
+        ros::Publisher pub_inv_next_cart;
         // Set-up a timer with a period of one millisecond
         ros::Timer timer;
         // Creating all relevant objects of the Type II Reflexxes Motion Library

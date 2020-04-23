@@ -4,9 +4,9 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
 {
     // Subscriber & Publisher
     //topic: [reflexxes_target_cart] --> {ReflexML} --> [cartesian_pos_cmd] --> {Inverse Postion Kine}.
-    sub_reflex_target = nh.subscribe<geometry_msgs::Pose>("reflexxes_target_cart", 100, &CricketReflexxes::SubMsgCallback, this);
-    pub_next_cart = nh.advertise<geometry_msgs::Pose>("cartesian_pos_cmd", 100);
-
+    sub_reflex_target = nh.subscribe<geometry_msgs::Pose>("reflexxes_target_cart", 1, &CricketReflexxes::SubMsgCallback, this);
+    pub_next_cart = nh.advertise<geometry_msgs::Pose>("cartesian_pos_cmd", 1);
+    pub_inv_next_cart = nh.advertise<lwr_controllers::PoseRPY>("/lwr/one_task_inverse_kinematics/command", 1);
     // Reflexxes Motion Lib Call
     IP=new RMLPositionInputParameters(NUMBER_OF_DOFS);
     OP=new RMLPositionOutputParameters(NUMBER_OF_DOFS);
@@ -16,26 +16,26 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     /* TF Operation class initialization in Initial List */
 
     /* set MAX ARGUMENTS for Reflexxes Call */
-    IP->MaxVelocityVector->VecData          [0] = 0.5;
-    IP->MaxVelocityVector->VecData          [1] = 0.5;
-    IP->MaxVelocityVector->VecData          [2] = 0.5;
-    IP->MaxVelocityVector->VecData          [3] = 0.5;
-    IP->MaxVelocityVector->VecData          [4] = 0.5;
-    IP->MaxVelocityVector->VecData          [5] = 0.5;
+    IP->MaxVelocityVector->VecData          [0] = 800.0;
+    IP->MaxVelocityVector->VecData          [1] = 800.0;
+    IP->MaxVelocityVector->VecData          [2] = 800.0;
+    IP->MaxVelocityVector->VecData          [3] = 314.0;
+    IP->MaxVelocityVector->VecData          [4] = 314.0;
+    IP->MaxVelocityVector->VecData          [5] = 314.0;
 
-    IP->MaxAccelerationVector->VecData      [0] = 2.0;
-    IP->MaxAccelerationVector->VecData      [1] = 2.0;
-    IP->MaxAccelerationVector->VecData      [2] = 2.0;
-    IP->MaxAccelerationVector->VecData      [3] = 2.0;
-    IP->MaxAccelerationVector->VecData      [4] = 2.0;
-    IP->MaxAccelerationVector->VecData      [5] = 2.0;
+    IP->MaxAccelerationVector->VecData      [0] = 5000.0;
+    IP->MaxAccelerationVector->VecData      [1] = 5000.0;
+    IP->MaxAccelerationVector->VecData      [2] = 5000.0;
+    IP->MaxAccelerationVector->VecData      [3] = 5000.0;
+    IP->MaxAccelerationVector->VecData      [4] = 5000.0;
+    IP->MaxAccelerationVector->VecData      [5] = 5000.0;
     
-    IP->MaxJerkVector->VecData              [0] = 20.0;
-    IP->MaxJerkVector->VecData              [1] = 20.0;
-    IP->MaxJerkVector->VecData              [2] = 20.0;
-    IP->MaxJerkVector->VecData              [3] = 20.0;
-    IP->MaxJerkVector->VecData              [4] = 20.0;
-    IP->MaxJerkVector->VecData              [5] = 20.0;
+    IP->MaxJerkVector->VecData              [0] = 10000.0;
+    IP->MaxJerkVector->VecData              [1] = 10000.0;
+    IP->MaxJerkVector->VecData              [2] = 10000.0;
+    IP->MaxJerkVector->VecData              [3] = 8000.0;
+    IP->MaxJerkVector->VecData              [4] = 8000.0;
+    IP->MaxJerkVector->VecData              [5] = 8000.0;
 
     IP->SelectionVector->VecData            [0] = true;
     IP->SelectionVector->VecData            [1] = true;
@@ -108,7 +108,7 @@ void CricketReflexxes::SubMsgCallback(const geometry_msgs::Pose rcv_msg)
 
 }
 
-void CricketReflexxes::TimerCallback(const ros::TimerEvent&)
+void CricketReflexxes::TimerCallback(const ros::TimerEvent& event)
 {
     // step1: Calling the Reflexxes OTG algorithm: Calc Module's Output: OP
     ResultValue =   RML->RMLPosition(*IP, OP, Flags);
@@ -129,6 +129,15 @@ void CricketReflexxes::TimerCallback(const ros::TimerEvent&)
     cartesian_pos_next_cmd.orientation.w = tf_quat.getW();
     pub_next_cart.publish(cartesian_pos_next_cmd);
     
+    // Step 2.1(backup): publish on topic: "/lwr/one_task_inverse_kinematics/command"
+    inv_pos_next_cmd.position.x = OP->NewPositionVector->VecData[0];
+    inv_pos_next_cmd.position.y = OP->NewPositionVector->VecData[1];
+    inv_pos_next_cmd.position.z = OP->NewPositionVector->VecData[2];
+    inv_pos_next_cmd.orientation.roll = OP->NewPositionVector->VecData[3];
+    inv_pos_next_cmd.orientation.pitch = OP->NewPositionVector->VecData[4];
+    inv_pos_next_cmd.orientation.yaw = OP->NewPositionVector->VecData[5];
+    pub_inv_next_cart.publish(inv_pos_next_cmd);
+
     // step3: Update the Module's Input: IP
     tf_oper.TFListen("/lwr_base_link", "/lwr_7_link");
     double roll, pitch, yaw;
@@ -137,13 +146,12 @@ void CricketReflexxes::TimerCallback(const ros::TimerEvent&)
     geometry_msgs::Quaternion Quat(geo_ST.transform.rotation);
     CricketReflexxes::QuaternionToRPY<geometry_msgs::Quaternion>(Quat, roll, pitch, yaw);
     // CricketReflexxes::QuaternionToRPY<tf::Quaternion>(tf_oper.listen_transform.getRotation(), roll, pitch, yaw);
-    IP->CurrentPositionVector->VecData      [0] = tf_oper.listen_transform.getOrigin().getX();
-    IP->CurrentPositionVector->VecData      [1] = tf_oper.listen_transform.getOrigin().getY();
-    IP->CurrentPositionVector->VecData      [2] = tf_oper.listen_transform.getOrigin().getZ();
+    IP->CurrentPositionVector->VecData      [0] = geo_ST.transform.translation.x;
+    IP->CurrentPositionVector->VecData      [1] = geo_ST.transform.translation.y;
+    IP->CurrentPositionVector->VecData      [2] = geo_ST.transform.translation.z;
     IP->CurrentPositionVector->VecData      [3] = roll;
     IP->CurrentPositionVector->VecData      [4] = pitch;
     IP->CurrentPositionVector->VecData      [5] = yaw;
-    // *IP->CurrentPositionVector      =*OP->NewPositionVector;
     *IP->CurrentVelocityVector      =*OP->NewVelocityVector;
     *IP->CurrentAccelerationVector  =*OP->NewAccelerationVector;
 }
