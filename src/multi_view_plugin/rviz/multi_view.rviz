@@ -57,9 +57,9 @@ Visualization Manager:
       Class: rviz/PointStamped
       Color: 204; 41; 204
       Enabled: true
-      History Length: 10
+      History Length: 20
       Name: PointStamped
-      Radius: 0.0500000007
+      Radius: 0.100000001
       Topic: /ball/real_pos
       Unreliable: false
       Value: true
@@ -67,9 +67,9 @@ Visualization Manager:
       Class: rviz/PointStamped
       Color: 0; 255; 0
       Enabled: true
-      History Length: 10
+      History Length: 20
       Name: PointStamped
-      Radius: 0.0500000007
+      Radius: 0.100000001
       Topic: /ball/tracked_pos
       Unreliable: false
       Value: true
@@ -77,10 +77,10 @@ Visualization Manager:
       Class: rviz/PointStamped
       Color: 255; 255; 0
       Enabled: true
-      History Length: 1
+      History Length: 20
       Name: PointStamped
-      Radius: 0.0500000007
-      Topic: /ball/hjw
+      Radius: 0.100000001
+      Topic: /ball/tracked_pos_kf
       Unreliable: false
       Value: true
   Enabled: true
@@ -88,7 +88,7 @@ Visualization Manager:
     Background Color: 48; 48; 48
     Default Light: true
     Fixed Frame: world
-    Frame Rate: 60
+    Frame Rate: 30
   Name: root
   Tools:
     - Class: rviz/Interact
@@ -108,25 +108,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 9.16651249
+      Distance: 16.1108284
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.0204323977
-        Y: 0.682859957
-        Z: 0.280860275
+        X: 0.330742449
+        Y: 0.779784203
+        Z: 1.02148736
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.409796506
+      Pitch: 0.340398192
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.605397463
+      Yaw: 6.08858442
     Saved: ~
 Window Geometry:
   Displays:

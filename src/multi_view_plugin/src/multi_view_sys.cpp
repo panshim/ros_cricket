@@ -1,5 +1,4 @@
 #include "multi_view_plugin/multi_view_sys.hpp"
-#include "kdl_parser/kdl_parser.hpp"
 
 
 MultiViewSys::MultiViewSys(ros::NodeHandle& nh) : nh (nh), sync (sub0, sub1, sub2, sub3, 10) 
@@ -29,6 +28,30 @@ MultiViewSys::MultiViewSys(ros::NodeHandle& nh) : nh (nh), sync (sub0, sub1, sub
   topic_track_ = "ball/tracked_pos";
   ROS_INFO("MultiViewSys: topic_track_ is %s", topic_track_.c_str());
   pub_track = nh.advertise<geometry_msgs::PointStamped>(topic_track_, 10);
+
+  // configure kalman filter smoothing
+  kf = cv::KalmanFilter(state_size, msr_size, ctl_size, CV_32F);
+
+  last_stamp = 0;
+  current_stamp = 0;
+
+  topic_kf_ = "ball/tracked_pos_kf";
+  ROS_INFO("MultiViewSys: topic_kf_ is %s", topic_kf_.c_str());
+  pub_kf = nh.advertise<geometry_msgs::PointStamped>(topic_kf_, 10);
+
+  cv::setIdentity(kf.transitionMatrix);
+  kf.controlMatrix = cv::Mat::zeros(state_size, ctl_size, CV_32F);
+  cv::setIdentity(kf.processNoiseCov, cv::Scalar(0.005));
+  kf.processNoiseCov.at<float>(3, 3) = 0.2;
+  kf.processNoiseCov.at<float>(4, 4) = 0.2;
+  kf.processNoiseCov.at<float>(5, 5) = 0.2;
+
+  kf.measurementMatrix = cv::Mat::zeros(msr_size, state_size, CV_32F);
+  kf.measurementMatrix.at<float>(0, 0) = 1.0;
+  kf.measurementMatrix.at<float>(1, 1) = 1.0;
+  kf.measurementMatrix.at<float>(2, 2) = 1.0;
+  cv::setIdentity(kf.measurementNoiseCov, cv::Scalar(0.005));
+  cv::setIdentity(kf.errorCovPre, cv::Scalar(0.1));
 }
   
 MultiViewSys::~MultiViewSys(){}
@@ -63,7 +86,6 @@ void MultiViewSys::triangulationCallback(const geometry_msgs::PointStamped::Cons
       pt_3D.at<float>(2, 0) = pt_4D.at<float>(2, 0) / pt_4D.at<float>(3, 0);
       pts_3D.push_back(pt_3D);
     }
-    geometry_msgs::PointStamped msg_track;
     msg_track.header.stamp = msg3->header.stamp; // need to modify to reflect the latest timestamp
     msg_track.header.frame_id = "world";
 
@@ -80,6 +102,59 @@ void MultiViewSys::triangulationCallback(const geometry_msgs::PointStamped::Cons
     msg_track.point.y = y_sum / n_valid;
     msg_track.point.z = z_sum / n_valid;
     pub_track.publish(msg_track);
+
+    // kalman filter smoothing
+    current_stamp = msg_track.header.stamp.toSec();
+    track_pos = KDL::Vector(msg_track.point.x, msg_track.point.y, msg_track.point.z);
+    if (last_stamp == 0) // node starts
+    {
+      last_stamp = current_stamp;
+      last_pos = track_pos;
+      kf_triggered = false;
+    }
+    else
+    {
+      KDL::Vector dp = track_pos - last_pos;
+      if (track_pos[2] < 0.1) // ball on the ground, stop smoothing
+      {
+        last_stamp = current_stamp;
+        last_pos = track_pos;
+        kf_triggered = false;
+      }
+      else if ((track_pos[2] >= 0.1) && (dp.Norm() < 1)) // smoothing
+      {
+        float dt = current_stamp - last_stamp;
+        if (!kf_triggered) // kalman filter triggered, initialize
+        {
+          kf.statePre.at<float>(0) = last_pos[0];
+          kf.statePre.at<float>(1) = last_pos[1];
+          kf.statePre.at<float>(2) = last_pos[2];
+          kf.statePre.at<float>(3) = dp[0] / dt;
+          kf.statePre.at<float>(4) = dp[1] / dt;
+          kf.statePre.at<float>(5) = dp[2] / dt;
+
+          kf_triggered = true;
+        }
+        cv::Mat msr_pos = (cv::Mat_<float>(msr_size, 1) << track_pos[0], track_pos[1], track_pos[2]);
+        cv::Mat estimate = MultiViewSys::kfSmooth(dt, msr_pos);
+
+        msg_kf.header.stamp = msg3->header.stamp;
+        msg_kf.header.frame_id = "world";
+        msg_kf.point.x = estimate.at<float>(0);
+        msg_kf.point.y = estimate.at<float>(1);
+        msg_kf.point.z = estimate.at<float>(2);
+        
+        pub_kf.publish(msg_kf);
+
+        last_stamp = current_stamp;
+        last_pos = track_pos;
+      }
+      else // reset
+      {
+        last_stamp = 0;
+        kf_triggered = false;
+      }
+    }
   }
 }
       
@@ -135,4 +210,18 @@ void MultiViewSys::getProjectionMatrix(cv::Mat& proj, const std::string& camera_
   }
 }
 
+cv::Mat MultiViewSys::kfSmooth(float dt, const cv::Mat msr_pos)
+{
+  kf.transitionMatrix.at<float>(0, 3) = dt;
+  kf.transitionMatrix.at<float>(1, 4) = dt;
+  kf.transitionMatrix.at<float>(2, 5) = dt;
 
+  kf.controlMatrix.at<float>(2, 0) = 0.5 * dt *dt;
+  kf.controlMatrix.at<float>(5, 0) = dt;
+
+  cv::Mat pred = kf.predict(kf_ctl);
+  cv::Mat estimate = kf.correct(msr_pos);
+  return estimate;
+}
+  
+  
