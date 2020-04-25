@@ -156,14 +156,15 @@ void MultiViewSys::triangulationCallback(const geometry_msgs::PointStamped::Cons
 
         pub_kf.publish(msg_kf);
 
-
-        if (msg_kf.point.z>0.5)
+        """
+        if ((msg_kf.point.z>0.2)&&(std::abs(msg_track.point.x-3)>0.02))
         {
-        	MultiViewSys::lsPrediction(dt, dur_time, msg_kf, pt, N);
+        	MultiViewSys::lsPrediction(dt, dur_time, msg_track, pt, N);
 
         	N += 1;
         	dur_time = dur_time + dt;
         }
+        """
 
         last_stamp = current_stamp;
         last_pos = track_pos;
@@ -172,8 +173,10 @@ void MultiViewSys::triangulationCallback(const geometry_msgs::PointStamped::Cons
       {
         last_stamp = 0;
         kf_triggered = false;
+        """
         N = 0;
         dur_time = 0.0;
+        """
       }
     }
   }
