@@ -1,0 +1,5 @@
+<launch>
+    
+    <node name="cricket_coordinate_node" pkg="cricket_coordinate" type="cricket_coordinate_node" output="screen"/>
+    
+</launch>

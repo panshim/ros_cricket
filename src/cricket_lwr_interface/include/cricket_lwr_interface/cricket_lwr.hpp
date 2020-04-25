@@ -1,3 +1,6 @@
+#ifndef _CRICKET_LWR_H_
+#define _CRICKET_LWR_H_
+
 // ROS
 #include <ros/ros.h>
 #include <geometry_msgs/Pose.h>
@@ -51,3 +54,5 @@ class LwrCartesianCommand
         void action_joint_request();
 
 };
+
+#endif
