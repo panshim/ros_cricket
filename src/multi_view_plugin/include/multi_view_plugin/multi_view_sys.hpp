@@ -2,7 +2,6 @@
 #include "ros/ros.h"
 #include "gazebo_msgs/GetModelState.h"
 #include "geometry_msgs/PointStamped.h"
-#include "geometry_msgs/AccelStamped.h"
 #include "sensor_msgs/CameraInfo.h"
 #include "message_filters/subscriber.h"
 #include "message_filters/time_synchronizer.h"
@@ -39,7 +38,7 @@ class MultiViewSys
 
     message_filters::TimeSynchronizer<geometry_msgs::PointStamped, geometry_msgs::PointStamped, geometry_msgs::PointStamped, geometry_msgs::PointStamped> sync; // message synchronizer
       
-    // kalman filter and LS related
+    // kalman filter related
     bool kf_triggered = false;
 
     float last_stamp;
@@ -52,30 +51,12 @@ class MultiViewSys
     int msr_size = 3; // x, y, z (tracked)
     int ctl_size = 1; // gravity
     cv::Mat kf_ctl = (cv::Mat_<float>(1, 1) << -9.8);
-    cv::Mat X;
-    cv::Mat Y;
-    cv::Mat Z;
-    cv::Mat T;
-    cv::Mat A;
-
-    int N;
-    float dur_time;
-
 
     cv::KalmanFilter kf;
 
     std::string topic_kf_;
-    std::string topic_prediction_pos_vel_;
-    std::string topic_prediction_pos_;
     ros::Publisher pub_kf;
-    ros::Publisher pub_prediction_pos_vel;
-    ros::Publisher pub_prediction_pos;
     geometry_msgs::PointStamped msg_kf;
-    geometry_msgs::AccelStamped est_kf_pos_vel;
-    geometry_msgs::PointStamped est_kf_pos;
-
-
-    float pt = 0.2; // 1 second ahead of time 
     
   public:
     MultiViewSys(ros::NodeHandle& nh);
@@ -87,9 +68,6 @@ class MultiViewSys
 			       const geometry_msgs::PointStamped::ConstPtr& msg3);
     void getProjectionMatrix(cv::Mat& proj, const std::string& camera_name);
     cv::Mat kfSmooth(float dt, const cv::Mat msr_pos);
-    void lsPrediction(const float dt, float dur_time, const geometry_msgs::PointStamped& msg_kf, 
-                    const float pt, int N);
-    void lsPredResult(const float dur_time, const float val, const float pt, const int flag, const int N);
 };
 
 
