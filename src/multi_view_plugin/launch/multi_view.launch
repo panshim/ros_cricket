@@ -61,8 +61,11 @@
 
         <node pkg="multi_view_plugin" type="tracking_node" name="track_the_ball" output="screen"/>
 
+<<<<<<< HEAD
         <node pkg="ekf" type="ekf_node" name="EKF" output="screen"/>
 
+=======
+>>>>>>> ceffcc3e8194f3778397c73d99f301a1d478e86a
         <node pkg="rviz" type="rviz" name="rviz" args="-d $(find multi_view_plugin)/rviz/multi_view.rviz"/>
 
 </launch>
