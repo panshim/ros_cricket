@@ -12,6 +12,8 @@ EKFNode::EKFNode( ros::NodeHandle& nh, ros::NodeHandle& nhp, double r ) :
   // advertise estimation
   pub_pose=nh_private.advertise<geometry_msgs::AccelStamped>("/ball/posterior_estimation",10);
 
+  pub_point=nh_private.advertise<geometry_msgs::PointStamped>("/ball/hjw",10);
+
   // subscribe sensor 
   sub_pose=nh.subscribe( "ball/tracked_pos", 100, &EKFNode::callback_sensors, this ); // now still hardcoded
 
@@ -58,7 +60,17 @@ void EKFNode::callback_sensors( const geometry_msgs::PointStamped& sen){
   EST.accel.angular.y = z(5); // y velocity
   EST.accel.angular.z = z(6)-9.8*i; // z velocity
 
+
+  geometry_msgs::PointStamped point_est;
+  point_est.header.stamp = time + ros::Duration(i); // TODO : how to match the time?
+  point_est.header.frame_id = "world";
+
+  point_est.point.x = std::min(10.0,z(1)+i*z(4)); // x position
+  point_est.point.y = std::min(10.0,z(2)+i*z(5)); // y position
+  point_est.point.z = std::min(10.0,std::max(z(3)+i*z(6)-4.9*i*i,0.0)); // z position
+
   pub_pose.publish( EST );
+  pub_point.publish( point_est );
 
 
 }

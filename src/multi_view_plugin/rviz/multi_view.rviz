@@ -8,6 +8,7 @@ Panels:
         - /Status1
         - /PointStamped1
         - /PointStamped2
+        - /PointStamped3
       Splitter Ratio: 0.5
     Tree Height: 463
   - Class: rviz/Selection
@@ -70,6 +71,16 @@ Visualization Manager:
       Name: PointStamped
       Radius: 0.0500000007
       Topic: /ball/tracked_pos
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Class: rviz/PointStamped
+      Color: 255; 255; 0
+      Enabled: true
+      History Length: 1
+      Name: PointStamped
+      Radius: 0.0500000007
+      Topic: /ball/hjw
       Unreliable: false
       Value: true
   Enabled: true

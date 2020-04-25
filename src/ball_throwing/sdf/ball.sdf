@@ -51,11 +51,11 @@
           <surface>
             <friction>
               <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
+                <mu>0.0</mu>
+                <mu2>0.0</mu2>
                 <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
+                <slip1>1</slip1>
+                <slip2>1</slip2>
               </ode>
               <torsional>
                 <coefficient>1</coefficient>
@@ -68,8 +68,8 @@
               </torsional>
             </friction>
             <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
+              <restitution_coefficient>1.0</restitution_coefficient>
+              <threshold>0.01</threshold>
             </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
@@ -80,7 +80,7 @@
                 <soft_erp>0.2</soft_erp>
                 <kp>1e+13</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
+                <max_vel>10.0</max_vel>
                 <min_depth>0</min_depth>
               </ode>
               <bullet>

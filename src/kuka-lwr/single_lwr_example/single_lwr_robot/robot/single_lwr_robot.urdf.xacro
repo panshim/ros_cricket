@@ -29,12 +29,45 @@
 	</link>
 
 	<gazebo reference="box">
-		<static>true</static>>
+		<static>true</static>
 	</gazebo>
+
 
 	<!-- using the models -->
 	<xacro:kuka_lwr parent="box" name="lwr">
 		<origin xyz="0 0 1" rpy="0 0 0"/>
 	</xacro:kuka_lwr>
+
+	<gazebo reference="lwr_bat_link">
+		<collision>
+			<surface>
+				<bounce>
+					<restitution_coefficient>1</restitution_coefficient>
+					<threshold>0.01</threshold>
+				</bounce>
+				<contact>
+					<collide_without_contact>0</collide_without_contact>
+					<collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+					<collide_bitmask>1</collide_bitmask>
+					<ode>
+						<soft_cfm>0</soft_cfm>
+						<soft_erp>0.2</soft_erp>
+						<kp>1e+13</kp>
+						<kd>1</kd>
+						<max_vel>10.0</max_vel>
+						<min_depth>0</min_depth>
+					</ode>
+					<bullet>
+						<split_impulse>1</split_impulse>
+						<split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+						<soft_cfm>0</soft_cfm>
+						<soft_erp>0.2</soft_erp>
+						<kp>1e+13</kp>
+						<kd>1</kd>
+					</bullet>
+				</contact>
+			</surface>
+		</collision>
+	</gazebo>
 
 </robot>

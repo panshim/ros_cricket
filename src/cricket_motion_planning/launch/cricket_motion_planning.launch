@@ -7,5 +7,7 @@
     </include>
     
     <node name="cricket_motion_planning_node" pkg="cricket_motion_planning" type="cricket_motion_planning_node" output="screen"/>
+
+    <include file="$(find multi_view_plugin)/launch/multi_view.launch"/>
     
 </launch>

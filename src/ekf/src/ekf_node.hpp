@@ -25,6 +25,7 @@ private:
 
   ros::Subscriber sub_pose;
   ros::Publisher  pub_pose;
+  ros::Publisher  pub_point;
 
   EKF ekf;
   

@@ -43,6 +43,9 @@ printf(":%d",scanKeyboard());
 }
 */
 
+void vel_gen(const geometry_msgs::Pose& init_pose, const geometry_msgs::Pose& target_pose, 
+					double* vel_xyz, double radius, double duration);
+
 
 int main(int argc, char **argv){
 	ros::init(argc,argv,"ball_throwing");
@@ -50,11 +53,13 @@ int main(int argc, char **argv){
 
 	ros::Publisher twist_pub = nh.advertise<gazebo_msgs::ModelState>("gazebo/set_model_state",10);
 
-        if (argc != 4)
+        if (argc != 9)
         {
           ROS_INFO("usage: (rosrun) ball x[type:int] y[type:int] z[type:int]");
           return 1;
         }
+
+		ROS_INFO("------------------------------- (%f)", atof(argv[4]));
         
         // spawn the ball initially
         std::string pkg_path = ros::package::getPath("ball_throwing");
@@ -73,6 +78,20 @@ int main(int argc, char **argv){
         spawn_msg.request.model_xml = xml_stream.str();
         spawn_msg.request.robot_namespace = "ball";
         spawn_msg.request.initial_pose = init_pose;
+
+		// set target region parameters
+		geometry_msgs::Pose target_pose;
+        target_pose.position.x = atof(argv[4]);
+        target_pose.position.y = atof(argv[5]);
+        target_pose.position.z = atof(argv[6]);
+		// target_pose.position.x = 0.0;
+        // target_pose.position.y = 0.0;
+        // target_pose.position.z = 1.0;
+
+		// radius of target region
+		double RADIUS = atof(argv[7]);
+		// duration of ball flying in sky
+		double DURATION = atof(argv[8]);
 
         ros::ServiceClient spawn = nh.serviceClient<gazebo_msgs::SpawnModel>("/gazebo/spawn_sdf_model");
         spawn.waitForExistence();
@@ -107,13 +126,24 @@ int main(int argc, char **argv){
 
 			gazebo_msgs::ModelState msg_qd;
 
-			msg_qd.model_name=std::string("ball");
+			msg_qd.model_name = std::string("ball");
 
-                        msg_qd.pose = init_pose;
+            msg_qd.pose = init_pose;
 
-			msg_qd.twist.linear.x=double(rand())/double(RAND_MAX)*4.0-2.0;
-			msg_qd.twist.linear.y=double(rand())/double(RAND_MAX)*4.0-2.0;
-			msg_qd.twist.linear.z=5+double(rand())/double(RAND_MAX)*2.0;
+			double vel_xyz[3];
+
+			vel_gen(init_pose, target_pose, vel_xyz, RADIUS, DURATION);
+
+			ROS_INFO("velocity (%f, %f, %f)",vel_xyz[0], vel_xyz[1], vel_xyz[2]);
+
+			msg_qd.twist.linear.x = vel_xyz[0];
+			msg_qd.twist.linear.y = vel_xyz[1];
+			msg_qd.twist.linear.z = vel_xyz[2];
+
+			// msg_qd.twist.linear.x = double(rand()) / double(RAND_MAX) * 2.0 - 5.0;
+			// // msg_qd.twist.linear.y = double(rand()) / double(RAND_MAX) * 4.0 - 2.0;
+			// msg_qd.twist.linear.y = 0.0;
+			// msg_qd.twist.linear.z = 4.0 + double(rand()) / double(RAND_MAX) * 2.0;
 
 			twist_pub.publish( msg_qd );
 
@@ -129,9 +159,9 @@ int main(int argc, char **argv){
 			msg_qd.model_name=std::string("ball");
 
 			msg_qd.pose = init_pose;
-			msg_qd.twist.linear.x=0;
-			msg_qd.twist.linear.y=0;
-			msg_qd.twist.linear.z=0;
+			msg_qd.twist.linear.x = 0;
+			msg_qd.twist.linear.y = 0;
+			msg_qd.twist.linear.z = 0;
 
 			twist_pub.publish( msg_qd );
 
@@ -142,4 +172,22 @@ int main(int argc, char **argv){
 	}
 
 	return 0;
+}
+
+
+void vel_gen(const geometry_msgs::Pose& init_pose, const geometry_msgs::Pose& target_pose, 
+					double* vel_xyz, double radius, double duration){
+
+	double r = double(rand()) / double(RAND_MAX) * radius;
+	double alpha = double(rand()) / double(RAND_MAX) * 2.0 * M_PI;
+	double gamma = double(rand()) / double(RAND_MAX) * 0.5 * M_PI;
+
+	double target_x = target_pose.position.x + r * cos(gamma) * cos(alpha);
+	double target_y = target_pose.position.y + r * cos(gamma) * sin(alpha);
+	double target_z = target_pose.position.z + r * sin(gamma);
+
+	vel_xyz[0] = (target_x - init_pose.position.x) / duration;
+	vel_xyz[1] = (target_y - init_pose.position.y) / duration;
+	vel_xyz[2] = (target_z - init_pose.position.z) / duration + 0.5 * duration * 9.801;
+
 }
