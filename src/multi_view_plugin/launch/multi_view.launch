@@ -5,6 +5,8 @@
         <arg name="camera_C_name" default="C"/>
         <arg name="camera_D_name" default="D"/>
 
+        <arg name="rviz_file" default="$(find multi_view_plugin)/rviz/multi_view.rviz"/>
+
         <include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<arg name="world_name" value="$(find multi_view_plugin)/worlds/multi_view.world"/>
 	</include>
@@ -59,6 +61,6 @@
 
         <node pkg="multi_view_plugin" type="tracking_node" name="track_the_ball" output="screen"/>
 
-        <node pkg="rviz" type="rviz" name="rviz" args="-d $(find multi_view_plugin)/rviz/multi_view.rviz"/>
+        <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_file)"/>
 
 </launch>
