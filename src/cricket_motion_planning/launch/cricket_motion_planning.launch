@@ -1,5 +1,8 @@
 <launch>
-    <include file="$(find cricket_lwr_interface)/launch/cricket_lwr.launch"/>
+    <include file="$(find cricket_lwr_interface)/launch/cricket_lwr.launch">
+        <arg name="__main__" value="false"/> 
+    </include>
+    
     <include file="$(find single_lwr_launch)/launch/single_lwr.launch">
         <arg name="controllers" value="one_task_inverse_kinematics"/> 
 	    <!-- default: joint_trajectory_controller  one_task_inverse_kinematics-->

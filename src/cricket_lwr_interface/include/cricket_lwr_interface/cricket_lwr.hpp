@@ -19,7 +19,7 @@
 typedef actionlib::SimpleActionClient<control_msgs::FollowJointTrajectoryAction> lwr_action_client;
 typedef boost::shared_ptr<lwr_action_client>  lwr_action_client_Ptr;
 
-#define INVERSE_KINE_TIME_STEP 0.8
+#define INVERSE_KINE_TIME_STEP 0.5
 
 class LwrCartesianCommand
 {
@@ -28,6 +28,7 @@ class LwrCartesianCommand
         /* Subscriber & Publisher & Actionlib Client*/
         ros::Subscriber subCartCmd;
         ros::Publisher pubJntCmd;
+        ros::Publisher pubJntCommand;//backup
         trajectory_msgs::JointTrajectory contrCmd;
         lwr_action_client_Ptr jntClientPtr;
         /* KDL Inverse Kinematics */
@@ -43,7 +44,9 @@ class LwrCartesianCommand
         /* Cartesian & JointSpace Command */
         geometry_msgs::Pose poseCmd;
         control_msgs::FollowJointTrajectoryGoal goalCmd;
+        control_msgs::FollowJointTrajectoryActionGoal goalCommand;
         // Set-up a timer with a period of one millisecond
+        bool timerLock;
         ros::Timer timer;
 
     public:

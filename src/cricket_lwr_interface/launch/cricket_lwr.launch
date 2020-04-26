@@ -1,4 +1,12 @@
 <launch>
+    <arg name="__main__" default="true"/>
+    <group if="$(arg __main__)">
+        <include file="$(find single_lwr_launch)/launch/single_lwr.launch">
+            <arg name="controllers" value="joint_trajectory_controller"/> 
+            <!-- default: joint_trajectory_controller  one_task_inverse_kinematics-->
+            <arg name="use_rviz" value="false"/>
+        </include>
+    </group>
+    
     <node name="cricket_lwr_node" pkg="cricket_lwr_interface" type="cricket_lwr_node" output="screen"/>
-
 </launch>

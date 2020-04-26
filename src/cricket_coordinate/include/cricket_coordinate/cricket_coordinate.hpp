@@ -7,6 +7,7 @@
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/AccelStamped.h>
 #include <tf/transform_datatypes.h>
+#include <geometry_msgs/Twist.h>
 // Gazebo
 #include <gazebo_msgs/GetModelState.h>
 #include <gazebo_msgs/GetLinkState.h>
@@ -18,7 +19,8 @@ class CricketCoordinate
         ros::Publisher pub_ready;
         geometry_msgs::Pose ready_pose;
         /* publish Reflexxes Traj. Command */
-        ros::Publisher pub_reflexxes;
+        ros::Publisher pub_reflexxes_pose;
+        ros::Publisher pub_reflexxes_twist;
         /* subscribe estimated ball position */
         ros::Subscriber sub_ball;
         ros::NodeHandle nh;

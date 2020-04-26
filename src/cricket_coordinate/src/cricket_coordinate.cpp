@@ -16,7 +16,8 @@ CricketCoordinate::CricketCoordinate(ros::NodeHandle nh):nh(nh)
     sub_ball = nh.subscribe("ball/posterior_estimation", 1, &CricketCoordinate::SubBallCallback, this);
 
     /* Publish Reflexxes Command */
-    pub_reflexxes = nh.advertise<geometry_msgs::Pose>("reflexxes_target_cart", 10);
+    pub_reflexxes_pose = nh.advertise<geometry_msgs::Pose>("reflexxes_target_cart", 10);
+    pub_reflexxes_twist = nh.advertise<geometry_msgs::Twist>("reflexxes_target_twist", 10);
 
     /* get Pose of LWR_base and LWR_ee */
     cli_model_lwr =  nh.serviceClient<gazebo_msgs::GetLinkState>("gazebo/get_link_state");
@@ -50,11 +51,18 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::AccelStamped rcv_ms
         link_7_pose = srv_link7state.response.link_state.pose;
         link_7_trans = GeoposeToTftrans(link_7_pose);
 
-        if(BallWithinRange(rcv_msg)) // if in range, then publish Reflexxes
+        if(BallWithinRange(rcv_msg)) // if in range, then publish Reflexxes related topics
         {
+            // publish target pose
             tf::Transform ball_trans = GeoaccToTftrans(rcv_msg);
             tf::Transform reflexxesTrans = link_base_trans.inverseTimes(ball_trans);
-            pub_reflexxes.publish( TftransToGeopose(ball_trans) );
+            pub_reflexxes_pose.publish( TftransToGeopose(reflexxesTrans) );
+            // publish target twist
+            geometry_msgs::Twist targetTwist;
+            targetTwist.linear.x = rcv_msg.accel.angular.x;
+            targetTwist.linear.y = rcv_msg.accel.angular.y;
+            targetTwist.linear.z = rcv_msg.accel.angular.z;
+            pub_reflexxes_twist.publish(targetTwist);
             std::cout << "Ball in Range, Move!!!" << std::endl;
         }
         else
