@@ -79,7 +79,7 @@ void MultiViewSys::triangulationCallback(const geometry_msgs::PointStamped::Cons
     for (int i = 0; i < n_valid; i++)
     {
       cv::Mat pt_4D = cv::Mat(4, 1, CV_32F); // homogeneous 3D coordinate
-      cv::triangulatePoints(proj_mats[0], proj_mats[2], pts_2D[0], pts_2D[2], pt_4D);
+      cv::triangulatePoints(proj_mats[valid[i]], proj_mats[valid[(i+1) % n_valid]], pts_2D[valid[i]], pts_2D[valid[(i+1) % n_valid]], pt_4D);
       cv::Mat pt_3D = cv::Mat(3, 1, CV_32F);
       pt_3D.at<float>(0, 0) = pt_4D.at<float>(0, 0) / pt_4D.at<float>(3, 0);
       pt_3D.at<float>(1, 0) = pt_4D.at<float>(1, 0) / pt_4D.at<float>(3, 0);
