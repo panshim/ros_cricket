@@ -91,7 +91,7 @@ Visualization Manager:
       History Length: 20
       Name: PointStamped
       Radius: 0.100000001
-      Topic: /ball/pos_after_1sec
+      Topic: /ball/pos_in_secs
       Unreliable: false
       Value: true
   Enabled: true

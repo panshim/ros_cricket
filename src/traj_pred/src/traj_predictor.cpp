@@ -1,9 +1,10 @@
 #include "traj_pred/traj_predictor.hpp"
 
-TrajPredictor::TrajPredictor(ros::NodeHandle& nh, std::string topic_sub, std::string topic_pub) : nh_(nh), topic_sub_(topic_sub), topic_pub_(topic_pub)
+TrajPredictor::TrajPredictor(ros::NodeHandle& nh, float sec, std::string topic_sub, std::string topic_pub_pos, std::string topic_pub_tgt) : nh_(nh), sec_(sec), topic_sub_(topic_sub), topic_pub_pos_(topic_pub_pos), topic_pub_tgt_(topic_pub_tgt)
 {
   sub = nh_.subscribe(topic_sub_, 10, &TrajPredictor::calCallback, this);
-  pub = nh.advertise<geometry_msgs::PointStamped>(topic_pub_, 10);
+  pub_pos = nh.advertise<geometry_msgs::PointStamped>(topic_pub_pos_, 10);
+  pub_tgt = nh.advertise<geometry_msgs::TwistStamped>(topic_pub_tgt_, 10);
 
   A = cv::Mat::zeros(1, 3, CV_32F);
   X = cv::Mat::zeros(3, 3, CV_32F);
@@ -64,13 +65,23 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         geometry_msgs::PointStamped msg_pub;
         msg_pub.header.stamp = msg->header.stamp;
         msg_pub.header.frame_id = "world";
-        cv::Mat dt_one_sec = (cv::Mat_<float>(1, 3) << (dt + 0.5) * (dt + 0.5), dt + 0.5, 1); // half second later
+        cv::Mat dt_one_sec = (cv::Mat_<float>(1, 3) << (dt + sec_) * (dt + sec_), dt + sec_, 1); // sec_ seconds later
         cv::Mat pos_one_sec = dt_one_sec * X; 
         msg_pub.point.x = pos_one_sec.at<float>(0);
         msg_pub.point.y = pos_one_sec.at<float>(1);
         msg_pub.point.z = pos_one_sec.at<float>(2);
-        
-        pub.publish(msg_pub);
+        pub_pos.publish(msg_pub);
+
+        // use TwistStamped message to send target position and velocity information
+        geometry_msgs::TwistStamped msg_tgt;
+        msg_tgt.header = msg_pub.header;
+        msg_tgt.twist.linear.x = msg_pub.point.x; // position
+        msg_tgt.twist.linear.y = msg_pub.point.y;
+        msg_tgt.twist.linear.z = msg_pub.point.z;
+        msg_tgt.twist.angular.x = 2 * X.at<float>(0, 0) * (dt + sec_) + X.at<float>(1, 0);
+        msg_tgt.twist.angular.y = 2 * X.at<float>(0, 1) * (dt + sec_) + X.at<float>(1, 1);
+        msg_tgt.twist.angular.z = 2 * X.at<float>(0, 2) * (dt + sec_) + X.at<float>(1, 2);
+        pub_tgt.publish(msg_tgt);
       }
     }
   }
