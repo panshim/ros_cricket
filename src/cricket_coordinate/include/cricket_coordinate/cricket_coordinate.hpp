@@ -14,12 +14,15 @@
 #include <gazebo_msgs/GetModelState.h>
 #include <gazebo_msgs/GetLinkState.h>
 
+#include <lwr_controllers/PoseRPY.h>
+
 class CricketCoordinate
 {
     private:
         /* publish ready position for lwr-arm */
         ros::Publisher pub_ready;
         geometry_msgs::Pose ready_pose;
+        lwr_controllers::PoseRPY ready_pose_2;
         /* publish Reflexxes Traj. Command */
         ros::Publisher pub_reflexxes_pose;
         ros::Publisher pub_reflexxes_twist;

@@ -1,0 +1,14 @@
+<launch>
+
+    <arg name="rviz_file" default="$(find multi_view_plugin)/rviz/multi_view.rviz"/>
+    
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find multi_view_plugin)/worlds/multi_view.world"/>
+	</include>
+
+	<include file="$(find multi_view_plugin)/launch/multi_view.launch">
+        <arg name="use_rviz" value="true"/>
+        <arg name="rviz_file" value="$(arg rviz_file)"/>
+	</include>
+
+</launch>

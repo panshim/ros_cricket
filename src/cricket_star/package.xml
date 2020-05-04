@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>cricket_coordinate</name>
+  <name>cricket_star</name>
   <version>0.0.0</version>
-  <description>The cricket_coordinate package</description>
+  <description>The cricket_star package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="shimin@todo.todo">shimin</maintainer>
+  <maintainer email="jiawen@todo.todo">jiawen</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
@@ -19,7 +19,7 @@
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/cricket_coordinate</url> -->
+  <!-- <url type="website">http://wiki.ros.org/cricket_star</url> -->
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
@@ -49,27 +49,17 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>tf</build_depend>
-  <build_depend>gazebo_msgs</build_depend>
-  <build_depend>control_msgs</build_depend>
-  <build_depend>lwr_controllers</build_depend>
-  
-  <build_export_depend>roscpp</build_export_depend>
-  <build_export_depend>geometry_msgs</build_export_depend>
-  <build_export_depend>tf</build_export_depend>
-  <build_export_depend>gazebo_msgs</build_export_depend>
-  <build_export_depend>control_msgs</build_export_depend>
-  <build_export_depend>lwr_controllers</build_export_depend>
-  
-  <exec_depend>roscpp</exec_depend>
-  <exec_depend>geometry_msgs</exec_depend>
-  <exec_depend>tf</exec_depend>
-  <exec_depend>gazebo_msgs</exec_depend>
-  <exec_depend>control_msgs</exec_depend>
-  <exec_depend>lwr_controllers</exec_depend>
-  
+  <build_depend>cricket_motion_planning</build_depend>
+  <build_depend>multi_view_plugin</build_depend>
+  <build_depend>traj_pred</build_depend>
+  <build_export_depend>cricket_motion_planning</build_export_depend>
+  <build_export_depend>multi_view_plugin</build_export_depend>
+  <build_export_depend>traj_pred</build_export_depend>
+  <exec_depend>cricket_motion_planning</exec_depend>
+  <exec_depend>multi_view_plugin</exec_depend>
+  <exec_depend>traj_pred</exec_depend>
+
+
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->

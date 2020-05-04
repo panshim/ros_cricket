@@ -14,34 +14,8 @@
 
 #include <termio.h>
 #include <stdio.h>
- 
-/*
-int scanKeyboard()
-{
-int in;
-struct termios new_settings;
-struct termios stored_settings;
-tcgetattr(0,&stored_settings);
-new_settings = stored_settings;
-new_settings.c_lflag &= (~ICANON);
-new_settings.c_cc[VTIME] = 0;
-tcgetattr(0,&stored_settings);
-new_settings.c_cc[VMIN] = 1;
-tcsetattr(0,TCSANOW,&new_settings);
- 
-in = getchar();
- 
-tcsetattr(0,TCSANOW,&stored_settings);
-return in;
-}
 
 
-int main(){
-while(1){
-printf(":%d",scanKeyboard());
-}
-}
-*/
 
 void vel_gen(const geometry_msgs::Pose& init_pose, const geometry_msgs::Pose& target_pose, 
 					double* vel_xyz, double radius, double duration);
@@ -84,9 +58,6 @@ int main(int argc, char **argv){
         target_pose.position.x = atof(argv[4]);
         target_pose.position.y = atof(argv[5]);
         target_pose.position.z = atof(argv[6]);
-		// target_pose.position.x = 0.0;
-        // target_pose.position.y = 0.0;
-        // target_pose.position.z = 1.0;
 
 		// radius of target region
 		double RADIUS = atof(argv[7]);
@@ -139,11 +110,6 @@ int main(int argc, char **argv){
 			msg_qd.twist.linear.x = vel_xyz[0];
 			msg_qd.twist.linear.y = vel_xyz[1];
 			msg_qd.twist.linear.z = vel_xyz[2];
-
-			// msg_qd.twist.linear.x = double(rand()) / double(RAND_MAX) * 2.0 - 5.0;
-			// // msg_qd.twist.linear.y = double(rand()) / double(RAND_MAX) * 4.0 - 2.0;
-			// msg_qd.twist.linear.y = 0.0;
-			// msg_qd.twist.linear.z = 4.0 + double(rand()) / double(RAND_MAX) * 2.0;
 
 			twist_pub.publish( msg_qd );
 

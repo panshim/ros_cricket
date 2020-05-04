@@ -65,7 +65,12 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         geometry_msgs::PointStamped msg_pub;
         msg_pub.header.stamp = msg->header.stamp;
         msg_pub.header.frame_id = "world";
-        cv::Mat dt_one_sec = (cv::Mat_<float>(1, 3) << (dt + sec_) * (dt + sec_), dt + sec_, 1); // sec_ seconds later
+        float az = X.at<float>(0, 2);
+        float bz = X.at<float>(1, 2);
+        float cz = X.at<float>(2, 2);
+        float t_target = (-bz - sqrt(bz * bz - 4 * az * (cz - 1.5))) / (2 * az);
+        cv::Mat dt_one_sec = (cv::Mat_<float>(1, 3) << (t_target * t_target), t_target, 1);
+        // cv::Mat dt_one_sec = (cv::Mat_<float>(1, 3) << (dt + sec_) * (dt + sec_), dt + sec_, 1); // sec_ seconds later
         cv::Mat pos_one_sec = dt_one_sec * X; 
         msg_pub.point.x = pos_one_sec.at<float>(0);
         msg_pub.point.y = pos_one_sec.at<float>(1);

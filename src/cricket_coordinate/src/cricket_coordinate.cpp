@@ -3,14 +3,21 @@
 CricketCoordinate::CricketCoordinate(ros::NodeHandle nh):nh(nh)
 {
     /* Get to the ready postion */
-    pub_ready = nh.advertise<geometry_msgs::Pose>("reflexxes_target_cart", 10);
-    ready_pose.position.x = 0.0;
-    ready_pose.position.y = 0.0;
+    pub_ready = nh.advertise<geometry_msgs::Pose>("/reflexxes_target_cart", 10);
+    ready_pose.position.x = 0.7;
+    ready_pose.position.y = -0.3;
     ready_pose.position.z = 0.8;
-    ready_pose.orientation.x = 0.0;
-    ready_pose.orientation.y = 0.0;
-    ready_pose.orientation.z = 0.01;
-    ready_pose.orientation.w = 1.0;
+    ready_pose.orientation.x = 0.5;
+    ready_pose.orientation.y = 0.5;
+    ready_pose.orientation.z = 0.5;
+    ready_pose.orientation.w = 0.5;
+
+    // ready_pose_2.position.x = 0.5;
+    // ready_pose_2.position.y = -0.3;
+    // ready_pose_2.position.z = 0.8;
+    // ready_pose_2.orientation.roll = 0.2;
+    // ready_pose_2.orientation.pitch = 0.2;
+    // ready_pose_2.orientation.yaw = 0.2;
 
     /* Subscrib tracking ball & Move if within the predesigned range */
     // sub_ball = nh.subscribe("ball/posterior_estimation", 1, &CricketCoordinate::SubBallCallback, this);

@@ -5,11 +5,14 @@
         <arg name="camera_C_name" default="C"/>
         <arg name="camera_D_name" default="D"/>
 
+		<arg name="use_rviz" default="true"/>
+		<arg name="ball_trowing_state" default="0 4 0.5 0.5 0 1.8 0.1 2.0"/>
+
         <arg name="rviz_file" default="$(find multi_view_plugin)/rviz/multi_view.rviz"/>
 
-        <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<arg name="world_name" value="$(find multi_view_plugin)/worlds/multi_view.world"/>
-	</include>
+	</include> -->
 
 	<include file="$(find multi_view_plugin)/launch/camera_setting.launch">
         	<arg name="camera_name" value="$(arg camera_A_name)"/>
@@ -55,12 +58,13 @@
 		<arg name="yaw" value="0.7853"/>
 	</include>
 
-        <node pkg="ball_throwing" type="ball_node" name="throw_the_ball" args="3 3 0.5 0 0 1 0.5 2.0" output="screen"/>
+        <node pkg="ball_throwing" type="ball_node" name="throw_the_ball" args="$(arg ball_trowing_state)" output="screen"/>
 
         <node pkg="ball_throwing" type="pub_real_pos_node" name="pub_ball_real_pos" output="screen"/>
 
         <node pkg="multi_view_plugin" type="tracking_node" name="track_the_ball" output="screen"/>
-
+	<group if="$(arg use_rviz)">
         <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_file)"/>
+	</group>
 
 </launch>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="in_secs" default="0.8"/>
+    <arg name="ball_trowing_state" default="0 4 0.5 0.7 -0.3 1.8 1 2.0"/>
+
+    <include file="$(find cricket_motion_planning)/launch/cricket_motion_planning.launch">
+        
+    </include>
+
+    <include file="$(find multi_view_plugin)/launch/multi_view.launch">
+        <arg name="use_rviz" value="true"/>
+        <arg name="rviz_file" value="$(find traj_pred)/rviz/traj_pred.rviz"/>
+        <arg name="ball_trowing_state" value="$(arg ball_trowing_state)"/>
+    </include>
+
+    <node pkg="traj_pred" type="traj_pred_node" name="traj_pred_node" 
+        args="$(arg in_secs)" output="screen"/>
+
+</launch>

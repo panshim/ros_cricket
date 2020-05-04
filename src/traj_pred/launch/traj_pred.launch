@@ -2,7 +2,7 @@
 
    	<arg name="in_secs" default="0.5"/>
 
-        <include file="$(find multi_view_plugin)/launch/multi_view.launch">
+        <include file="$(find multi_view_plugin)/launch/multi_view_test.launch">
         	<arg name="rviz_file" value="$(find traj_pred)/rviz/traj_pred.rviz"/>
         </include>
 
