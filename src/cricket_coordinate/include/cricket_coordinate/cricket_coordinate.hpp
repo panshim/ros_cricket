@@ -8,6 +8,8 @@
 #include <geometry_msgs/AccelStamped.h>
 #include <tf/transform_datatypes.h>
 #include <geometry_msgs/Twist.h>
+#include <geometry_msgs/TwistStamped.h>
+
 // Gazebo
 #include <gazebo_msgs/GetModelState.h>
 #include <gazebo_msgs/GetLinkState.h>
@@ -38,11 +40,11 @@ class CricketCoordinate
     public:
         CricketCoordinate(ros::NodeHandle nh);
         ~CricketCoordinate();
-        void SubBallCallback(const geometry_msgs::AccelStamped rcv_msg);
-        bool BallWithinRange(const geometry_msgs::AccelStamped ball_pose);
+        void SubBallCallback(const geometry_msgs::TwistStamped rcv_msg);
+        bool BallWithinRange(const geometry_msgs::TwistStamped ball_pose);
         bool getReady();
         static tf::Transform GeoposeToTftrans(const geometry_msgs::Pose geoPose);
-        static tf::Transform GeoaccToTftrans(const geometry_msgs::AccelStamped geoAcc);
+        static tf::Transform GeoaccToTftrans(const geometry_msgs::TwistStamped geoAcc);
         static geometry_msgs::Pose TftransToGeopose(const tf::Transform trans);
 };
 

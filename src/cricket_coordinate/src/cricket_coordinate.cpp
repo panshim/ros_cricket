@@ -13,7 +13,8 @@ CricketCoordinate::CricketCoordinate(ros::NodeHandle nh):nh(nh)
     ready_pose.orientation.w = 1.0;
 
     /* Subscrib tracking ball & Move if within the predesigned range */
-    sub_ball = nh.subscribe("ball/posterior_estimation", 1, &CricketCoordinate::SubBallCallback, this);
+    // sub_ball = nh.subscribe("ball/posterior_estimation", 1, &CricketCoordinate::SubBallCallback, this);
+    sub_ball = nh.subscribe("ball/target", 1, &CricketCoordinate::SubBallCallback, this);
 
     /* Publish Reflexxes Command */
     pub_reflexxes_pose = nh.advertise<geometry_msgs::Pose>("reflexxes_target_cart", 10);
@@ -43,7 +44,7 @@ CricketCoordinate::CricketCoordinate(ros::NodeHandle nh):nh(nh)
 CricketCoordinate::~CricketCoordinate(){}
 
 /* if Within the Range, then publish the ReflexxesCommand */
-void CricketCoordinate::SubBallCallback(const geometry_msgs::AccelStamped rcv_msg)
+void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_msg)
 {
     // get lwr_7_link's global trans
     if(cli_link_7.call(srv_link7state))
@@ -59,9 +60,12 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::AccelStamped rcv_ms
             pub_reflexxes_pose.publish( TftransToGeopose(reflexxesTrans) );
             // publish target twist
             geometry_msgs::Twist targetTwist;
-            targetTwist.linear.x = rcv_msg.accel.angular.x;
-            targetTwist.linear.y = rcv_msg.accel.angular.y;
-            targetTwist.linear.z = rcv_msg.accel.angular.z;
+            // targetTwist.linear.x = rcv_msg.accel.angular.x;
+            // targetTwist.linear.y = rcv_msg.accel.angular.y;
+            // targetTwist.linear.z = rcv_msg.accel.angular.z;
+            targetTwist.linear.x = rcv_msg.twist.angular.x;
+            targetTwist.linear.y = rcv_msg.twist.angular.y;
+            targetTwist.linear.z = rcv_msg.twist.angular.z;
             pub_reflexxes_twist.publish(targetTwist);
             std::cout << "Ball in Range, Move!!!" << std::endl;
         }
@@ -77,7 +81,7 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::AccelStamped rcv_ms
 }
 
 /* judge if the ball is within the predefined range: 1.close to the EE; 2.not lower than the table */
-bool CricketCoordinate::BallWithinRange(const geometry_msgs::AccelStamped ball_pose)
+bool CricketCoordinate::BallWithinRange(const geometry_msgs::TwistStamped ball_pose)
 {
     tf::Transform ball_trans = GeoaccToTftrans(ball_pose);
     return ( link_7_trans.getOrigin().distance(ball_trans.getOrigin())<2 && ball_trans.getOrigin().getZ()>1 );
@@ -101,17 +105,17 @@ tf::Transform CricketCoordinate::GeoposeToTftrans(const geometry_msgs::Pose geoP
 }
 
 /* Message transformation */
-tf::Transform CricketCoordinate::GeoaccToTftrans(const geometry_msgs::AccelStamped geoAcc)
+tf::Transform CricketCoordinate::GeoaccToTftrans(const geometry_msgs::TwistStamped geoAcc)
 {
     // construct quaternion piece
     tf::Vector3 axisY(0.0, 1.0, 0.0);
-    tf::Vector3 orientY(-geoAcc.accel.angular.x, -geoAcc.accel.angular.y, -geoAcc.accel.angular.z);
+    tf::Vector3 orientY(-geoAcc.twist.angular.x, -geoAcc.twist.angular.y, -geoAcc.twist.angular.z);
     tfScalar theta = axisY.angle(orientY);
     tf::Vector3 w = axisY.cross(orientY);
 
     // construct transformation
     tf::Quaternion tfQuat(w, theta);
-    tf::Vector3 tfVec(geoAcc.accel.linear.x, geoAcc.accel.linear.y, geoAcc.accel.linear.z);
+    tf::Vector3 tfVec(geoAcc.twist.linear.x, geoAcc.twist.linear.y, geoAcc.twist.linear.z);
     tf::Transform tfTrans(tfQuat,tfVec);
 
     return tfTrans;
