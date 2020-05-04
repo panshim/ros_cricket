@@ -16,6 +16,12 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     ResultValue = 0;
     /* TF Operation class initialization in Initial List */
 
+    /* Cricket Bat Transformmation */
+    tf::Vector3 batVec(0,0,-0.4);
+    tf::Quaternion batQuat(0,0,0,1);
+    batTransform.setOrigin(batVec);
+    batTransform.setRotation(batQuat);
+
     /* set MAX ARGUMENTS for Reflexxes Call */
     IP->MaxVelocityVector->VecData          [0] = 2000.0;
     IP->MaxVelocityVector->VecData          [1] = 2000.0;
@@ -131,14 +137,35 @@ void CricketReflexxes::TimerCallback(const ros::TimerEvent& event)
     // step2: publish on topic: "cartesian_pos_cmd"
     tf::Quaternion tf_quat;
     RPYToQuaternion(tf_quat, OP->NewPositionVector->VecData[3], OP->NewPositionVector->VecData[4], OP->NewPositionVector->VecData[5]);
-    cartesian_pos_next_cmd.position.x = OP->NewPositionVector->VecData[0];
-    cartesian_pos_next_cmd.position.y = OP->NewPositionVector->VecData[1];
-    cartesian_pos_next_cmd.position.z = OP->NewPositionVector->VecData[2];
-    cartesian_pos_next_cmd.orientation.x = tf_quat.getX();
-    cartesian_pos_next_cmd.orientation.y = tf_quat.getY();
-    cartesian_pos_next_cmd.orientation.z = tf_quat.getZ();
-    cartesian_pos_next_cmd.orientation.w = tf_quat.getW();
+    
+    // contruct eeTransform and drift
+    tf::Vector3 eeVec(OP->NewPositionVector->VecData[0], OP->NewPositionVector->VecData[1], OP->NewPositionVector->VecData[2] );
+    eeTransform.setOrigin(eeVec);
+    eeTransform.setRotation(tf_quat);
+
+    // std::cout << "before: " << eeTransform.getOrigin().getZ() << std::endl;
+    eeTransform = eeTransform * batTransform;
+    // std::cout << "after: " << eeTransform.getOrigin().getZ() << std::endl;
+    // std::cout << "----------------------------------" << std::endl;
+
+    //Construct topic: "cartesian_pos_cmd"
+    cartesian_pos_next_cmd.position.x = eeTransform.getOrigin().getX();
+    cartesian_pos_next_cmd.position.y = eeTransform.getOrigin().getY();
+    cartesian_pos_next_cmd.position.z = eeTransform.getOrigin().getZ();
+    cartesian_pos_next_cmd.orientation.x = eeTransform.getRotation().getX();
+    cartesian_pos_next_cmd.orientation.y = eeTransform.getRotation().getY();
+    cartesian_pos_next_cmd.orientation.z = eeTransform.getRotation().getZ();
+    cartesian_pos_next_cmd.orientation.w = eeTransform.getRotation().getW();
     pub_next_cart.publish(cartesian_pos_next_cmd);
+
+    // cartesian_pos_next_cmd.position.x = OP->NewPositionVector->VecData[0];
+    // cartesian_pos_next_cmd.position.y = OP->NewPositionVector->VecData[1];
+    // cartesian_pos_next_cmd.position.z = OP->NewPositionVector->VecData[2];
+    // cartesian_pos_next_cmd.orientation.x = tf_quat.getX();
+    // cartesian_pos_next_cmd.orientation.y = tf_quat.getY();
+    // cartesian_pos_next_cmd.orientation.z = tf_quat.getZ();
+    // cartesian_pos_next_cmd.orientation.w = tf_quat.getW();
+    // pub_next_cart.publish(cartesian_pos_next_cmd);
     
     // Step 2.1(backup): publish on topic: "/lwr/one_task_inverse_kinematics/command"
     inv_pos_next_cmd.position.x = OP->NewPositionVector->VecData[0];

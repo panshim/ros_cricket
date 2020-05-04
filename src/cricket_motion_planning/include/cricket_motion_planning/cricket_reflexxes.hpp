@@ -31,6 +31,8 @@ class CricketReflexxes
         geometry_msgs::Pose reflexxesTarget;
         geometry_msgs::Pose cartesian_pos_next_cmd;
         lwr_controllers::PoseRPY inv_pos_next_cmd;
+        tf::Transform batTransform;
+        tf::Transform eeTransform;
         // Publisher & Subscriber
         ros::Subscriber sub_reflex_target;
         ros::Subscriber sub_reflex_twist;
