@@ -11,8 +11,11 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   tf
   geometry_msgs
+  sensor_msgs
+  kdl_parser
 )
 find_package(reflexxes_type2)
+find_package(orocos_kdl REQUIRED)
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -105,8 +108,8 @@ find_package(reflexxes_type2)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES cricket_motion_planning
-   CATKIN_DEPENDS roscpp tf geometry_msgs
-   DEPENDS reflexxes_type2
+   CATKIN_DEPENDS roscpp tf geometry_msgs sensor_msgs
+   DEPENDS reflexxes_type2 kdl_parser orocos_kdl
 )
 
 ###########
@@ -119,6 +122,7 @@ include_directories(
   include
   ${catkin_INCLUDE_DIRS}
   ${reflexxes_type2_INCLUDE_DIRS}
+  ${orocos_kdl_INCLUDE_DIRS}
   )
 
 ## Declare a C++ library
@@ -151,7 +155,7 @@ add_executable(cricket_motion_planning_node
 # add_dependencies(cricket_motion_planning_node ${${reflexxes_type2}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 # Specify libraries to link a library or executable target against
-target_link_libraries(cricket_motion_planning_node ${catkin_LIBRARIES} ${reflexxes_type2_LIBRARIES})
+target_link_libraries(cricket_motion_planning_node ${catkin_LIBRARIES} ${reflexxes_type2_LIBRARIES} ${orocos_kdl_LIBRARIES})
 
 #############
 ## Install ##
