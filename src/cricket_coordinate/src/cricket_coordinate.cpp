@@ -57,6 +57,9 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_ms
     if(cli_link_7.call(srv_link7state))
     {
         link_7_pose = srv_link7state.response.link_state.pose;
+        // std::cout << "link_7_pose[x]: " << link_7_pose.position.x << std::endl;
+        // std::cout << "link_7_pose[y]: " << link_7_pose.position.y << std::endl;
+        // std::cout << "link_7_pose[z]: " << link_7_pose.position.z << std::endl;
         link_7_trans = GeoposeToTftrans(link_7_pose);
 
         if(BallWithinRange(rcv_msg)) // if in range, then publish Reflexxes related topics

@@ -3,6 +3,18 @@ lwr:
   joint_state_controller:
     type: joint_state_controller/JointStateController
     publish_rate: 100  
+  
+  # Velocity Controller
+  joint_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joints:
+      - lwr_a1_joint
+      - lwr_a2_joint
+      - lwr_e1_joint
+      - lwr_a3_joint
+      - lwr_a4_joint
+      - lwr_a5_joint
+      - lwr_a6_joint
 
   # Standard effort controller
   joint_efforts_controller:
