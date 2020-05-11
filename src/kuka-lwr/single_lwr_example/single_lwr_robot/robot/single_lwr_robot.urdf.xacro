@@ -29,7 +29,7 @@
 	</link>
 
 	<gazebo reference="box">
-		<static>true</static>
+		<gravity>false</gravity>
 	</gazebo>
 
 
