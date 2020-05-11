@@ -9,7 +9,7 @@
 #include "ekf.hpp"
 
 #include <geometry_msgs/PointStamped.h>
-#include <geometry_msgs/AccelStamped.h>
+#include <geometry_msgs/InertiaStamped.h>
 
 class EKFNode{
 
@@ -25,6 +25,7 @@ private:
 
   ros::Subscriber sub_pose;
   ros::Publisher  pub_pose;
+  ros::Publisher  pub_tar;
   ros::Publisher  pub_point;
 
   EKF ekf;

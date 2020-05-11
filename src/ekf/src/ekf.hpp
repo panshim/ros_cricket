@@ -17,7 +17,7 @@
 #include <tf/tf.h>
 
 // msgs
-#include <geometry_msgs/AccelStamped.h>
+#include <geometry_msgs/InertiaStamped.h>
 
 // log files
 #include <fstream>
@@ -39,7 +39,7 @@ public:
 
   bool is_initialized() const { return initialized; }
 
-  geometry_msgs::AccelStamped get_posterior() const;
+  geometry_msgs::InertiaStamped get_posterior() const;
 
 private:
 
