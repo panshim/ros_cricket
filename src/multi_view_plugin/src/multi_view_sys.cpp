@@ -35,19 +35,9 @@ MultiViewSys::MultiViewSys(ros::NodeHandle& nh) : nh (nh), sync (sub0, sub1, sub
   last_stamp = 0;
   current_stamp = 0;
 
-  N = 0;
-  dur_time = 0.0;
-
   topic_kf_ = "ball/tracked_pos_kf";
   ROS_INFO("MultiViewSys: topic_kf_ is %s", topic_kf_.c_str());
-  topic_prediction_pos_vel_ = "ball/predicted_pos_vel";
-  ROS_INFO("MultiViewSys: topic_prediction_pos_vel_ is %s", topic_prediction_pos_vel_.c_str());
-  topic_prediction_pos_ = "ball/predicted_pos";
-  ROS_INFO("MultiViewSys: topic_prediction_pos_ is %s", topic_prediction_pos_.c_str());
-
   pub_kf = nh.advertise<geometry_msgs::PointStamped>(topic_kf_, 10);
-  pub_prediction_pos_vel = nh.advertise<geometry_msgs::AccelStamped>(topic_prediction_pos_vel_, 10);
-  pub_prediction_pos = nh.advertise<geometry_msgs::PointStamped>(topic_prediction_pos_, 10);//only for visualizaiton in rviz
 
   cv::setIdentity(kf.transitionMatrix);
   kf.controlMatrix = cv::Mat::zeros(state_size, ctl_size, CV_32F);
@@ -156,15 +146,6 @@ void MultiViewSys::triangulationCallback(const geometry_msgs::PointStamped::Cons
         
         pub_kf.publish(msg_kf);
 
-
-        if (msg_kf.point.z>0.5)
-        {
-        	MultiViewSys::lsPrediction(dt, dur_time, msg_kf, pt, N);
-
-        	N += 1;
-        	dur_time = dur_time + dt;
-        }
-
         last_stamp = current_stamp;
         last_pos = track_pos;
       }
@@ -228,110 +209,19 @@ void MultiViewSys::getProjectionMatrix(cv::Mat& proj, const std::string& camera_
     }
   }
 }
-    
-void MultiViewSys::lsPrediction(const float dt, float dur_time, const geometry_msgs::PointStamped& msg_kf, 
-								const float pt, int N)
+
+cv::Mat MultiViewSys::kfSmooth(float dt, const cv::Mat msr_pos)
 {
-	// using at least 5 points to estimate the trajectory 
-	if (N == 0) //initialization
-	{
-		X = cv::Mat::zeros(3, 1, CV_32FC1);
-		Y = cv::Mat::zeros(3, 1, CV_32FC1);
-		Z = cv::Mat::zeros(3, 1, CV_32FC1);
-		T = cv::Mat::zeros(3, 3, CV_32FC1);
+  kf.transitionMatrix.at<float>(0, 3) = dt;
+  kf.transitionMatrix.at<float>(1, 4) = dt;
+  kf.transitionMatrix.at<float>(2, 5) = dt;
 
-		lsPredResult(dur_time, msg_kf.point.x, pt, 1, N);
-		lsPredResult(dur_time, msg_kf.point.y, pt, 2, N);
-		lsPredResult(dur_time, msg_kf.point.z, pt, 3, N);
-	}
-	else if (N<5)
-	{
+  kf.controlMatrix.at<float>(2, 0) = 0.5 * dt *dt;
+  kf.controlMatrix.at<float>(5, 0) = dt;
 
-		lsPredResult(dur_time, msg_kf.point.x, pt, 1, N);
-		lsPredResult(dur_time, msg_kf.point.y, pt, 2, N);
-		lsPredResult(dur_time, msg_kf.point.z, pt, 3, N);
-	}
-	else
-	{	
-
-		lsPredResult(dur_time, msg_kf.point.x, pt, 1, N);
-		lsPredResult(dur_time, msg_kf.point.y, pt, 2, N);
-		lsPredResult(dur_time, msg_kf.point.z, pt, 3, N);
-
-		est_kf_pos_vel.header.stamp = msg_kf.header.stamp + ros::Duration(pt);
-		est_kf_pos.header.stamp = est_kf_pos_vel.header.stamp;
-
-		est_kf_pos_vel.header.frame_id = "world";
-		est_kf_pos.header.frame_id = "world";
-
-		pub_prediction_pos_vel.publish(est_kf_pos_vel);
-		pub_prediction_pos.publish(est_kf_pos);
-	}
+  cv::Mat pred = kf.predict(kf_ctl);
+  cv::Mat estimate = kf.correct(msr_pos);
+  return estimate;
 }
-
-void MultiViewSys::lsPredResult(const float dur_time, const float val, const float pt, const int flag, const int N)
-{
-	//float pos_tmp;
-	//float vel_tmp;
-
-	T.at<float>(0,0) = N+1.0;
-	T.at<float>(0,1) += dur_time;
-	T.at<float>(1,0) = T.at<float>(0,1);
-	T.at<float>(0,2) += std::pow(dur_time,2);
-	T.at<float>(1,1) = T.at<float>(0,2);
-	T.at<float>(2,0) = T.at<float>(0,2);
-	T.at<float>(1,2) += std::pow(dur_time,3);
-	T.at<float>(2,1) = T.at<float>(1,2);
-	T.at<float>(2,2) += std::pow(dur_time,4);
-
-	if(flag==1) //X Matrix
-	{
-		for (int i=0;i<3;i++)
-		{
-			X.at<float>(i,0) = X.at<float>(i,0) + val*std::pow(dur_time,i);
-		}
-	}
-	else if(flag==2)//Y Matirx
-	{
-		for (int i=0;i<3;i++)
-		{
-			Y.at<float>(i,0) = Y.at<float>(i,0) + val*std::pow(dur_time,i);
-		}
-	}
-	else//Z Matrix
-	{
-		for (int i=0;i<3;i++)
-		{
-			Z.at<float>(i,0) = Z.at<float>(i,0) + val*std::pow(dur_time,i);
-		}
-	}
-
-	if (N>=5) // run LS
-	{
-
-		if (flag==1)
-		{
-			A = cv::Mat::zeros(3,1,CV_32FC1);
-			cv::solve(T,X,A,cv::DECOMP_LU);
-			est_kf_pos_vel.accel.linear.x = A.at<float>(0,0)+A.at<float>(1,0)*(dur_time+pt)+A.at<float>(2,0)*(dur_time+pt)*(dur_time+pt);
-			est_kf_pos_vel.accel.angular.x = A.at<float>(1,0)+A.at<float>(2,0)*(dur_time+pt);
-			est_kf_pos.point.x = est_kf_pos_vel.accel.linear.x;
-		}
-		else if (flag==2)
-		{
-			A = cv::Mat::zeros(3,1,CV_32FC1);
-			cv::solve(T,Y,A,cv::DECOMP_LU);
-			est_kf_pos_vel.accel.linear.y = A.at<float>(0,0)+A.at<float>(1,0)*(dur_time+pt)+A.at<float>(2,0)*(dur_time+pt)*(dur_time+pt);
-			est_kf_pos_vel.accel.angular.y = A.at<float>(1,0)+A.at<float>(2,0)*(dur_time+pt);
-			est_kf_pos.point.y = est_kf_pos_vel.accel.linear.y;
-		}
-		else
-		{
-			A = cv::Mat::zeros(3,1,CV_32FC1);
-			cv::solve(T,Z,A,cv::DECOMP_LU);
-			est_kf_pos_vel.accel.linear.z = std::max(float(0.0),A.at<float>(0,0)+A.at<float>(1,0)*(dur_time+pt)+A.at<float>(2,0)*(dur_time+pt)*(dur_time+pt));
-			est_kf_pos_vel.accel.angular.z = A.at<float>(1,0)+A.at<float>(2,0)*(dur_time+pt);
-			est_kf_pos.point.z = est_kf_pos_vel.accel.linear.z;
-		}
-	}
-}
+  
+  

@@ -15,13 +15,13 @@ EKF::EKF():
 
 
   // create system model
-  ColumnVector sysNoise_Mu(6);  
+  ColumnVector sysNoise_Mu(9);  
   sysNoise_Mu = 0;
-  SymmetricMatrix sysNoise_Cov(6); 
+  SymmetricMatrix sysNoise_Cov(9); 
   sysNoise_Cov = 0;
   
-  //process_covariance 6#6;
-  for( int r=1; r<=6; r++ )
+  //process_covariance 9#9;
+  for( int r=1; r<=9; r++ )
     { sysNoise_Cov( r, r ) = 1.0; } // TODO : whether we need system noise
   
   Gaussian system_Uncertainty( sysNoise_Mu, sysNoise_Cov ); // currently no noise is added
@@ -29,13 +29,13 @@ EKF::EKF():
   sys_model_ = new AnalyticSystemModelGaussianUncertainty( sys_ );
   
   // create measurement model
-  ColumnVector measNoise_Mu(6);  
+  ColumnVector measNoise_Mu(9);  
   measNoise_Mu = 0;
-  SymmetricMatrix measNoise_Cov(6);  
+  SymmetricMatrix measNoise_Cov(9);  
   measNoise_Cov = 0;
   
   //measurement_covariance 3*3;
-  for( int r=1; r<=6; r++ )
+  for( int r=1; r<=9; r++ )
     { measNoise_Cov( r, r ) = 1.0; } // TODO : whether we need system noise
 
   Gaussian measurement_Uncertainty( measNoise_Mu, measNoise_Cov );
@@ -60,7 +60,7 @@ EKF::~EKF()
 void EKF::initialize()
 {
 
-  ColumnVector prior_Mu(6);
+  ColumnVector prior_Mu(9);
   prior_Mu = 0.0;
   prior_Mu(1) = 1;
   prior_Mu(2) = 1;
@@ -68,12 +68,15 @@ void EKF::initialize()
   prior_Mu(4) = 0;
   prior_Mu(5) = 0;
   prior_Mu(6) = 0;
+  prior_Mu(7) = 0; // a_x
+  prior_Mu(8) = 0;
+  prior_Mu(9) = -9.8;
   // how to estimate the velocity of the ball??
 
   // TODO!!! set covariance
-  SymmetricMatrix prior_Cov(6);
-  for (unsigned int i=1; i<=6; i++){
-    for (unsigned int j=1; j<=6; j++){
+  SymmetricMatrix prior_Cov(9);
+  for (unsigned int i=1; i<=9; i++){
+    for (unsigned int j=1; j<=9; j++){
       if (i==j) { prior_Cov(i,j) = 1; }
       else      { prior_Cov(i,j) = 0; }
     }
@@ -106,7 +109,7 @@ geometry_msgs::InertiaStamped EKF::get_posterior() const
   post_pose.inertia.ixz = state(6); // z velocity
   post_pose.inertia.iyy = state(7); // x velocity
   post_pose.inertia.iyz = state(8); // y velocity
-  post_pose.inertia.izz = state(6); // z velocity
+  post_pose.inertia.izz = state(9); // z velocity
 
   // alternative method to make prediction
 
@@ -115,10 +118,10 @@ geometry_msgs::InertiaStamped EKF::get_posterior() const
   //for(double i = 0.01; i<dt ; i=i+0.01){
     post_pose.inertia.com.x = post_pose.inertia.com.x+i*post_pose.inertia.angular.x; // x position
     post_pose.inertia.com.y = post_pose.inertia.com.y+i*post_pose.inertia.angular.y; // y position
-    post_pose.inertia.com.z = std::max(post_pose.inertia.com.z+i*post_pose.inertia.angular.z,0.0);//-4.6*i*i,0.0); // z position
+    post_pose.inertia.com.z = std::max(post_pose.inertia.com.z+i*post_pose.inertia.angular.z,0.0);//-4.9*i*i,0.0); // z position
     post_pose.inertia.angular.x = post_pose.inertia.angular.x; // x velocity
     post_pose.inertia.angular.y = post_pose.inertia.angular.y; // y velocity
-    post_pose.inertia.angular.z = post_pose.inertia.angular.z;//-6.8*i; // z velocity
+    post_pose.inertia.angular.z = post_pose.inertia.angular.z;//-9.8*i; // z velocity
   //}
 
   post_pose.header.stamp = ros::Time::now()+ros::Duration(i); // TODO : how to match the time?
