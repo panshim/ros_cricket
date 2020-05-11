@@ -25,8 +25,6 @@ private:
 
   ros::Subscriber sub_pose;
   ros::Publisher  pub_pose;
-  ros::Publisher  pub_tar;
-  ros::Publisher  pub_point;
 
   EKF ekf;
   
@@ -36,7 +34,7 @@ public:
   
   //void callback_sensors( const NavSatFix& nsf, const Imu& imu );
   void callback_sensors( const geometry_msgs::PointStamped& sen);
-  void update();
+  geometry_msgs::InertiaStamped update();
 
 };
 
