@@ -125,10 +125,10 @@ void EKFNode::update(){
     point_tar.twist.angular.y = EST.inertia.ixy;
     point_tar.twist.angular.z = EST.inertia.ixz;
 
-    //if (abs(point_tar.twist.linear.z-1.8)<0.1){
-    pub_tar.publish( point_tar );
-    pub_point.publish( point_est );
-    //}
+    if (abs(point_tar.twist.linear.z-1.8)<0.1){
+    	pub_tar.publish( point_tar );
+    	pub_point.publish( point_est );
+    }
   }
 }
 
