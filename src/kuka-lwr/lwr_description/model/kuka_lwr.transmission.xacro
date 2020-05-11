@@ -6,7 +6,6 @@
 	<xacro:property name="Interface30" value="EffortJointInterface"/>
 	<xacro:property name="Interface50" value="VelocityJointInterface"/>
 	
-	
 	<xacro:macro name="kuka_lwr_transmission" params="name">
 
 		<transmission name="${name}_a1_trans">
@@ -14,6 +13,7 @@
 			<joint name="${name}_a1_joint">
 				<hardwareInterface>${Interface10}</hardwareInterface>
 				<hardwareInterface>${Interface30}</hardwareInterface>
+				<hardwareInterface>${Interface50}</hardwareInterface>
 			</joint>
 			<actuator name="${name}_a1_motor">
 				<mechanicalReduction>1</mechanicalReduction>
@@ -25,6 +25,7 @@
 			<joint name="${name}_a2_joint">
 				<hardwareInterface>${Interface10}</hardwareInterface>
 				<hardwareInterface>${Interface30}</hardwareInterface>
+				<hardwareInterface>${Interface50}</hardwareInterface>
 			</joint>
 			<actuator name="${name}_a2_motor">
 				<mechanicalReduction>1</mechanicalReduction>
@@ -36,6 +37,7 @@
 			<joint name="${name}_e1_joint">
 				<hardwareInterface>${Interface10}</hardwareInterface>
 				<hardwareInterface>${Interface30}</hardwareInterface>
+				<hardwareInterface>${Interface50}</hardwareInterface>
 			</joint>
 			<actuator name="${name}_e1_motor">
 				<mechanicalReduction>1</mechanicalReduction>
@@ -47,6 +49,7 @@
 			<joint name="${name}_a3_joint">
 				<hardwareInterface>${Interface10}</hardwareInterface>
 				<hardwareInterface>${Interface30}</hardwareInterface>
+				<hardwareInterface>${Interface50}</hardwareInterface>
 			</joint>
 			<actuator name="${name}_a3_motor">
 				<mechanicalReduction>1</mechanicalReduction>
@@ -58,6 +61,7 @@
 			<joint name="${name}_a4_joint">
 				<hardwareInterface>${Interface10}</hardwareInterface>
 				<hardwareInterface>${Interface30}</hardwareInterface>
+				<hardwareInterface>${Interface50}</hardwareInterface>
 			</joint>
 			<actuator name="${name}_a4_motor">
 				<mechanicalReduction>1</mechanicalReduction>
@@ -69,6 +73,7 @@
 			<joint name="${name}_a5_joint">
 				<hardwareInterface>${Interface10}</hardwareInterface>
 				<hardwareInterface>${Interface30}</hardwareInterface>
+				<hardwareInterface>${Interface50}</hardwareInterface>
 			</joint>
 			<actuator name="${name}_a5_motor">
 				<mechanicalReduction>1</mechanicalReduction>
@@ -80,6 +85,7 @@
 			<joint name="${name}_a6_joint">
 				<hardwareInterface>${Interface10}</hardwareInterface>
 				<hardwareInterface>${Interface30}</hardwareInterface>
+				<hardwareInterface>${Interface50}</hardwareInterface>
 			</joint>
 			<actuator name="${name}_a6_motor">
 				<mechanicalReduction>1</mechanicalReduction>
