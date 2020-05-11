@@ -4,8 +4,8 @@ CricketCoordinate::CricketCoordinate(ros::NodeHandle nh):nh(nh)
 {
     /* Get to the ready postion */
     pub_ready = nh.advertise<geometry_msgs::Pose>("/reflexxes_target_cart", 10);
-    ready_pose.position.x = 0.7;
-    ready_pose.position.y = -0.3;
+    ready_pose.position.x = 0.2;
+    ready_pose.position.y = -0.2;
     ready_pose.position.z = 0.8;
     ready_pose.orientation.x = 0.5;
     ready_pose.orientation.y = 0.5;

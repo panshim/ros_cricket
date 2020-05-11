@@ -9,7 +9,7 @@ namespace BFL
   using namespace MatrixWrapper;
   
   System::System( const Gaussian& additiveNoise )
-    : AnalyticConditionalGaussianAdditiveNoise( additiveNoise, 2 ){}
+    : AnalyticConditionalGaussianAdditiveNoise( additiveNoise ){}
   
   System::~System(){}
 
@@ -23,14 +23,14 @@ namespace BFL
 
     // copy to the state (1 indexed to 0 indexed)
     State state_in;
-    for( size_t i=1; i<=7; i++ )
+    for( size_t i=1; i<=6; i++ )
       { state_in.x[i-1] = state(i); }
 
     // Call the state prediction
-    State state_out = sys_evaluate_g( state_in, 0.05); // TODO:!!! update time step == 1
+    State state_out = sys_evaluate_g( state_in, 0.01); // TODO:!!! update time step == 1
 
     // copy back to the state
-    for( size_t i=1; i<=7; i++ )
+    for( size_t i=1; i<=6; i++ )
       { state(i) = state_out.x[i-1]; }
 
     return state;
@@ -43,10 +43,10 @@ namespace BFL
   Matrix System::dfGet(unsigned int i) const
   {
 
-    Matrix df( 7, 7 );
+    Matrix df( 6, 6 );
     // initialize df matrix to identity
-    for( int r=1; r<=7; r++){
-      for( int c=1; c<=7; c++){
+    for( int r=1; r<=6; r++){
+      for( int c=1; c<=6; c++){
         if( r == c ) { df(r,c) = 1; }
         else         { df(r,c) = 0; }
       }
@@ -58,16 +58,16 @@ namespace BFL
 
       // copy to the state
       State s;
-      for( size_t i=1; i<=7; i++ )
+      for( size_t i=1; i<=6; i++ )
         { s.x[i-1] = state(i); }
 
-      double G[7][7];
-      sys_evaluate_G( G, s, 0.05);
+      double G[6][6];
+      sys_evaluate_G( G, s, 0.01);
 
       // initialize df matrix
-      for( int r=1; r<=7; r++)
+      for( int r=1; r<=6; r++)
       {
-        for( int c=1; c<=7; c++)
+        for( int c=1; c<=6; c++)
         {
           df(r,c) = G[r-1][c-1];
         }
@@ -85,13 +85,13 @@ namespace BFL
 
     // copy to the state
     State s;
-    for( size_t i=1; i<=7; i++ )
+    for( size_t i=1; i<=6; i++ )
       { s.x[i-1] = state(i); }
 
-    double Q[7][7];
-    sys_evaluate_VMVt( Q, s, 0.05);
+    double Q[6][6];
+    sys_evaluate_VMVt( Q, s, 0.01);
     
-    SymmetricMatrix sysQ( 7, 7 );
+    SymmetricMatrix sysQ( 6, 6 );
     for( int r=1; r<=6; r++)
     {
       for( int c=1; c<=6; c++)

@@ -40,8 +40,8 @@
 	<camera name="camera_${name}">
 	  <horizontal_fov>1.3962634</horizontal_fov>
           <image>
-	    <width>400</width>
-	    <height>400</height>
+	    <width>300</width>
+	    <height>300</height>
 	    <format>R8G8B8</format>
 	  </image>
 	  <clip>

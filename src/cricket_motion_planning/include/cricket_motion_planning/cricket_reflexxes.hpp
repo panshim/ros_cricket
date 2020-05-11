@@ -28,9 +28,9 @@
 #include "lwr_controllers/PoseRPY.h"
 
 // defines
-#define CYCLE_TIME_IN_SECONDS   0.1 // 1/n Hz traj. command frequency
+#define CYCLE_TIME_IN_SECONDS   0.5 // 1/n Hz traj. command frequency
 #define NUMBER_OF_DOFS          6   // 6 DOF EndEffector
-#define Pi                      3.14159265358979323846
+#define Pi                      3.1416
 class CricketReflexxes
 {
     private:
