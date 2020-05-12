@@ -3,24 +3,16 @@
 CricketCoordinate::CricketCoordinate(ros::NodeHandle nh):nh(nh)
 {
     /* Get to the ready postion */
-    pub_ready = nh.advertise<geometry_msgs::Pose>("/reflexxes_target_cart", 10);
-    ready_pose.position.x = 0.2;
-    ready_pose.position.y = -0.2;
-    ready_pose.position.z = 0.8;
+    pub_ready = nh.advertise<geometry_msgs::Pose>("reflexxes_target_cart", 1);
+    ready_pose.position.x = 0.20;
+    ready_pose.position.y = -0.20;
+    ready_pose.position.z = 0.80;
     ready_pose.orientation.x = 0.5;
     ready_pose.orientation.y = 0.5;
     ready_pose.orientation.z = 0.5;
     ready_pose.orientation.w = 0.5;
 
-    // ready_pose_2.position.x = 0.5;
-    // ready_pose_2.position.y = -0.3;
-    // ready_pose_2.position.z = 0.8;
-    // ready_pose_2.orientation.roll = 0.2;
-    // ready_pose_2.orientation.pitch = 0.2;
-    // ready_pose_2.orientation.yaw = 0.2;
-
     /* Subscrib tracking ball & Move if within the predesigned range */
-    // sub_ball = nh.subscribe("ball/posterior_estimation", 1, &CricketCoordinate::SubBallCallback, this);
     sub_ball = nh.subscribe("ball/target", 1, &CricketCoordinate::SubBallCallback, this);
 
     /* Publish Reflexxes Command */
@@ -57,9 +49,6 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_ms
     if(cli_link_7.call(srv_link7state))
     {
         link_7_pose = srv_link7state.response.link_state.pose;
-        // std::cout << "link_7_pose[x]: " << link_7_pose.position.x << std::endl;
-        // std::cout << "link_7_pose[y]: " << link_7_pose.position.y << std::endl;
-        // std::cout << "link_7_pose[z]: " << link_7_pose.position.z << std::endl;
         link_7_trans = GeoposeToTftrans(link_7_pose);
 
         if(BallWithinRange(rcv_msg)) // if in range, then publish Reflexxes related topics
@@ -68,11 +57,9 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_ms
             tf::Transform ball_trans = GeoaccToTftrans(rcv_msg);
             tf::Transform reflexxesTrans = link_base_trans.inverseTimes(ball_trans);
             pub_reflexxes_pose.publish( TftransToGeopose(reflexxesTrans) );
+            
             // publish target twist
             geometry_msgs::Twist targetTwist;
-            // targetTwist.linear.x = rcv_msg.accel.angular.x;
-            // targetTwist.linear.y = rcv_msg.accel.angular.y;
-            // targetTwist.linear.z = rcv_msg.accel.angular.z;
             targetTwist.linear.x = rcv_msg.twist.angular.x;
             targetTwist.linear.y = rcv_msg.twist.angular.y;
             targetTwist.linear.z = rcv_msg.twist.angular.z;

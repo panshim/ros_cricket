@@ -4,13 +4,13 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
 {
     /* Step1: Subscriber & Publisher */
     //topic: [reflexxes_target_cart] --> {ReflexML} --> [cartesian_pos_cmd] --> {Inverse Postion Kine}.
-    sub_reflex_target = nh.subscribe<geometry_msgs::Pose>("reflexxes_target_cart", 1, &CricketReflexxes::SubMsgCallbackPose, this);
-    sub_reflex_twist = nh.subscribe<geometry_msgs::Twist>("reflexxes_target_twist", 1, &CricketReflexxes::SubMsgCallbackTwist, this);
+    sub_reflex_target = nh.subscribe<geometry_msgs::Pose>("/reflexxes_target_cart", 10, &CricketReflexxes::SubMsgCallbackPose, this);
+    sub_reflex_twist = nh.subscribe<geometry_msgs::Twist>("/reflexxes_target_twist", 10, &CricketReflexxes::SubMsgCallbackTwist, this);
     sub_jointstate = nh.subscribe<sensor_msgs::JointState>("/lwr/joint_states", 1, &CricketReflexxes::SubMsgCallbackJnt, this);
-    pub_next_cart = nh.advertise<geometry_msgs::Pose>("cartesian_pos_cmd", 1);
+    pub_next_cart = nh.advertise<geometry_msgs::Pose>("/cartesian_pos_cmd", 1);
     pub_inv_next_cart = nh.advertise<lwr_controllers::PoseRPY>("/lwr/one_task_inverse_kinematics/command", 1);
     
-    // Step2: Reflexxes Motion Lib Call
+    /* Step2: Reflexxes Motion Lib Call */
     IP=new RMLPositionInputParameters(NUMBER_OF_DOFS);
     OP=new RMLPositionOutputParameters(NUMBER_OF_DOFS);
     RML=new ReflexxesAPI(NUMBER_OF_DOFS, CYCLE_TIME_IN_SECONDS);
@@ -18,7 +18,7 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     ResultValue = 0;
     /* TF Operation class initialization in Initial List */
 
-    // /* Step3: set MAX ARGUMENTS for Reflexxes Call */
+    /* Step3: set MAX ARGUMENTS for Reflexxes Call */
     IP->MaxVelocityVector->VecData          [0] = 2000.0;
     IP->MaxVelocityVector->VecData          [1] = 2000.0;
     IP->MaxVelocityVector->VecData          [2] = 2000.0;
@@ -47,7 +47,6 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     IP->SelectionVector->VecData            [4] = true;
     IP->SelectionVector->VecData            [5] = true;
     
-
     /* Step4: set Initial CURRENT POSITION for Reflexxes Call */
     // Note: For the very first motion after starting the controller, velocities & acceleration are commonly set to zero.
     prevTime = ros::Time::now();
@@ -83,8 +82,8 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     IP->CurrentAccelerationVector->VecData  [5] = 0;
 
     /* Step5: Cricket Bat Transformmation */
-    tf::Vector3 batVec(0,0,-0.4);
-    tf::Quaternion batQuat(0,0,0,1);
+    tf::Vector3 batVec(0,0,-0.125);
+    tf::Quaternion batQuat(0,0,-0.259,0.966);
     batTransform.setOrigin(batVec);
     batTransform.setRotation(batQuat);
 
@@ -141,9 +140,12 @@ void CricketReflexxes::SubMsgCallbackTwist(const geometry_msgs::Twist rcv_msg)
     tarVel.y = -rcv_msg.linear.y / den;
     tarVel.z = -rcv_msg.linear.z / den;
     
-    IP->TargetVelocityVector->VecData       [0] = tarVel.x;
-    IP->TargetVelocityVector->VecData       [1] = tarVel.y;
-    IP->TargetVelocityVector->VecData       [2] = tarVel.z;
+    // IP->TargetVelocityVector->VecData       [0] = tarVel.x;
+    // IP->TargetVelocityVector->VecData       [1] = tarVel.y;
+    // IP->TargetVelocityVector->VecData       [2] = tarVel.z;
+    IP->TargetVelocityVector->VecData       [0] = 0;
+    IP->TargetVelocityVector->VecData       [1] = 0;
+    IP->TargetVelocityVector->VecData       [2] = 0;
     IP->TargetVelocityVector->VecData       [3] = 0;
     IP->TargetVelocityVector->VecData       [4] = 0;
     IP->TargetVelocityVector->VecData       [5] = 0;
@@ -161,24 +163,14 @@ void CricketReflexxes::SubMsgCallbackJnt(const sensor_msgs::JointState recv_js)
 void CricketReflexxes::TimerCallback(const ros::TimerEvent& event)
 {
     // step1: Update the Module's Input: IP
-    tf_oper.TFListen("/lwr_base_link", "/lwr_7_link");
+    tf_oper.TFListen("/lwr_7_link", "/lwr_base_link");
     double roll, pitch, yaw;
     geometry_msgs::TransformStamped geo_ST;
     transformStampedTFToMsg(tf_oper.listen_transform, geo_ST);
     geometry_msgs::Quaternion Quat(geo_ST.transform.rotation);
     CricketReflexxes::QuaternionToRPY<geometry_msgs::Quaternion>(Quat, roll, pitch, yaw);
-
-    // Update Current State
-    // nowTime = ros::Time::now();
-    // intervalTime = (nowTime - prevTime).toSec();
-    // prevTime = nowTime;
-    // IP->CurrentVelocityVector->VecData      [0] = (geo_ST.transform.translation.x - IP->CurrentPositionVector->VecData[0])/intervalTime;
-    // IP->CurrentVelocityVector->VecData      [1] = (geo_ST.transform.translation.y - IP->CurrentPositionVector->VecData[1])/intervalTime;
-    // IP->CurrentVelocityVector->VecData      [2] = (geo_ST.transform.translation.z - IP->CurrentPositionVector->VecData[2])/intervalTime;
-    // IP->CurrentVelocityVector->VecData      [3] = (RotationPrincipleValue(roll )- RotationPrincipleValue(IP->CurrentPositionVector->VecData[3]))/intervalTime;
-    // IP->CurrentVelocityVector->VecData      [4] = (RotationPrincipleValue(pitch)- RotationPrincipleValue(IP->CurrentPositionVector->VecData[4]))/intervalTime;
-    // IP->CurrentVelocityVector->VecData      [5] = (RotationPrincipleValue(yaw  )- RotationPrincipleValue(IP->CurrentPositionVector->VecData[5]))/intervalTime;
     
+    //calc. current forward velocity
     solv_fd_vel->JntToCart(jntArrayVel, frameVel);
     IP->CurrentVelocityVector->VecData      [0] = frameVel.GetTwist().vel[0];
     IP->CurrentVelocityVector->VecData      [1] = frameVel.GetTwist().vel[1];
@@ -234,12 +226,15 @@ void CricketReflexxes::TimerCallback(const ros::TimerEvent& event)
     
 
     // Step 3.1(backup): publish on topic: "/lwr/one_task_inverse_kinematics/command"
-    inv_pos_next_cmd.position.x = OP->NewPositionVector->VecData[0];
-    inv_pos_next_cmd.position.y = OP->NewPositionVector->VecData[1];
-    inv_pos_next_cmd.position.z = OP->NewPositionVector->VecData[2];
-    inv_pos_next_cmd.orientation.roll = OP->NewPositionVector->VecData[3];
-    inv_pos_next_cmd.orientation.pitch = OP->NewPositionVector->VecData[4];
-    inv_pos_next_cmd.orientation.yaw = OP->NewPositionVector->VecData[5];
+    tf::Matrix3x3 mat(eeTransform.getRotation());
+    mat.getRPY(roll, pitch, yaw);
+    inv_pos_next_cmd.position.x = eeTransform.getOrigin().getX();
+    inv_pos_next_cmd.position.y = eeTransform.getOrigin().getY();
+    inv_pos_next_cmd.position.z = eeTransform.getOrigin().getZ();
+    inv_pos_next_cmd.orientation.roll = roll;
+    inv_pos_next_cmd.orientation.pitch = pitch;
+    inv_pos_next_cmd.orientation.yaw = yaw;
+
     pub_inv_next_cart.publish(inv_pos_next_cmd);
 }
 
