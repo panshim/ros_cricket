@@ -84,6 +84,7 @@ CricketReflexxes::CricketReflexxes(ros::NodeHandle nh):nh(nh), tf_oper(nh)
     /* Step5: Cricket Bat Transformmation */
     tf::Vector3 batVec(0,0,-0.125);
     tf::Quaternion batQuat(0,0,-0.259,0.966);
+
     batTransform.setOrigin(batVec);
     batTransform.setRotation(batQuat);
 

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <launch>
 
-    <arg name="in_secs" default="0.8"/>
-    <arg name="ball_trowing_state" default="0 4 0.5 0.5 -0.2 1.8 0.01 2.0"/>
+    <arg name="in_secs" default="1"/>
+    <arg name="ball_trowing_state" default="0 4 0.5 0.5 -0.2 1.8 0.2 2.0"/>
 
     <include file="$(find cricket_motion_planning)/launch/cricket_motion_planning.launch">
         
@@ -14,7 +14,9 @@
         <arg name="ball_trowing_state" value="$(arg ball_trowing_state)"/>
     </include>
 
-    <node pkg="traj_pred" type="traj_pred_node" name="traj_pred_node" 
+    <!-- <node pkg="ekf" type="ekf_node" name="ekf_node" /> -->
+
+     <node pkg="traj_pred" type="traj_pred_node" name="traj_pred_node"
         args="$(arg in_secs)" output="screen"/>
 
 </launch>

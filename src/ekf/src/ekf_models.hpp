@@ -68,14 +68,14 @@ struct Obser{
 
 State sys_evaluate_g( const State& state_in, double dt );
 
-void sys_evaluate_G( double G[6][6], const State& state, double dt );
+void sys_evaluate_G( double G[9][9], const State& state, double dt );
 
-void sys_evaluate_VMVt( double VMVt[6][6], const State& state, double dt );
+void sys_evaluate_VMVt( double VMVt[9][9], const State& state, double dt );
 
 geometry_msgs::InertiaStamped meas_evaluate_gps( const State& state );
 
-void meas_evaluate_Hgps( double Hgps[6][6], const State& state );
+void meas_evaluate_Hgps( double Hgps[9][9], const State& state );
 
-void meas_evaluate_R( double R[6][6], const State& state );
+void meas_evaluate_R( double R[9][9], const State& state );
 
 #endif
