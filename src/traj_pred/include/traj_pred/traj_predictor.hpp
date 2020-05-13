@@ -29,6 +29,8 @@ class TrajPredictor
     int i; // message index
     float last_time;
     float start_time;
+    float finish_time;
+    float rate_time;
     bool trigger;
 
   public:

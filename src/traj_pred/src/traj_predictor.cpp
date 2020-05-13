@@ -12,6 +12,8 @@ TrajPredictor::TrajPredictor(ros::NodeHandle& nh, float sec, std::string topic_s
 
   i = 0;
   start_time = 0;
+  finish_time = 9.5;
+  rate_time = 0.0;
   trigger = false;
 }
 
@@ -30,9 +32,12 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         trigger = true;
         std::cout << "polynomial curve fitting starts." << std::endl;
         start_time = last_time;
+        finish_time = msg->header.stamp.toSec() + 9.5;
         float dt = msg->header.stamp.toSec() - start_time;
         cv::Mat new_A_row = (cv::Mat_<float>(1, 3) << dt * dt, dt, 1);
         cv::Mat new_B_row = (cv::Mat_<float>(1, 3) << current_pos.x, current_pos.y, current_pos.z);
+        A.at<float>(0, 0) = 0;
+        A.at<float>(0, 1) = 0;
         A.at<float>(0, 2) = 1;
         A.push_back(new_A_row);
         B.at<float>(0, 0) = last_pos.x;
@@ -54,12 +59,20 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         trigger = false;
         start_time = 0;
         last_time = msg->header.stamp.toSec();
+        rate_time = msg->header.stamp.toSec();
+        finish_time = last_time +3.3;
+
         last_pos = current_pos;
         A = cv::Mat(1, 3, CV_32F);
         B = cv::Mat(1, 3, CV_32F);
         return;
       }
+      else if (current_pos.z < 0.9) {
+        finish_time = msg->header.stamp.toSec() +9.5;
+      }
       float dt = msg->header.stamp.toSec() - start_time;
+      sec_ = (finish_time - msg->header.stamp.toSec()-0.8*(msg->header.stamp.toSec()-rate_time));
+      sec_ = (3-2.2*dt);
       cv::Mat new_A_row = (cv::Mat_<float>(1, 3) << dt * dt, dt, 1);
       cv::Mat new_B_row = (cv::Mat_<float>(1, 3) << current_pos.x, current_pos.y, current_pos.z);
       A.push_back(new_A_row);

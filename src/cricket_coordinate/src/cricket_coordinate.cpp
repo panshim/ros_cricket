@@ -82,10 +82,10 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_ms
             if(rcv_msg.twist.linear.z < -90)
             {
                 CricketCoordinate::getReady();
-                std::cout << "Stage1: Robot Arm LWR: Back to Ready Pose!!!" << std::endl;
+                // std::cout << "Stage1: Robot Arm LWR: Back to Ready Pose!!!" << std::endl;
             }
-            else
-                std::cout << "Stage3: Ball Not in Working Range... & Not yet Ready Pose..." << std::endl;
+            // else
+                // std::cout << "Stage3: Ball Not in Working Range... & Not yet Ready Pose..." << std::endl;
         }
     }
     else
