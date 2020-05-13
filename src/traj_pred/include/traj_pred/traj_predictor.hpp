@@ -8,7 +8,7 @@ class TrajPredictor
   private:
     ros::NodeHandle nh_;
 
-    float sec_; // after how many secs
+    float sec_; // after how many secs (dynamic)
 
     std::string topic_sub_;
     std::string topic_pub_pos_;
@@ -29,12 +29,10 @@ class TrajPredictor
     int i; // message index
     float last_time;
     float start_time;
-    float finish_time;
-    float rate_time;
     bool trigger;
 
   public:
-    TrajPredictor(ros::NodeHandle& nh, float sec, std::string topic_sub, std::string topic_pub_pos, std::string topic_pub_tgt);
+    TrajPredictor(ros::NodeHandle& nh, std::string topic_sub, std::string topic_pub_pos, std::string topic_pub_tgt);
     ~TrajPredictor();
     void calCallback(const geometry_msgs::PointStamped::ConstPtr& msg);
     void solveLS();
