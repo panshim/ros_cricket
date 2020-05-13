@@ -4,10 +4,40 @@ lwr:
     type: joint_state_controller/JointStateController
     publish_rate: 100  
   
-  # Velocity Controller
-  joint_velocity_controller:
+  # -------------------- Velocity Controller -------------------
+  VelocityJointInterface_J1_controller:
     type: velocity_controllers/JointVelocityController
-    joints:
+    joint: lwr_a1_joint
+    
+  VelocityJointInterface_J2_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: lwr_a2_joint
+    
+  VelocityJointInterface_J3_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: lwr_e1_joint
+    
+  VelocityJointInterface_J4_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: lwr_a3_joint
+    
+  VelocityJointInterface_J5_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: lwr_a4_joint
+    
+  VelocityJointInterface_J6_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: lwr_a5_joint
+    
+  VelocityJointInterface_J7_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: lwr_a6_joint
+# ------------------------------------------------------------ #
+
+  # Forward Velocity Controllers ---------------------------------------
+  VelocityJointInterface_trajectory_controller:
+    type: velocity_controllers/JointTrajectoryController
+    joints: 
       - lwr_a1_joint
       - lwr_a2_joint
       - lwr_e1_joint
@@ -15,6 +45,7 @@ lwr:
       - lwr_a4_joint
       - lwr_a5_joint
       - lwr_a6_joint
+# ------------------------------------------------------------ #
 
   # Standard effort controller
   joint_efforts_controller:

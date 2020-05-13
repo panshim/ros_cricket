@@ -5,7 +5,7 @@
 	<xacro:property name="Interface10" value="PositionJointInterface"/>
 	<xacro:property name="Interface30" value="EffortJointInterface"/>
 	<xacro:property name="Interface50" value="VelocityJointInterface"/>
-	
+
 	<xacro:macro name="kuka_lwr_transmission" params="name">
 
 		<transmission name="${name}_a1_trans">

@@ -46,6 +46,17 @@ CricketCoordinate::~CricketCoordinate(){}
 void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_msg)
 {
     // get lwr_7_link's global trans
+    if(cli_model_lwr.call(srv_linkbasestate))
+    {
+        link_base_pose = srv_linkbasestate.response.link_state.pose;
+        link_base_trans = GeoposeToTftrans(link_base_pose);
+    }
+    else
+    {
+        std::cout << "Service cli_link_base call failed" << std::endl;
+    }
+    
+    // get lwr_7_link's global trans
     if(cli_link_7.call(srv_link7state))
     {
         link_7_pose = srv_link7state.response.link_state.pose;
