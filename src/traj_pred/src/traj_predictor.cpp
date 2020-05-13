@@ -77,7 +77,7 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         cv::Mat dt_in_sec = (cv::Mat_<float>(1, 3) << (dt + sec_) * (dt + sec_), dt + sec_, 1); // sec_ seconds later
         cv::Mat pos_in_sec = dt_in_sec * X; 
         
-        float z_target = 3 - pos_1_sec.at<float>(2);
+        //float z_target = 3 - pos_1_sec.at<float>(2);
         //float t_target = (-bz - sqrt(bz * bz - 4 * az * (cz - z_target))) / (2 * az);
         //cv::Mat dt_target = (cv::Mat_<float>(1, 3) << (t_target * t_target), t_target, 1);
         //cv::Mat pos_one_sec = dt_target * X;
