@@ -40,10 +40,15 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         B.at<float>(0, 2) = last_pos.z;
         B.push_back(new_B_row);
       }
+      // send a false target to tell robot get ready
+      geometry_msgs::TwistStamped msg_tgt;
+      msg_tgt.header.stamp = msg->header.stamp;
+      msg_tgt.header.frame_id = "world";
+      msg_tgt.twist.linear.z = -100;
     }
     else
     {
-      if (current_pos.z < 0.2) // ball on the ground, reset
+      if (current_pos.z < 0.5) // ball on the ground, reset
       {
         trigger = false;
         start_time = 0;
@@ -69,50 +74,46 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         float bz = X.at<float>(1, 2);
         float cz = X.at<float>(2, 2);
 
-        cv::Mat dt_one_sec = (cv::Mat_<float>(1, 3) << (dt + sec_) * (dt + sec_), dt + sec_, 1); // sec_ seconds later
-        cv::Mat pos_one_sec = dt_one_sec * X; 
+        cv::Mat dt_in_sec = (cv::Mat_<float>(1, 3) << (dt + sec_) * (dt + sec_), dt + sec_, 1); // sec_ seconds later
+        cv::Mat pos_in_sec = dt_in_sec * X; 
         
-        std::cout << pos_one_sec.at<float>(2) << std::endl;
-        if (true)
-        // if ((pos_1_sec.at<float>(2)>=1) && (pos_1_sec.at<float>(2)<=2))
-        { 
-          //float z_target = 3 - pos_1_sec.at<float>(2);
-          //float t_target = (-bz - sqrt(bz * bz - 4 * az * (cz - z_target))) / (2 * az);
-          //cv::Mat dt_target = (cv::Mat_<float>(1, 3) << (t_target * t_target), t_target, 1);
-          //cv::Mat pos_one_sec = dt_target * X;
-          msg_pub.point.x = pos_one_sec.at<float>(0);
-          msg_pub.point.y = pos_one_sec.at<float>(1);
-          msg_pub.point.z = pos_one_sec.at<float>(2);
-          // use TwistStamped message to send target position and velocity information
-          geometry_msgs::TwistStamped msg_tgt;
-          msg_tgt.header = msg_pub.header;
-          msg_tgt.twist.linear.x = msg_pub.point.x; // position
-          msg_tgt.twist.linear.y = msg_pub.point.y;
-          msg_tgt.twist.linear.z = msg_pub.point.z;
-          msg_tgt.twist.angular.x = 2 * X.at<float>(0, 0) * (dt + sec_) + X.at<float>(1, 0);
-          msg_tgt.twist.angular.y = 2 * X.at<float>(0, 1) * (dt + sec_) + X.at<float>(1, 1);
-          msg_tgt.twist.angular.z = 2 * X.at<float>(0, 2) * (dt + sec_) + X.at<float>(1, 2);
+        float z_target = 3 - pos_1_sec.at<float>(2);
+        //float t_target = (-bz - sqrt(bz * bz - 4 * az * (cz - z_target))) / (2 * az);
+        //cv::Mat dt_target = (cv::Mat_<float>(1, 3) << (t_target * t_target), t_target, 1);
+        //cv::Mat pos_one_sec = dt_target * X;
+        msg_pub.point.x = pos_in_sec.at<float>(0);
+        msg_pub.point.y = pos_in_sec.at<float>(1);
+        msg_pub.point.z = pos_in_sec.at<float>(2);
 
-          //msg_tgt.twist.angular.x = 2 * X.at<float>(0, 0) * (t_target) + X.at<float>(1, 0);
-          //msg_tgt.twist.angular.y = 2 * X.at<float>(0, 1) * (t_target) + X.at<float>(1, 1);
-          //msg_tgt.twist.angular.z = 2 * X.at<float>(0, 2) * (t_target) + X.at<float>(1, 2);
+        // use TwistStamped message to send target position and velocity information
+        geometry_msgs::TwistStamped msg_tgt;
+        msg_tgt.header = msg_pub.header;
+        msg_tgt.twist.linear.x = msg_pub.point.x; // position
+        msg_tgt.twist.linear.y = msg_pub.point.y;
+        msg_tgt.twist.linear.z = msg_pub.point.z;
+        msg_tgt.twist.angular.x = 2 * X.at<float>(0, 0) * (dt + sec_) + X.at<float>(1, 0);
+        msg_tgt.twist.angular.y = 2 * X.at<float>(0, 1) * (dt + sec_) + X.at<float>(1, 1);
+        msg_tgt.twist.angular.z = 2 * X.at<float>(0, 2) * (dt + sec_) + X.at<float>(1, 2);
 
-          // if (t_target - dt <= 0.1)
-          // {
-          //   msg_pub.point.x = pos_one_sec.at<float>(0) - msg_tgt.twist.angular.x * 0.05;
-          //   msg_pub.point.y = pos_one_sec.at<float>(1) - msg_tgt.twist.angular.y * 0.05;
-          //   msg_pub.point.z = pos_one_sec.at<float>(2) - msg_tgt.twist.angular.z * 0.05;
+        //msg_tgt.twist.angular.x = 2 * X.at<float>(0, 0) * (t_target) + X.at<float>(1, 0);
+        //msg_tgt.twist.angular.y = 2 * X.at<float>(0, 1) * (t_target) + X.at<float>(1, 1);
+        //msg_tgt.twist.angular.z = 2 * X.at<float>(0, 2) * (t_target) + X.at<float>(1, 2);
 
-          //   msg_tgt.twist.linear.x = pos_one_sec.at<float>(0) - msg_tgt.twist.angular.x * 0.05;
-          //   msg_tgt.twist.linear.y = pos_one_sec.at<float>(1) - msg_tgt.twist.angular.y * 0.05;
-          //   msg_tgt.twist.linear.z = pos_one_sec.at<float>(2) - msg_tgt.twist.angular.z * 0.05;
-          // }
-          //if (t_target - dt <= 0.5)
-          //{
-          pub_pos.publish(msg_pub);
-          pub_tgt.publish(msg_tgt);
-          //}
-        }
+        // if (t_target - dt <= 0.1)
+        // {
+        //   msg_pub.point.x = pos_one_sec.at<float>(0) - msg_tgt.twist.angular.x * 0.05;
+        //   msg_pub.point.y = pos_one_sec.at<float>(1) - msg_tgt.twist.angular.y * 0.05;
+        //   msg_pub.point.z = pos_one_sec.at<float>(2) - msg_tgt.twist.angular.z * 0.05;
+
+        //   msg_tgt.twist.linear.x = pos_one_sec.at<float>(0) - msg_tgt.twist.angular.x * 0.05;
+        //   msg_tgt.twist.linear.y = pos_one_sec.at<float>(1) - msg_tgt.twist.angular.y * 0.05;
+        //   msg_tgt.twist.linear.z = pos_one_sec.at<float>(2) - msg_tgt.twist.angular.z * 0.05;
+        // }
+        //if (t_target - dt <= 0.5)
+        //{
+        pub_pos.publish(msg_pub);
+        pub_tgt.publish(msg_tgt);
+      
       }
     }
   }
