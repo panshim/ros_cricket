@@ -87,6 +87,7 @@ public:
   hardware_interface::PositionJointInterface position_interface_;
   hardware_interface::CartesianStateInterface cart_interface_;
   hardware_interface::PositionCartesianInterface position_cart_interface_;
+  hardware_interface::VelocityJointInterface velocity_interface_;
   // hardware_interface::StiffnessJointInterface stiffness_interface_; // ToDo
   // hardware_interface::ImpedanceointInterface impedance_interface_; // ToDo
 

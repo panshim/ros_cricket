@@ -293,6 +293,7 @@ namespace lwr_hw
     registerInterface(&position_interface_);
     registerInterface(&cart_interface_);
     registerInterface(&position_cart_interface_);
+    registerInterface(&velocity_interface_);
   }
 
   // Register the limits of the joint specified by joint_name and\ joint_handle. The limits are
