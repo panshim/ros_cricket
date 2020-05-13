@@ -1,6 +1,6 @@
 #include "traj_pred/traj_predictor.hpp"
 
-TrajPredictor::TrajPredictor(ros::NodeHandle& nh, float sec, std::string topic_sub, std::string topic_pub_pos, std::string topic_pub_tgt) : nh_(nh), sec_(sec), topic_sub_(topic_sub), topic_pub_pos_(topic_pub_pos), topic_pub_tgt_(topic_pub_tgt)
+TrajPredictor::TrajPredictor(ros::NodeHandle& nh, std::string topic_sub, std::string topic_pub_pos, std::string topic_pub_tgt) : nh_(nh), topic_sub_(topic_sub), topic_pub_pos_(topic_pub_pos), topic_pub_tgt_(topic_pub_tgt)
 {
   sub = nh_.subscribe(topic_sub_, 10, &TrajPredictor::calCallback, this);
   pub_pos = nh.advertise<geometry_msgs::PointStamped>(topic_pub_pos_, 10);
@@ -33,6 +33,8 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         float dt = msg->header.stamp.toSec() - start_time;
         cv::Mat new_A_row = (cv::Mat_<float>(1, 3) << dt * dt, dt, 1);
         cv::Mat new_B_row = (cv::Mat_<float>(1, 3) << current_pos.x, current_pos.y, current_pos.z);
+        A.at<float>(0, 0) = 0;
+        A.at<float>(0, 1) = 0;
         A.at<float>(0, 2) = 1;
         A.push_back(new_A_row);
         B.at<float>(0, 0) = last_pos.x;
@@ -53,13 +55,12 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
       {
         trigger = false;
         start_time = 0;
-        last_time = msg->header.stamp.toSec();
-        last_pos = current_pos;
         A = cv::Mat(1, 3, CV_32F);
         B = cv::Mat(1, 3, CV_32F);
         return;
       }
       float dt = msg->header.stamp.toSec() - start_time;
+      sec_ = (3.3-2.2*dt);
       cv::Mat new_A_row = (cv::Mat_<float>(1, 3) << dt * dt, dt, 1);
       cv::Mat new_B_row = (cv::Mat_<float>(1, 3) << current_pos.x, current_pos.y, current_pos.z);
       A.push_back(new_A_row);
@@ -77,10 +78,6 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         cv::Mat dt_in_sec = (cv::Mat_<float>(1, 3) << (dt + sec_) * (dt + sec_), dt + sec_, 1); // sec_ seconds later
         cv::Mat pos_in_sec = dt_in_sec * X; 
         
-        //float z_target = 3 - pos_1_sec.at<float>(2);
-        //float t_target = (-bz - sqrt(bz * bz - 4 * az * (cz - z_target))) / (2 * az);
-        //cv::Mat dt_target = (cv::Mat_<float>(1, 3) << (t_target * t_target), t_target, 1);
-        //cv::Mat pos_one_sec = dt_target * X;
         msg_pub.point.x = pos_in_sec.at<float>(0);
         msg_pub.point.y = pos_in_sec.at<float>(1);
         msg_pub.point.z = pos_in_sec.at<float>(2);
@@ -95,25 +92,11 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         msg_tgt.twist.angular.y = 2 * X.at<float>(0, 1) * (dt + sec_) + X.at<float>(1, 1);
         msg_tgt.twist.angular.z = 2 * X.at<float>(0, 2) * (dt + sec_) + X.at<float>(1, 2);
 
-        //msg_tgt.twist.angular.x = 2 * X.at<float>(0, 0) * (t_target) + X.at<float>(1, 0);
-        //msg_tgt.twist.angular.y = 2 * X.at<float>(0, 1) * (t_target) + X.at<float>(1, 1);
-        //msg_tgt.twist.angular.z = 2 * X.at<float>(0, 2) * (t_target) + X.at<float>(1, 2);
-
-        // if (t_target - dt <= 0.1)
-        // {
-        //   msg_pub.point.x = pos_one_sec.at<float>(0) - msg_tgt.twist.angular.x * 0.05;
-        //   msg_pub.point.y = pos_one_sec.at<float>(1) - msg_tgt.twist.angular.y * 0.05;
-        //   msg_pub.point.z = pos_one_sec.at<float>(2) - msg_tgt.twist.angular.z * 0.05;
-
-        //   msg_tgt.twist.linear.x = pos_one_sec.at<float>(0) - msg_tgt.twist.angular.x * 0.05;
-        //   msg_tgt.twist.linear.y = pos_one_sec.at<float>(1) - msg_tgt.twist.angular.y * 0.05;
-        //   msg_tgt.twist.linear.z = pos_one_sec.at<float>(2) - msg_tgt.twist.angular.z * 0.05;
-        // }
-        //if (t_target - dt <= 0.5)
-        //{
-        pub_pos.publish(msg_pub);
-        pub_tgt.publish(msg_tgt);
-      
+        if ((msg_tgt.twist.linear.z>1.2)&&(msg_tgt.twist.linear.z<2.7))
+	{
+          pub_pos.publish(msg_pub);
+          pub_tgt.publish(msg_tgt);
+        }
       }
     }
   }

@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   sensor_msgs
   kdl_parser
+  lwr_controllers
 )
 find_package(reflexxes_type2)
 find_package(orocos_kdl REQUIRED)
@@ -108,7 +109,7 @@ find_package(orocos_kdl REQUIRED)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES cricket_motion_planning
-   CATKIN_DEPENDS roscpp tf geometry_msgs sensor_msgs
+   CATKIN_DEPENDS roscpp tf geometry_msgs sensor_msgs lwr_controllers
    DEPENDS reflexxes_type2 kdl_parser orocos_kdl
 )
 

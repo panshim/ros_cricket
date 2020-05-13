@@ -82,10 +82,10 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_ms
             if(rcv_msg.twist.linear.z < -90)
             {
                 CricketCoordinate::getReady();
-                //std::cout << "Stage1: Robot Arm LWR: Back to Ready Pose!!!" << std::endl;
+                // std::cout << "Stage1: Robot Arm LWR: Back to Ready Pose!!!" << std::endl;
             }
-            //else
-                //std::cout << "Stage3: Ball Not in Working Range... & Not yet Ready Pose..." << std::endl;
+            // else
+                // std::cout << "Stage3: Ball Not in Working Range... & Not yet Ready Pose..." << std::endl;
         }
     }
     else
@@ -98,7 +98,7 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_ms
 bool CricketCoordinate::BallWithinRange(const geometry_msgs::TwistStamped ball_pose)
 {
     tf::Transform ball_trans = GeoaccToTftrans(ball_pose);
-    return ( link_7_trans.getOrigin().distance(ball_trans.getOrigin())<2 && ball_trans.getOrigin().getZ()>1 );
+    return ( link_7_trans.getOrigin().distance(ball_trans.getOrigin())<2.5 && ball_trans.getOrigin().getZ()>1 );
 }
 
 /* LWR arm goes to ready position */
