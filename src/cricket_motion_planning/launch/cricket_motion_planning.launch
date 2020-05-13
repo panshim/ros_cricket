@@ -4,8 +4,9 @@
     </include>
     
     <include file="$(find single_lwr_launch)/launch/single_lwr.launch">
-        <arg name="controllers" value="one_task_inverse_kinematics"/> 
-	    <!-- default: joint_trajectory_controller  one_task_inverse_kinematics-->
+        <arg name="controllers" value="VelocityJointInterface_J1_controller VelocityJointInterface_J2_controller VelocityJointInterface_J3_controller VelocityJointInterface_J4_controller VelocityJointInterface_J5_controller VelocityJointInterface_J6_controller"/> 
+        <!-- default: joint_trajectory_controller  one_task_inverse_kinematics VelocityJointInterface_trajectory_controller -->
+        <!-- VelocityJointInterface_J1_controller VelocityJointInterface_J2_controller VelocityJointInterface_J3_controller VelocityJointInterface_J4_controller VelocityJointInterface_J5_controller VelocityJointInterface_J6_controller -->
         <arg name="use_rviz" value="false"/>
     </include>
     

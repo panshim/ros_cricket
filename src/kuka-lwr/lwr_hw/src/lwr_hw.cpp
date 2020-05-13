@@ -209,7 +209,7 @@ namespace lwr_hw
       joint_handle_position = hardware_interface::JointHandle(state_interface_.getHandle(joint_names_[j]),
                                                        &joint_position_command_[j]);
       position_interface_.registerHandle(joint_handle_position);
-      
+
       hardware_interface::JointHandle joint_handle_set_point;
       joint_handle_set_point = hardware_interface::JointHandle(hardware_interface::JointStateHandle(
                                                                    joint_names_[j]+std::string("_set_point"),
@@ -237,6 +237,10 @@ namespace lwr_hw
       hardware_interface::JointHandle joint_handle_velocity;
       joint_handle_velocity = hardware_interface::JointHandle(state_interface_.getHandle(joint_names_[j]),
           &joint_velocity_command_[j]);
+      
+      //---------------- ROS Programming Group: add velocity_interface -------------------
+      velocity_interface_.registerHandle(joint_handle_velocity);
+      //-----------------------------------------------------------
 
       registerJointLimits(joint_names_[j], 
                           joint_handle_effort, 
