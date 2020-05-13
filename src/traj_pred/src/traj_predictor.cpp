@@ -45,6 +45,7 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
       msg_tgt.header.stamp = msg->header.stamp;
       msg_tgt.header.frame_id = "world";
       msg_tgt.twist.linear.z = -100;
+      pub_tgt.publish(msg_tgt);
     }
     else
     {
@@ -56,7 +57,6 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         last_pos = current_pos;
         A = cv::Mat(1, 3, CV_32F);
         B = cv::Mat(1, 3, CV_32F);
-        i++;
         return;
       }
       float dt = msg->header.stamp.toSec() - start_time;

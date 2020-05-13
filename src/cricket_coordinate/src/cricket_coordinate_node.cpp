@@ -7,6 +7,7 @@ int main(int argc, char **argv)
     ros::NodeHandle nh;
     CricketCoordinate cood(nh);
 
+<<<<<<< HEAD
     while (ros::ok()) {
         /* Receive a keyboard signal: Player, Get Ready! */
         char readySignal;
@@ -17,10 +18,20 @@ int main(int argc, char **argv)
         cood.getReady();
         // }
         std::cout << "Get into ball hitting loop!... " << std::endl;
+=======
+    /* Receive a keyboard signal: Player, Get Ready! */
+    // std::cout << "press 'r' to get ready..." << std::endl;
+    // std::cin >> readySignal;
+    // if( readySignal == 'r' )
+    // {
+    ros::Duration(0.5).sleep();//wait cood to be constructed
+    cood.getReady();
+    // }
+    std::cout << "Get into ball hitting loop!... " << std::endl;
+>>>>>>> a30d7fd348b949f5b596b85e8de7ef4dc9196de1
 
-        /* a loop to subscribe the ball & publish command */
-        ros::spin();
-    }
+    /* a loop to subscribe the ball & publish command */
+    ros::spin();
 
     return 0;
 }
