@@ -75,17 +75,17 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_ms
             targetTwist.linear.y = rcv_msg.twist.angular.y;
             targetTwist.linear.z = rcv_msg.twist.angular.z;
             pub_reflexxes_twist.publish(targetTwist);
-            std::cout << "Ball in Range, Move!!!" << std::endl;
+            std::cout << "Stage2: Ball in Range, Move!!!" << std::endl;
         }
         else //Ball not in range
         {
             if(rcv_msg.twist.linear.z < -90)
             {
                 CricketCoordinate::getReady();
-                std::cout << "Robot Arm LWR: Back to Ready Pose!!!" << std::endl;
+                std::cout << "Stage1: Robot Arm LWR: Back to Ready Pose!!!" << std::endl;
             }
             else
-                std::cout << "Ball Not in Working Range... & Not yet Ready Pose..." << std::endl;
+                std::cout << "Stage3: Ball Not in Working Range... & Not yet Ready Pose..." << std::endl;
         }
     }
     else
