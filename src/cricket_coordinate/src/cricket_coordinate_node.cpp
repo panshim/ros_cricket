@@ -17,7 +17,6 @@ int main(int argc, char **argv)
             cood.getReady();
         }
         std::cout << "Get into ball hitting loop!... " << std::endl;
-        system("rosnode list");
 
         /* a loop to subscribe the ball & publish command */
         ros::spin();

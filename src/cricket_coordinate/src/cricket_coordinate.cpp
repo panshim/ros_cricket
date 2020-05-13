@@ -92,7 +92,7 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_ms
 bool CricketCoordinate::BallWithinRange(const geometry_msgs::TwistStamped ball_pose)
 {
     tf::Transform ball_trans = GeoaccToTftrans(ball_pose);
-    return ( link_7_trans.getOrigin().distance(ball_trans.getOrigin())<2 && ball_trans.getOrigin().getZ()>1 );
+    return ( link_7_trans.getOrigin().distance(ball_trans.getOrigin())<2.5 && ball_trans.getOrigin().getZ()>1 );
 }
 
 /* LWR arm goes to ready position */

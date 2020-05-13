@@ -14,6 +14,9 @@
         <arg name="ball_trowing_state" value="$(arg ball_trowing_state)"/>
     </include>
 
+    <!-- <node name="cricket_coordinate_node" pkg="cricket_coordinate" 
+            type="cricket_coordinate_node" output="screen"/> -->
+
     <!-- <node pkg="ekf" type="ekf_node" name="ekf_node" /> -->
 
      <node pkg="traj_pred" type="traj_pred_node" name="traj_pred_node"
