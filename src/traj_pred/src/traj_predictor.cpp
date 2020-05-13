@@ -72,7 +72,7 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
       }
       float dt = msg->header.stamp.toSec() - start_time;
       sec_ = (finish_time - msg->header.stamp.toSec()-0.8*(msg->header.stamp.toSec()-rate_time));
-      sec_ = (3-2.2*dt);
+      sec_ = (3.3-2.2*dt);
       cv::Mat new_A_row = (cv::Mat_<float>(1, 3) << dt * dt, dt, 1);
       cv::Mat new_B_row = (cv::Mat_<float>(1, 3) << current_pos.x, current_pos.y, current_pos.z);
       A.push_back(new_A_row);
@@ -124,8 +124,11 @@ void TrajPredictor::calCallback(const geometry_msgs::PointStamped::ConstPtr& msg
         // }
         //if (t_target - dt <= 0.5)
         //{
-        pub_pos.publish(msg_pub);
-        pub_tgt.publish(msg_tgt);
+        if ((msg_tgt.twist.linear.z>1.2)&&(msg_tgt.twist.linear.z<2.7)){
+          pub_pos.publish(msg_pub);
+          pub_tgt.publish(msg_tgt);
+
+        }
       
       }
     }
