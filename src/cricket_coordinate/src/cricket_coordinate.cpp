@@ -45,7 +45,7 @@ CricketCoordinate::~CricketCoordinate(){}
 /* if Within the Range, then publish the ReflexxesCommand */
 void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_msg)
 {
-    // get lwr_7_link's global trans
+    // In Case of "Box Drifting" in Gazebo: get lwr_base_link's global trans
     if(cli_model_lwr.call(srv_linkbasestate))
     {
         link_base_pose = srv_linkbasestate.response.link_state.pose;
@@ -77,9 +77,15 @@ void CricketCoordinate::SubBallCallback(const geometry_msgs::TwistStamped rcv_ms
             pub_reflexxes_twist.publish(targetTwist);
             std::cout << "Ball in Range, Move!!!" << std::endl;
         }
-        else
+        else //Ball not in range
         {
-            std::cout << "Ball Not in Working Range..." << std::endl;
+            if(rcv_msg.twist.linear.z < -90)
+            {
+                CricketCoordinate::getReady();
+                std::cout << "Robot Arm LWR: Back to Ready Pose!!!" << std::endl;
+            }
+            else
+                std::cout << "Ball Not in Working Range... & Not yet Ready Pose..." << std::endl;
         }
     }
     else
