@@ -418,13 +418,13 @@
 			<visual>
 				<origin xyz="0 0 0" rpy="0 0 0"/>
 				<geometry>
-					<mesh filename="package://cricket_lwr_interface/meshes/cricket_bat_modified.STL" scale="1 1 1"/>
+					<mesh filename="package://cricket_lwr_interface/meshes/cricket_bat_large.STL" scale="1 1 1"/>
 				</geometry>
 			</visual>
 			<collision>
 				<origin xyz="0 0 0" rpy="0 0 0"/>
 				<geometry>
-					<mesh filename="package://cricket_lwr_interface/meshes/cricket_bat_modified.STL" scale="1 1 1"/>
+					<mesh filename="package://cricket_lwr_interface/meshes/cricket_bat_large.STL" scale="1 1 1"/>
 				</geometry>
 			</collision>>
 		</link>
