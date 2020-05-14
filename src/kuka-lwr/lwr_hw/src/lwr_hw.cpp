@@ -234,11 +234,12 @@ namespace lwr_hw
       effort_interface_.registerHandle(joint_handle_damping);
    
      // velocity command handle, recall it is fake, there is no actual velocity interface
+     /* Added by Shimin */
       hardware_interface::JointHandle joint_handle_velocity;
       joint_handle_velocity = hardware_interface::JointHandle(state_interface_.getHandle(joint_names_[j]),
           &joint_velocity_command_[j]);
       
-      //---------------- ROS Programming Group: add velocity_interface -------------------
+      //---------------- ROS Programming Group, Shimin: add velocity_interface -------------------
       velocity_interface_.registerHandle(joint_handle_velocity);
       //-----------------------------------------------------------
 
@@ -603,12 +604,17 @@ namespace lwr_hw
       ///semantic Zero
       joint_position_command_[j] = joint_position_[j];
       joint_effort_command_[j] = 0.0;
+      joint_velocity_command_[j] = joint_velocity_[j];
 
       ///call setCommand once so that the JointLimitsInterface receive the correct value on their getCommand()!
       try{  position_interface_.getHandle(joint_names_[j]).setCommand(joint_position_command_[j]);  }
       catch(const hardware_interface::HardwareInterfaceException&){}
       try{  effort_interface_.getHandle(joint_names_[j]).setCommand(joint_effort_command_[j]);  }
       catch(const hardware_interface::HardwareInterfaceException&){}
+      /* --------------Added by Shimin-------------- */
+      try{  velocity_interface_.getHandle(joint_names_[j]).setCommand(joint_velocity_command_[j]);  }
+      catch(const hardware_interface::HardwareInterfaceException&){}
+      /* ------------------------------------------- */
 
       ///reset joint_limit_interfaces
       pj_sat_interface_.reset();
@@ -655,6 +661,14 @@ namespace lwr_hw
                 {
                     std::cout << "Request to switch to hardware_interface::PositionCartesianInterface (CARTESIAN_IMPEDANCE)" << std::endl;
                     desired_strategy = CARTESIAN_IMPEDANCE;
+                    strategy_found = true;
+                    break;
+                }
+                /* Added by Shimin: Switch to Velocity Interface */
+                else if( it->hardware_interface.compare( std::string("hardware_interface::VelocityJointInterface")) == 0 )
+                {
+                    std::cout << "Request to switch to hardware_interface::VelocityJointInterface (JOINT_VELOCITY)" << std::endl;
+                    desired_strategy = JOINT_VELOCITY;
                     strategy_found = true;
                     break;
                 }

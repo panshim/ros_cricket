@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   forward_command_controller
   control_toolbox
+  velocity_controllers
   realtime_tools
   urdf
   roscpp
@@ -53,6 +54,7 @@ catkin_package(
     control_msgs
     geometry_msgs
     control_toolbox
+    velocity_controllers
     realtime_tools
     urdf
     forward_command_controller

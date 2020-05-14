@@ -70,6 +70,13 @@ public:
 
     switch (getControlStrategy())
     {
+      /* Added by Shimin */
+      case JOINT_VELOCITY:
+        for(int j=0; j < n_joints_; j++)
+        {
+          sim_joints_[j]->SetVelocity(0, joint_velocity_command_[j]);
+        }
+        break;
 
       case JOINT_POSITION:
         for(int j=0; j < n_joints_; j++)
