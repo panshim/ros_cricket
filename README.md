@@ -3,7 +3,7 @@
 ### 1.1 Introduction
 In this KUKA Cricket Star project, our team aim to make the KUKA robot arm able to imitate a cricket player and bat a flying ball randomly thrown to it in Gazebo simulation environment. More specifically, the system we design as shown in the Figure below mainly includes a multiple-camera (4-camera) system which detects and tracks the 3D position of the ball and then predicts the polynomial trajectory of the ball in 3D, and a 7-joint KUKA Lightweight Robt (LWR) holding our self-designed cricket bat to automatically react and hit back the ball thrown towards it.
 ![system](reports/system.png)
-*<center>Figure 1: The whole system for our project (simulated in Gazebo)</center>*
+*<p><center>Figure 1: The whole system for our project (simulated in Gazebo)</center></p>*
 
 ### 1.2 Ball Throwing
 With our self-created SDF blue ball model with bounce property, we can spawn the ball at a specific position in Gazebo. And we throw the ball with a proper but randomly sample initial velocity towards the robot. 
