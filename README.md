@@ -1,16 +1,45 @@
 # ros_cricket
 ## 1. Overview
 ### 1.1 Introduction
+In this KUKA Cricket Star project, our team aim to make the KUKA robot arm able to imitate a cricket player and bat a flying ball randomly thrown to it in Gazebo simulation environment. More specifically, the system we design as shown in the Figure below mainly includes a multiple-camera (4-camera) system which detects and tracks the 3D position of the ball and then predicts the polynomial trajectory of the ball in 3D, and a 7-joint KUKA Lightweight Robt (LWR) holding our self-designed cricket bat to automatically react and hit back the ball thrown towards it.
+![system](reports/system.png)
+*<center>Figure 1: The whole system for our project (simulated in Gazebo)</center>*
 
 ### 1.2 Ball Throwing
-
+With our self-created SDF blue ball model with bounce property, we can spawn the ball at a specific position in Gazebo. And we throw the ball with a proper but randomly sample initial velocity towards the robot. 
 
 ### 1.3 Multi-view Ball Tracking
+The multi-view system is composed of 4 cameras at different viewpoints. They are all aiming at the central experiment region as shown in Fig 1. The camera calibration process is simulated by calculating the camera projection matrices at the beginning. The ball tracking task mainly has the following three steps:
+
+1) **Ball detection and tracking on 2D image**: This is done for each individual camera. The ball detection on 2D image is done by pixel-level range filtering on HSV colorspace (the result is a filtered binary image). And then the tracking on 2D image space is by calculating the center of mass for binary images. We check whether the area of each camera binary image is zero, if so, the ball is currently invisible to this camera and we will temporarily discard this image. 
+![2d_detection](reports/2d_detection.png)
+*Figure 3: Raw images (first row) and filtered binary images (second row) for the four cameras (left to right: A to D), inspected by running image_view. The cameras are set up high since the ball might fly high, thus the ball is a very small spot in the image. However, if you take a closer look, you can see there are filtered white pixels in the binary images.*
+
+
+1) **Ball tracking in 3D**: The 3D tracking is done by synchronizing the 2D tracking results from all the cameras and doing triangulation. When the ball is currently invisible to less than 2 cameras, the single-view ambiguity will occur and thus we skip the current timestamp. A result is the green points shown in Figure 5.
+
+
+2) **Kalman Filter smoothing**: The smoothing on 3D tracked results is by a Kalman Filter with a constant acceleration motion model. The state is a 6-dim vector (ball position and velocity in 3D), the observation is a 3-dim vector (3D tracked position from triangulation), and the control in state transition is a scalar (gravity). A result is the yellow points shown in Figure 5. (Note: We do not use the Kalman Filter in our final version of the project since the tracked results are sufficiently accurate, but it is believed this smoothing process would help in real world where the environments are complicated and  easurements are noisy.)
+![EKF](reports/EKF.png)
+*Figure 4: Kalman Filter. The blue ball shows the 3D posterior estimation from the Kalman filter, and the red triangle shows the real position.*
 
 ### 1.4 Trajectory Prediction with Least Square
-
+We use least square formulation with stacked 3D tracking results to fit second-order polynomial curves in real time (ie. three curves of X, Y, Z ball positions w.r.t. the relative timestamp). The velocity prediction of the ball is also needed since we want to use the velocity information to guide the robot batting angle, and this is done by just computing the derivatives of the polynomials. We set a height threshold, when the ball is under this height, we regard the ball as just re-spawned or just falling onto the ground and bouncing up, and this case will trigger a new polynomial. A result is the red points shown in Figure 5.
+![track_pred](reports/track_pred.png)
+*Figure 5: Rviz visualization of the results for multi-view tracking system and trajectory prediction. The purple points are the real ball positions directly obtained from Gazebo, the green points are the tracked 3D position from the multi-view system triangulation, the yellow points are the smoothed results by Kalman Filter, and the red points are the predicted ball position after 0.5 second from our estimated polynomial trajectory. We use this Rviz visualization to validate the performance of tracking and trajectory prediction.*
 ### 1.5 KUKA LWR Control
+We formulated and implemented a robot control pipeline for this ball-hitting task: Perception & Control Interface->Trajectory planning->Inverse Kinematics->Ros-control stack. By absorbing the idea of interface class, they are intentionally designed to be as independent and modular as possible. The functionalities and designing ideas about these parts are described as in Figure 6:
+![control](reports/control.png)
+*Figure 6: Control pipeline for this ball-hitting task; ready pose before moving; a self-made cricket bat is attached to the KUKA-LWR model.*
 
+For Perception & Control Interface, it is responsible for coordinating the perception part and control pipeline, acting as an administrator of the controlling process: start the arm to tracking trajectory, move back to ready gesture, etc.. Besides, it is just like an trajectory tracking module, which follows the inverse predicted trajectory of the ball and "leads" the bat to the predicted position of the ball.
+
+For Trajectory planning, it utilizes the Reflexxes type II library to generate intermediate frames for robot arm. It makes more sense in real robot controlling because movements in physical world need to be smooth and should comply with specific motor parameters. While in simulation environment, the meaning of this part is more on interpolation in Cartesian space.
+
+For Inverse Kinematics, we basically implemented two ways. The first is using KDL inverse kinematics solver and send joint position to joint trajectory controller. The second is using
+built-in one-task-inverse-kinematics controller directly (This controller is implented in package lwr_controller).
+
+For Ros-control stack, we loaded and started joint_trajectory_controller, joint_trajectory_controller etc. through controller manager for different control strategy. Besides, we configured a running simulation environment for KUKA-LWR arm’s velocity controller, which did not exist in existing lwr stack, by registering and configuring velocity hardware interface and using velocity controllers in released ros_control package.
 
 ## 2. Software
 ### 2.1 Existing Packages We Utilized
