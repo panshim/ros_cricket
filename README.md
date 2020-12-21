@@ -1,4 +1,18 @@
 # ros_cricket
+- [ros_cricket](#ros_cricket)
+  - [1. Overview](#1-overview)
+    - [1.1 Introduction](#11-introduction)
+    - [1.2 Ball Throwing](#12-ball-throwing)
+    - [1.3 Multi-view Ball Tracking](#13-multi-view-ball-tracking)
+    - [1.4 Trajectory Prediction with Least Square](#14-trajectory-prediction-with-least-square)
+    - [1.5 KUKA LWR Control](#15-kuka-lwr-control)
+  - [2. Software](#2-software)
+    - [2.1 Existing Packages We Utilized](#21-existing-packages-we-utilized)
+    - [2.2 New ROS Packages We Implemented](#22-new-ros-packages-we-implemented)
+  - [3. Hardware and infrastructure](#3-hardware-and-infrastructure)
+  - [4. Result](#4-result)
+  - [5. Discussion](#5-discussion)
+
 ## 1. Overview
 ### 1.1 Introduction
 In this KUKA Cricket Star project, our team aim to make the KUKA robot arm able to imitate a cricket player and bat a flying ball randomly thrown to it in Gazebo simulation environment. More specifically, the system we design as shown in the Figure below mainly includes a multiple-camera (4-camera) system which detects and tracks the 3D position of the ball and then predicts the polynomial trajectory of the ball in 3D, and a 7-joint KUKA Lightweight Robt (LWR) holding our self-designed cricket bat to automatically react and hit back the ball thrown towards it.
